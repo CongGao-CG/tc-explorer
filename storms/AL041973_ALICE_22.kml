@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL041973</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL041973</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>1800 UTC JUL 1</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.0 N, 67.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.8,26</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 2</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.3 N, 67.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.5,26.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 2</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.5 N, 67.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.2,26.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 2</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.8 N, 66.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.8,26.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 2</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.4 N, 66.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.4,27.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 3</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.8 N, 66.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66,27.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 3</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.8 N, 65.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.6,28.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 3</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.8 N, 65.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.5,29.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 3</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.6 N, 65.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.4,30.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 4</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.4 N, 65.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.3,31.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 4</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.3 N, 65.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>986 mb / 29.12 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.1,32.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 4</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.1 N, 65.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>990 mb / 29.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.1,33.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 4</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.0 N, 65.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.1,34</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 5</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.9 N, 64.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64.9,34.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 5</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>35.8 N, 64.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64.7,35.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 5</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>36.9 N, 64.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64.3,36.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 5</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>38.3 N, 63.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63.9,38.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 6</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>40.3 N, 62.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>995 mb / 29.38 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-62.9,40.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 6</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>42.5 N, 61.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-61.6,42.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 6</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>45.0 N, 60.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>991 mb / 29.26 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-60,45</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 6</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>48.3 N, 58.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-58.8,48.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 7</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ALICE (AL041973)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>52.0 N, 56.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.5,52</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

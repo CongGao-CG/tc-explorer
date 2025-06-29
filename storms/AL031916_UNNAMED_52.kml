@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL031916</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL031916</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>0600 UTC JUL 10</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.5 N, 52.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52.1,11.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 10</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.5 N, 53.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-53.2,11.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 10</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.6 N, 54.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54.4,11.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 11</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.7 N, 55.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55.6,11.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 11</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.8 N, 56.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.7,11.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 11</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.0 N, 57.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-57.8,12</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 11</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.4 N, 58.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-58.8,12.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 12</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.0 N, 59.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-59.8,13</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 12</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.7 N, 60.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-60.8,13.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 12</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.5 N, 61.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-61.7,14.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 12</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.4 N, 62.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-62.7,15.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 13</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.4 N, 63.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63.8,16.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 13</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.5 N, 65.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65,17.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 13</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.4 N, 66.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66,18.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 13</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.1 N, 66.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.7,19.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.7 N, 67.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.2,19.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.3 N, 67.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.6,20.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.8 N, 68.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68,20.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.3 N, 68.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.3,21.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 15</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.7 N, 68.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.5,21.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 15</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.1 N, 68.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.6,22.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 15</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.5 N, 68.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.7,22.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 15</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.9 N, 68.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.8,22.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 16</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.2 N, 69.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-69,23.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 16</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.5 N, 69.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-69.2,23.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 16</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.8 N, 69.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-69.5,23.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 16</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.0 N, 70.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70,24</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 17</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.2 N, 70.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70.5,24.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 17</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.6 N, 71.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71,24.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 17</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.3 N, 71.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.5,25.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 17</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.1 N, 71.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.9,26.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 18</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.0 N, 72.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.2,27</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 18</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.0 N, 72.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.5,28</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 18</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.1 N, 72.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.8,29.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 18</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.2 N, 73.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73,30.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 19</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.2 N, 73.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.2,31.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 19</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.2 N, 73.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>980 mb / 28.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.3,32.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 19</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.2 N, 73.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.3,33.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 19</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.1 N, 73.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.1,34.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 20</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.9 N, 72.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.9,34.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 20</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>35.7 N, 72.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.7,35.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 20</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>36.6 N, 72.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.5,36.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 20</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>37.6 N, 72.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.3,37.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 21</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>38.8 N, 72.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.1,38.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 21</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>39.9 N, 71.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.8,39.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 21</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>41.1 N, 71.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>993 mb / 29.32 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.4,41.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1300 UTC JUL 21</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1300 UTC JUL 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>41.4 N, 71.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>993 mb / 29.32 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.2,41.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 21</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>43.0 N, 70.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1001 mb / 29.56 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70.4,43</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 22</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>44.7 N, 68.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.4,44.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 22</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>46.9 N, 65.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.5,46.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 22</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>48.5 N, 61.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-61.7,48.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 22</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX UNNAMED (AL031916)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>51.0 N, 56.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.5,51</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

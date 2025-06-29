@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL231978</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL231978</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>1800 UTC OCT 28</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.5 N, 72.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.7,23.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 29</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.2 N, 73.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.2,24.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 29</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.9 N, 73.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.6,24.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 29</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.7 N, 73.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>998 mb / 29.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.7,25.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 29</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.2 N, 74.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>995 mb / 29.38 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.1,26.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 30</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.3 N, 73.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.7,27.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 30</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.1 N, 73.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.5,28.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 30</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.9 N, 72.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>990 mb / 29.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.6,28.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 30</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.3 N, 72.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>998 mb / 29.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.3,29.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 31</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.0 N, 72.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72,30</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 31</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.5 N, 72.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.1,30.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 31</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.1 N, 71.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.9,31.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 31</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.7 N, 71.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.7,31.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 1</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.6 N, 70.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70.5,32.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 1</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.7 N, 68.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.2,33.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 1</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>35.2 N, 65.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.5,35.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 1</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>38.0 N, 60.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-60.5,38</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 2</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>40.5 N, 55.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55.5,40.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 2</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>41.0 N, 50.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-50,41</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 2</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>43.5 N, 44.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-44,43.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 2</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>44.5 N, 39.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-39.5,44.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 3</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>46.0 N, 35.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-35,46</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 3</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>47.5 N, 31.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-31,47.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 3</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX KENDRA (AL231978)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>50.0 N, 27.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-27,50</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

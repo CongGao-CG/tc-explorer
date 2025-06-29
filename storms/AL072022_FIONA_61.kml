@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL072022</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL072022</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>0600 UTC SEP 14</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.0 N, 47.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.9,16</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 14</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.4 N, 49.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-49.1,16.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.6 N, 50.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-50.1,16.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.6 N, 51.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-51.3,16.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.5 N, 52.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52.4,16.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.4 N, 53.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-53.6,16.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.3 N, 54.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54.8,16.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.1 N, 56.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.2,16.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.8 N, 57.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-57.5,15.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.8 N, 58.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-58.8,15.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.3 N, 60.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-60.4,16.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>2315 UTC SEP 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>2315 UTC SEP 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.4 N, 61.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-61.4,16.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 17</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.4 N, 61.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-61.6,16.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 17</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.3 N, 62.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-62.6,16.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 17</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.4 N, 63.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63.3,16.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 17</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.5 N, 64.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64,16.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 18</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.5 N, 64.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>997 mb / 29.44 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64.7,16.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 18</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.9 N, 65.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.5,16.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 18</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.2 N, 66.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>990 mb / 29.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.2,17.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 18</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.8 N, 66.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>986 mb / 29.12 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.9,17.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1920 UTC SEP 18</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1920 UTC SEP 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.0 N, 67.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>986 mb / 29.12 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.1,18</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 19</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.1 N, 67.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>984 mb / 29.06 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.8,18.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 19</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.2 N, 68.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>977 mb / 28.85 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.4,18.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0730 UTC SEP 19</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0730 UTC SEP 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.4 N, 68.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>976 mb / 28.82 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.5,18.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 19</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.8 N, 68.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>980 mb / 28.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.9,18.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 19</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.5 N, 69.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>972 mb / 28.70 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-69.5,19.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 20</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.2 N, 70.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>974 mb / 28.76 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70.1,20.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 20</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.8 N, 70.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>967 mb / 28.56 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70.7,20.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1100 UTC SEP 20</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1100 UTC SEP 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.4 N, 71.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>962 mb / 28.41 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.1,21.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 20</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.5 N, 71.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>961 mb / 28.38 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.2,21.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 20</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.3 N, 71.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>959 mb / 28.32 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.7,22.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 21</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.9 N, 71.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>951 mb / 28.08 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>110 kt / 127 mph / 204 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.8,22.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 21</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.5 N, 71.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>939 mb / 27.73 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>120 kt / 138 mph / 222 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.8,23.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 21</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.2 N, 71.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>937 mb / 27.67 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.7,24.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 21</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.1 N, 71.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>937 mb / 27.67 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.6,25.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 22</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.0 N, 71.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>934 mb / 27.58 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.4,26</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 22</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.9 N, 71.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>934 mb / 27.58 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.1,26.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 22</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.0 N, 70.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>936 mb / 27.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70.6,28</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 22</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.5 N, 70.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>936 mb / 27.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70,29.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 23</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.9 N, 69.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>931 mb / 27.49 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-69,30.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 23</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.5 N, 67.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>936 mb / 27.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.5,32.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 23</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.3 N, 65.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>935 mb / 27.61 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65,34.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 23</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>37.8 N, 61.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>940 mb / 27.76 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>110 kt / 127 mph / 204 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-61.7,37.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 24</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>42.3 N, 60.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>932 mb / 27.52 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-60.7,42.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 24</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>45.0 N, 61.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>931 mb / 27.49 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-61.2,45</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0700 UTC SEP 24</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0700 UTC SEP 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>45.2 N, 61.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>931 mb / 27.49 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-61.2,45.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 24</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>46.8 N, 61.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>938 mb / 27.70 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-61.2,46.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 24</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>47.9 N, 60.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>952 mb / 28.11 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-60.8,47.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 25</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>48.8 N, 59.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>968 mb / 28.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-59.8,48.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 25</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>50.6 N, 58.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>972 mb / 28.70 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-58.6,50.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0800 UTC SEP 25</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0800 UTC SEP 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>51.3 N, 58.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>974 mb / 28.76 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-58.3,51.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 25</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>53.1 N, 57.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>981 mb / 28.97 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-57.5,53.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 25</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>55.5 N, 58.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>984 mb / 29.06 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-58,55.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 26</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>57.5 N, 59.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>985 mb / 29.09 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-59,57.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 26</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>58.5 N, 59.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>985 mb / 29.09 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-59,58.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 26</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>59.5 N, 59.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>986 mb / 29.12 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-59,59.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 26</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>60.5 N, 58.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>988 mb / 29.18 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-58.5,60.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 27</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>61.5 N, 58.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-58,61.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 27</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>62.5 N, 57.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>998 mb / 29.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-57,62.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 27</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>63.3 N, 55.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55,63.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 27</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FIONA (AL072022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>64.0 N, 52.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52,64</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

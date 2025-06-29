@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL011936</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL011936</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>0000 UTC JUN 12</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUN 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.1 N, 87.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-87.3,18.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUN 12</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUN 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.9 N, 86.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.6,18.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUN 12</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUN 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.7 N, 86.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.4,19.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUN 12</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUN 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.4 N, 86.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.5,20.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUN 13</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUN 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.1 N, 86.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.6,21.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUN 13</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUN 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.1 N, 86.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.7,22.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUN 13</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUN 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.2 N, 86.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.7,23.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUN 13</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUN 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.9 N, 86.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.5,23.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUN 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUN 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.3 N, 86.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.4,24.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUN 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUN 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.7 N, 86.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.2,24.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUN 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUN 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.0 N, 86.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86,25</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUN 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUN 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.4 N, 85.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>998 mb / 29.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-85.3,25.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUN 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUN 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.8 N, 84.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-84,25.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUN 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUN 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.0 N, 82.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-82.3,26</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0800 UTC JUN 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0800 UTC JUN 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.9 N, 81.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-81.7,25.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUN 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUN 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.8 N, 80.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-80.5,25.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUN 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUN 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.1 N, 78.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78.2,26.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUN 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUN 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.1 N, 75.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.7,27.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUN 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUN 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.1 N, 73.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73,28.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUN 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUN 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.5 N, 70.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>996 mb / 29.41 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70.2,29.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUN 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUN 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.1 N, 67.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.5,31.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUN 17</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUN 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.9 N, 65.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.2,32.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUN 17</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS UNNAMED (AL011936)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUN 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>35.0 N, 63.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63.2,35</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL112013</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL112013</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>0000 UTC SEP 28</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.1 N, 50.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1012 mb / 29.88 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-50,21.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 28</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.2 N, 50.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1012 mb / 29.88 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-50.3,22.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 28</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.3 N, 50.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1011 mb / 29.85 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-50.6,23.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 28</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.2 N, 50.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1011 mb / 29.85 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-50.6,24.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 29</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.9 N, 50.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-50.4,24.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 29</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.6 N, 49.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-49.7,25.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 29</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.2 N, 49.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-49,26.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 29</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.7 N, 48.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-48.2,26.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 30</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.1 N, 47.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.5,27.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 30</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.2 N, 46.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-46.8,27.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 30</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.3 N, 46.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-46,27.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 30</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.3 N, 45.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-45,27.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 1</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.5 N, 43.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.9,27.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 1</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.7 N, 43.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.6,27.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 1</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.1 N, 43.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.5,28.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 1</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.1 N, 43.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.5,28.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.1 N, 43.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.7,28.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.1 N, 43.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.9,28.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.6 N, 43.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.4,28.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.0 N, 42.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-42.9,29</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 3</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.4 N, 42.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-42.4,29.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 3</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.1 N, 41.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-41.7,30.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 3</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.8 N, 40.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-40.6,30.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 3</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.5 N, 39.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-39.3,31.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 4</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.5 N, 38.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-38,32.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 4</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.1 N, 36.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-36.6,33.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 4</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.7 N, 35.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-35,33.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 4</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.2 N, 33.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-33.7,34.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 5</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.5 N, 32.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-32.7,34.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 5</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>35.0 N, 31.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-31.7,35</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 5</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>35.9 N, 30.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-30.7,35.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 5</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>36.7 N, 29.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-29.8,36.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 6</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO JERRY (AL112013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>38.0 N, 28.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-28.9,38</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

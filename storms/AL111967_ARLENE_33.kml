@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL111967</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL111967</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>1800 UTC AUG 28</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.8 N, 35.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-35.8,15.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 29</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.4 N, 36.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-36.8,16.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 29</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.1 N, 37.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-37.9,17.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 29</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.8 N, 39.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-39,17.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 29</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.5 N, 40.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-40.2,18.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 30</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.3 N, 41.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-41.6,19.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 30</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.0 N, 43.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43,20</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 30</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.6 N, 44.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1001 mb / 29.56 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-44.3,20.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 30</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.1 N, 45.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1001 mb / 29.56 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-45.5,21.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 31</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.8 N, 46.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-46.9,21.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 31</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.8 N, 48.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-48.3,22.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 31</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.3 N, 49.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-49.7,24.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 31</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.8 N, 51.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-51,25.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 1</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.1 N, 52.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52.1,27.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 1</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.4 N, 52.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52.9,28.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 1</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.7 N, 53.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-53.8,29.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 1</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.8 N, 55.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55.1,30.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.9 N, 56.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.3,31.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.2 N, 56.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.8,33.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.6 N, 56.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>999 mb / 29.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.9,34.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 2</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>36.1 N, 56.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.6,36.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 3</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>37.6 N, 55.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>990 mb / 29.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55.8,37.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 3</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>39.2 N, 54.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54.8,39.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 3</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>40.8 N, 53.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-53.8,40.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 3</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>42.6 N, 52.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52.5,42.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 4</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>44.5 N, 51.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>982 mb / 29.00 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-51,44.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 4</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>45.6 N, 49.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-49.3,45.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 4</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>46.0 N, 47.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.4,46</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 4</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>46.2 N, 45.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-45.3,46.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 5</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>46.3 N, 43.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.2,46.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 5</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>46.3 N, 41.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-41.5,46.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 5</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>46.5 N, 40.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-40,46.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 5</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX ARLENE (AL111967)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>47.0 N, 39.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-39,47</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

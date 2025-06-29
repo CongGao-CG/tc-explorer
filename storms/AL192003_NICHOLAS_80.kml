@@ -1,0 +1,1662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL192003</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL192003</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>0000 UTC OCT 13</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>9.5 N, 37.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-37,9.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 13</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>9.5 N, 37.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-37.7,9.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 13</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>9.6 N, 38.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-38.4,9.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 13</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>9.9 N, 38.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-38.9,9.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 14</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.2 N, 39.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-39.5,10.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 14</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.5 N, 40.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-40.3,10.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 14</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.7 N, 41.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-41.1,10.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.9 N, 41.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-41.9,10.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.2 N, 42.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1003 mb / 29.62 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-42.5,11.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.5 N, 43.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.1,11.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.8 N, 43.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.7,11.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.2 N, 44.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-44.3,12.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.6 N, 45.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-45,12.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.1 N, 45.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-45.6,13.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.5 N, 46.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>997 mb / 29.44 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-46,13.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.0 N, 46.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-46.6,14</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 17</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.4 N, 47.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>995 mb / 29.38 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.2,14.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 17</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.0 N, 47.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.6,15</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 17</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.5 N, 48.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>990 mb / 29.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-48,15.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 17</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.1 N, 48.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-48.1,16.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 18</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.3 N, 48.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-48.1,16.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 18</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.3 N, 47.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.9,16.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 18</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.5 N, 47.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.8,16.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 18</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.7 N, 47.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>997 mb / 29.44 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.7,16.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 19</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.0 N, 47.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>997 mb / 29.44 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.6,17</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 19</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.3 N, 47.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>997 mb / 29.44 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.4,17.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 19</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.6 N, 47.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>997 mb / 29.44 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.3,17.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 19</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.6 N, 47.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.5,17.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 20</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.4 N, 47.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.7,17.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 20</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.6 N, 47.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.9,17.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 20</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.8 N, 48.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-48.1,17.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 20</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.1 N, 48.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-48.9,18.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 21</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.4 N, 49.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-49.7,18.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 21</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.6 N, 50.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-50.3,18.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 21</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.7 N, 51.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-51,18.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 21</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.6 N, 52.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52,18.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 22</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.5 N, 52.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52.9,18.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 22</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.5 N, 53.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-53.6,18.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 22</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.8 N, 54.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54.1,18.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 22</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.5 N, 54.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54.6,19.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 23</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.4 N, 55.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55.4,20.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 23</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.5 N, 56.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56,21.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 23</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.5 N, 56.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.4,22.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 23</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.6 N, 56.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.9,23.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 24</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.1 N, 56.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.7,25.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 24</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.1 N, 56.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.4,27.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 24</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.8 N, 56.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1011 mb / 29.85 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.1,28.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 24</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.2 N, 55.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1012 mb / 29.88 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55.7,30.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 25</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.4 N, 54.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1013 mb / 29.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>20 kt / 23 mph / 37 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54.8,31.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 25</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.2 N, 53.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1014 mb / 29.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>20 kt / 23 mph / 37 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-53.5,32.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 25</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.4 N, 52.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1014 mb / 29.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>20 kt / 23 mph / 37 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52,32.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 25</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.5 N, 50.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1013 mb / 29.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>20 kt / 23 mph / 37 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-50.5,32.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 26</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.9 N, 49.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1013 mb / 29.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>20 kt / 23 mph / 37 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-49.5,31.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 26</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.7 N, 49.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1012 mb / 29.88 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-49.1,30.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 26</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.3 N, 49.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-49,29.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 26</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.3 N, 49.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-49.6,28.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 27</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.4 N, 50.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-50.5,27.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 27</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.7 N, 52.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52,26.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 27</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.4 N, 53.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-53.7,26.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 27</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.6 N, 55.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55.5,26.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 28</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.1 N, 57.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-57.3,27.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 28</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.9 N, 59.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-59.1,27.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 28</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.9 N, 60.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-60.8,28.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 28</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.5 N, 62.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-62.8,29.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 29</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.4 N, 65.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.1,29.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 29</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.3 N, 67.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.1,29.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 29</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.5 N, 68.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68,29.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 29</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.1 N, 68.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68,30.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 30</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.4 N, 67.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.2,30.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 30</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.4 N, 66.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.4,30.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 30</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.0 N, 65.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.8,30</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 30</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.3 N, 65.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.3,29.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 31</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.7 N, 65.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.5,28.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 31</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.3 N, 66.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66,28.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 31</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.7 N, 66.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.3,27.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 31</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.0 N, 66.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.4,27</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 1</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.4 N, 66.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.3,26.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 1</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.5 N, 66.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66,26.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 1</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.0 N, 66.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.3,27</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 1</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO NICHOLAS (AL192003)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.7 N, 67.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67,27.7</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

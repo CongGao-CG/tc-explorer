@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL041980</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL041980</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>1200 UTC JUL 31</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.0 N, 30.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-30,11</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 31</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.9 N, 32.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-32.2,10.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 1</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.8 N, 34.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-34.3,10.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 1</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.7 N, 36.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-36.4,10.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 1</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.7 N, 38.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-38.6,10.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 1</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.7 N, 40.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-40.7,10.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.0 N, 42.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-42.8,11</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.4 N, 44.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-44.8,11.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.9 N, 46.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>995 mb / 29.38 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-46.9,11.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.3 N, 49.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>990 mb / 29.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-49.1,12.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 3</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.4 N, 51.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>985 mb / 29.09 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-51.4,12.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 3</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.6 N, 53.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>980 mb / 28.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-53.6,12.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 3</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.8 N, 55.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>975 mb / 28.79 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55.6,12.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 3</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.9 N, 57.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>965 mb / 28.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-57.5,12.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 4</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.3 N, 59.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>950 mb / 28.05 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>110 kt / 127 mph / 204 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-59.1,13.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 4</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.6 N, 61.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>948 mb / 27.99 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-61,13.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 4</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.0 N, 63.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>945 mb / 27.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>125 kt / 144 mph / 232 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63,14</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 4</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.4 N, 64.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>930 mb / 27.46 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>130 kt / 150 mph / 241 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64.9,14.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 5</name>
+      <styleUrl>#cat5</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.8 N, 66.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>911 mb / 26.90 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>140 kt / 161 mph / 259 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.7,14.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 5</name>
+      <styleUrl>#cat5</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.4 N, 68.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>916 mb / 27.05 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>145 kt / 167 mph / 269 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.6,15.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 5</name>
+      <styleUrl>#cat5</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.9 N, 70.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>932 mb / 27.52 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>155 kt / 178 mph / 287 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70.5,15.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 5</name>
+      <styleUrl>#cat5</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.5 N, 72.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>940 mb / 27.76 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>150 kt / 173 mph / 278 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.3,16.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 6</name>
+      <styleUrl>#cat5</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.8 N, 73.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>945 mb / 27.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>140 kt / 161 mph / 259 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.8,17.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 6</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.3 N, 75.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>955 mb / 28.20 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.9,18.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 6</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.2 N, 78.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>955 mb / 28.20 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78,19.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 6</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.0 N, 80.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>955 mb / 28.20 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>125 kt / 144 mph / 232 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-80.1,20</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 7</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.1 N, 81.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>945 mb / 27.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>135 kt / 155 mph / 250 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-81.9,20.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 7</name>
+      <styleUrl>#cat5</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.4 N, 83.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>935 mb / 27.61 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>145 kt / 167 mph / 269 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-83.6,20.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 7</name>
+      <styleUrl>#cat5</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.0 N, 84.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>910 mb / 26.87 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>155 kt / 178 mph / 287 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-84.8,21</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 7</name>
+      <styleUrl>#cat5</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.8 N, 86.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>899 mb / 26.55 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>165 kt / 190 mph / 306 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.4,21.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 8</name>
+      <styleUrl>#cat5</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.2 N, 87.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>920 mb / 27.17 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>155 kt / 178 mph / 287 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-87.9,22.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 8</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.8 N, 89.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>945 mb / 27.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>130 kt / 150 mph / 241 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-89.2,22.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 8</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.4 N, 90.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>960 mb / 28.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-90.5,23.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 8</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.9 N, 91.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>940 mb / 27.76 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>130 kt / 150 mph / 241 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-91.8,23.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 9</name>
+      <styleUrl>#cat5</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.5 N, 93.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>912 mb / 26.93 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>145 kt / 167 mph / 269 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-93,24.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 9</name>
+      <styleUrl>#cat5</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.0 N, 94.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>909 mb / 26.84 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>155 kt / 178 mph / 287 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-94.2,25</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 9</name>
+      <styleUrl>#cat5</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.2 N, 95.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>916 mb / 27.05 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>140 kt / 161 mph / 259 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-95.4,25.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 9</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.4 N, 96.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>925 mb / 27.32 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>125 kt / 144 mph / 232 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-96.1,25.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 10</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.8 N, 96.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>935 mb / 27.61 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>110 kt / 127 mph / 204 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-96.8,25.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 10</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.1 N, 97.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>945 mb / 27.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-97.2,26.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 10</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.7 N, 98.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>960 mb / 28.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-98.1,26.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 10</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.3 N, 99.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-99,27.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 11</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.7 N, 99.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>990 mb / 29.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-99.8,27.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 11</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.0 N, 100.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-100.9,28</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 11</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.5 N, 101.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-101.9,28.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 11</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD ALLEN (AL041980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.9 N, 102.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-102.9,28.9</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

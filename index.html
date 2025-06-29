@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tropical Cyclone Explorer</title>
+  <!-- Tailwind for quick styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha512-p20qK0C7Y4eiSOk7o+uG5MdrfzQNl5lO6ZkcnU9Eq+cptdUZZdw7gC5JMEkR9ZL+NxCJhQPWr26Qc1yM6Mi5Qw=="
+    crossorigin=""
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha512-pHO0bS1zZUzAhaS2flAKm9O30KURspvFc7T9xvoMzc3WtBaNXRZdES4kz0UM4cKap23Ks4Nsp0L4q8sJz8+gTg=="
+    crossorigin=""
+  ></script>
+  <!-- leaflet-omnivore can read KML directly -->
+  <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
+</head>
+<body class="h-screen w-screen flex">
+  <!-- Sidebar -->
+  <aside class="w-72 p-4 bg-gray-100 overflow-y-auto">
+    <h1 class="text-2xl font-bold mb-4">Tropical Cyclones</h1>
+    <input
+      id="search"
+      type="text"
+      placeholder="Search storms…"
+      class="mb-4 w-full p-2 border rounded"
+    />
+    <ul id="storm-list" class="space-y-2"></ul>
+  </aside>
+
+  <!-- Map -->
+  <main class="flex-1">
+    <div id="map" class="h-full w-full"></div>
+  </main>
+
+  <script>
+    // Initialise map
+    const map = L.map("map").setView([20, 0], 2);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "© OpenStreetMap contributors",
+    }).addTo(map);
+
+    let currentLayer = null;
+
+    // Load the JSON catalogue of storms
+    fetch("storms/storms.json")
+      .then((res) => res.json())
+      .then((data) => {
+        window.stormCatalogue = data;
+        renderList(data);
+      });
+
+    /**
+     * Render clickable list of storms
+     */
+    function renderList(arr) {
+      const list = document.getElementById("storm-list");
+      list.innerHTML = "";
+      arr.forEach((storm) => {
+        const li = document.createElement("li");
+        li.className =
+          "cursor-pointer hover:bg-blue-100 p-2 rounded transition-colors";
+        li.textContent = `${storm.name} (${storm.year})`;
+        li.addEventListener("click", () => loadStorm(storm));
+        list.appendChild(li);
+      });
+    }
+
+    // Simple client-side search
+    document.getElementById("search").addEventListener("input", (e) => {
+      const q = e.target.value.toLowerCase();
+      renderList(
+        window.stormCatalogue.filter(
+          (s) =>
+            s.name.toLowerCase().includes(q) || String(s.year).includes(q)
+        )
+      );
+    });
+
+    /**
+     * Load a KML layer and zoom to it
+     */
+    function loadStorm(storm) {
+      if (currentLayer) map.removeLayer(currentLayer);
+
+      currentLayer = omnivore
+        .kml(storm.kml)
+        .on("ready", function () {
+          map.fitBounds(currentLayer.getBounds());
+        })
+        .addTo(map);
+    }
+  </script>
+</body>
+</html>

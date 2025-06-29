@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL111976</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL111976</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>1200 UTC AUG 27</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.5 N, 37.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-37.5,12.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 27</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.0 N, 39.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-39,13</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 28</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.5 N, 40.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-40.5,13.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 28</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.8 N, 42.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-42.1,13.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 28</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.3 N, 43.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.7,14.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 28</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.7 N, 45.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-45.3,14.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 29</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.4 N, 46.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-46.8,15.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 29</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.1 N, 48.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-48.4,16.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 29</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.6 N, 49.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>998 mb / 29.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-49.6,16.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 29</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.5 N, 50.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-50.5,17.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 30</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.3 N, 51.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>991 mb / 29.26 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-51.6,18.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 30</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.9 N, 52.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52.3,18.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 30</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.4 N, 53.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-53.3,19.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 30</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.2 N, 54.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>987 mb / 29.15 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54.2,20.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 31</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.0 N, 54.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>980 mb / 28.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54.9,21</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 31</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.0 N, 55.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55.1,22</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 31</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.1 N, 55.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>975 mb / 28.79 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55.2,23.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 31</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 31</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.2 N, 55.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55.2,24.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 1</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.3 N, 54.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>968 mb / 28.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54.9,25.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 1</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.3 N, 54.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>963 mb / 28.44 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54.3,26.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 1</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.2 N, 53.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>966 mb / 28.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-53.7,27.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 1</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.8 N, 52.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52.6,27.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 2</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.2 N, 51.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-51.3,28.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 2</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.2 N, 50.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-50.1,28.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 2</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.3 N, 48.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-48.7,28.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 2</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.5 N, 47.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.1,28.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 3</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.9 N, 45.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-45.1,28.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 3</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.0 N, 42.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-42.9,29</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 3</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.7 N, 40.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-40.8,29.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 3</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.6 N, 39.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-39,30.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 4</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.0 N, 37.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>992 mb / 29.29 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-37.2,32</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 4</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.4 N, 35.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-35.6,33.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 4</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.9 N, 34.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>992 mb / 29.29 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-34.1,34.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 4</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>36.4 N, 32.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-32.5,36.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 5</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>37.8 N, 30.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-30.8,37.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 5</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>39.4 N, 29.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-29.3,39.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 5</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>41.0 N, 28.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-28,41</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 5</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>42.1 N, 27.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-27.2,42.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 6</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>43.5 N, 27.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-27.1,43.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 6</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>42.8 N, 28.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-28.6,42.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 6</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>42.0 N, 28.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-28.2,42</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 6</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>41.9 N, 27.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>998 mb / 29.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-27.6,41.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 7</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>41.8 N, 27.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-27,41.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 7</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>41.7 N, 26.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-26.3,41.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 7</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FRANCES (AL111976)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>41.6 N, 25.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-25.7,41.6</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

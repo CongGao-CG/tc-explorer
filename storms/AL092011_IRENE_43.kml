@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL092011</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL092011</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>0000 UTC AUG 21</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.0 N, 59.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-59,15</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 21</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.0 N, 60.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-60.6,16</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 21</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.8 N, 62.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-62.2,16.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 21</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.5 N, 63.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>999 mb / 29.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63.7,17.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>2300 UTC AUG 21</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>2300 UTC AUG 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.8 N, 64.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>993 mb / 29.32 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64.6,17.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 22</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.9 N, 65.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>993 mb / 29.32 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65,17.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0525 UTC AUG 22</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0525 UTC AUG 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.1 N, 65.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>990 mb / 29.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.8,18.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 22</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.2 N, 65.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>990 mb / 29.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.9,18.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 22</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.9 N, 67.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>989 mb / 29.21 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67,18.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 22</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.3 N, 68.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>988 mb / 29.18 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68,19.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 23</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.7 N, 68.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>981 mb / 28.97 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.8,19.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 23</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.1 N, 69.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>978 mb / 28.88 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-69.7,20.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 23</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.4 N, 70.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>978 mb / 28.88 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70.6,20.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 23</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.7 N, 71.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>977 mb / 28.85 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.2,20.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 24</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.0 N, 71.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>969 mb / 28.61 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.9,21</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 24</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.3 N, 72.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>965 mb / 28.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.5,21.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 24</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.9 N, 73.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>957 mb / 28.26 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>105 kt / 121 mph / 194 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.3,21.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1600 UTC AUG 24</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1600 UTC AUG 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.4 N, 74.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>955 mb / 28.20 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74,22.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 24</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.7 N, 74.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>954 mb / 28.17 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.3,22.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 25</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.5 N, 75.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>952 mb / 28.11 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.1,23.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 25</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.1 N, 75.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>950 mb / 28.05 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.9,24.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0900 UTC AUG 25</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0900 UTC AUG 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.7 N, 76.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>950 mb / 28.05 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.2,24.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 25</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.4 N, 76.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>950 mb / 28.05 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.6,25.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 25</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.5 N, 77.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>950 mb / 28.05 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77.2,26.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 26</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.7 N, 77.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>946 mb / 27.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77.3,27.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 26</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.8 N, 77.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>942 mb / 27.82 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77.3,28.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 26</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.0 N, 77.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>947 mb / 27.97 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77.4,30</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 26</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.1 N, 77.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>950 mb / 28.05 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77.5,31.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 27</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.1 N, 77.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>952 mb / 28.11 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77.1,32.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 27</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.4 N, 76.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>952 mb / 28.11 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.8,33.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 27</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.7 N, 76.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>952 mb / 28.11 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.6,34.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 27</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>35.5 N, 76.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>950 mb / 28.05 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.3,35.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 28</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>36.7 N, 75.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>951 mb / 28.08 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.7,36.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 28</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>38.1 N, 75.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>958 mb / 28.29 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75,38.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0935 UTC AUG 28</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0935 UTC AUG 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>39.4 N, 74.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>959 mb / 28.32 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.4,39.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 28</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>40.3 N, 74.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>963 mb / 28.44 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.1,40.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1300 UTC AUG 28</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1300 UTC AUG 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>40.6 N, 74.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>965 mb / 28.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74,40.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 28</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>42.5 N, 73.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.1,42.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 29</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>44.2 N, 72.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>979 mb / 28.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.1,44.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC AUG 29</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC AUG 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>46.5 N, 69.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>983 mb / 29.03 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-69.5,46.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC AUG 29</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC AUG 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>49.1 N, 66.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>985 mb / 29.09 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.7,49.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC AUG 29</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC AUG 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>51.3 N, 63.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>987 mb / 29.15 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63.8,51.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC AUG 30</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IRENE (AL092011)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC AUG 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>53.0 N, 60.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>991 mb / 29.26 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-60,53</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

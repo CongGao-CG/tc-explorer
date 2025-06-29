@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL011972</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL011972</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>1800 UTC MAY 23</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC MAY 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.2 N, 78.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78.2,31.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC MAY 24</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC MAY 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.7 N, 77.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77,31.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC MAY 24</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC MAY 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.2 N, 76.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1003 mb / 29.62 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.6,32.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC MAY 24</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC MAY 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.9 N, 76.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.2,32.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC MAY 24</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC MAY 24</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.5 N, 75.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.7,33.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC MAY 25</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC MAY 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.0 N, 75.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.4,34</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC MAY 25</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC MAY 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.3 N, 75.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.1,34.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC MAY 25</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC MAY 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.4 N, 74.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.6,34.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC MAY 25</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC MAY 25</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.2 N, 74.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.1,34.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC MAY 26</name>
+      <styleUrl>#ss</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SS ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC MAY 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.0 N, 73.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.5,34</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC MAY 26</name>
+      <styleUrl>#ss</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SS ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC MAY 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.5 N, 74.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.6,32.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC MAY 26</name>
+      <styleUrl>#ss</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SS ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC MAY 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.6 N, 75.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1001 mb / 29.56 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.7,31.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC MAY 26</name>
+      <styleUrl>#ss</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SS ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC MAY 26</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.4 N, 75.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.9,31.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC MAY 27</name>
+      <styleUrl>#ss</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SS ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC MAY 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.2 N, 76.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.2,31.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC MAY 27</name>
+      <styleUrl>#ss</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SS ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC MAY 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.8 N, 77.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77.1,30.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC MAY 27</name>
+      <styleUrl>#ss</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SS ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC MAY 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.6 N, 78.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78.4,30.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC MAY 27</name>
+      <styleUrl>#ss</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SS ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC MAY 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.8 N, 80.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>991 mb / 29.26 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-80.1,30.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC MAY 28</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC MAY 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.0 N, 81.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-81.7,31</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC MAY 28</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC MAY 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.5 N, 83.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1011 mb / 29.85 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-83,30.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC MAY 28</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC MAY 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.8 N, 84.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1012 mb / 29.88 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-84,29.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC MAY 28</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC MAY 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.2 N, 84.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1013 mb / 29.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-84.7,29.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC MAY 29</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC MAY 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.8 N, 85.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-85,28.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC MAY 29</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC MAY 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.4 N, 85.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-85.2,28.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC MAY 29</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD ALPHA (AL011972)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC MAY 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.8 N, 85.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1013 mb / 29.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-85.5,27.8</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

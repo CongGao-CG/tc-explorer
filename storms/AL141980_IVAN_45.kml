@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL141980</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL141980</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>0000 UTC OCT 1</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.6 N, 20.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-20,33.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 1</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.7 N, 20.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-20.7,33.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 1</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.8 N, 21.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-21.5,33.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 1</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.1 N, 22.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-22.2,34.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 2</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.5 N, 22.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-22.8,34.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 2</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>35.0 N, 23.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-23.3,35</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 2</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>35.7 N, 23.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-23.7,35.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 2</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>36.5 N, 23.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-23.8,36.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 3</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>37.2 N, 23.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-23.5,37.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 3</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>37.8 N, 23.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-23.1,37.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 3</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>38.7 N, 22.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-22.5,38.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 3</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>38.5 N, 21.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-21.4,38.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 4</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>37.7 N, 21.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-21.8,37.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 4</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>37.0 N, 22.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-22.7,37</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 4</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>36.5 N, 23.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-23.5,36.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 4</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>35.6 N, 24.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>998 mb / 29.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-24.6,35.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 5</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.4 N, 25.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>996 mb / 29.41 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-25.7,34.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 5</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.4 N, 26.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>995 mb / 29.38 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-26.8,33.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 5</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.4 N, 28.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-28.3,32.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 5</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.3 N, 29.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>993 mb / 29.32 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-29.6,31.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 6</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.1 N, 30.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>992 mb / 29.29 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-30.5,30.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 6</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.1 N, 31.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>985 mb / 29.09 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-31.1,29.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 6</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.4 N, 31.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>976 mb / 28.82 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-31.3,28.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 6</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.1 N, 31.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-31.1,28.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 7</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.0 N, 30.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-30.7,28</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 7</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.5 N, 30.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-30.6,28.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 7</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.5 N, 31.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-31.7,29.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 7</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.8 N, 32.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-32.7,29.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 8</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.0 N, 34.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-34.4,30</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 8</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.6 N, 36.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-36.2,30.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 8</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.3 N, 37.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-37.4,31.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 8</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.5 N, 39.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-39,31.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 9</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.7 N, 40.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-40.5,31.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 9</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.3 N, 41.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>971 mb / 28.67 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-41,32.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 9</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.2 N, 41.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>973 mb / 28.73 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-41.1,33.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 9</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.8 N, 41.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>975 mb / 28.79 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-41.2,33.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 10</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.9 N, 40.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>977 mb / 28.85 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-40.7,34.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 10</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>36.2 N, 40.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>978 mb / 28.88 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-40,36.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 10</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>37.8 N, 39.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>978 mb / 28.88 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-39.1,37.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 10</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>39.7 N, 37.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>980 mb / 28.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-37.9,39.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 11</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>42.0 N, 36.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>985 mb / 29.09 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-36.1,42</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 11</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>44.4 N, 34.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>988 mb / 29.18 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-34.1,44.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 11</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>46.8 N, 31.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>990 mb / 29.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-31.5,46.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 11</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>49.7 N, 27.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>990 mb / 29.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-27.5,49.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 12</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX IVAN (AL141980)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>52.5 N, 24.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>990 mb / 29.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-24.5,52.5</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

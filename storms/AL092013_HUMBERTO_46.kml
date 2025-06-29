@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL092013</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL092013</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>0000 UTC SEP 8</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.0 N, 17.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-17.6,13</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 8</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.0 N, 18.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-18.4,13</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 8</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.0 N, 19.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-19.3,13</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 8</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.0 N, 20.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-20.3,13</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 9</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.1 N, 21.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-21.3,13.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 9</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.3 N, 22.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-22.4,13.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 9</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.5 N, 23.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-23.6,13.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 9</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.7 N, 24.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-24.6,13.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 10</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.9 N, 25.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-25.5,13.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 10</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.1 N, 26.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-26.5,14.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 10</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.3 N, 27.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-27.3,14.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 10</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.7 N, 27.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>999 mb / 29.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-27.9,14.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 11</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.1 N, 28.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>998 mb / 29.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-28.3,15.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 11</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.6 N, 28.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-28.6,15.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 11</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.3 N, 28.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>987 mb / 29.15 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-28.9,16.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 11</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.4 N, 28.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>979 mb / 28.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-28.9,17.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 12</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.6 N, 28.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>979 mb / 28.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-28.9,18.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 12</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.9 N, 28.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>979 mb / 28.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-28.9,19.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 12</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.2 N, 28.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>980 mb / 28.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-28.9,21.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 12</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.3 N, 29.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>980 mb / 28.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-29.1,22.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 13</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.2 N, 29.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>982 mb / 29.00 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-29.5,23.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 13</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.0 N, 30.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>986 mb / 29.12 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-30,24</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 13</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.6 N, 30.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>988 mb / 29.18 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-30.8,24.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 13</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.8 N, 31.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>995 mb / 29.38 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-31.7,24.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 14</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.8 N, 32.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>999 mb / 29.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-32.6,24.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 14</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.9 N, 33.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1003 mb / 29.62 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-33.6,24.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 14</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.2 N, 34.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-34.8,25.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 14</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.5 N, 36.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-36.3,25.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.6 N, 37.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-37.8,25.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.6 N, 38.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-38.9,25.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.9 N, 39.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-39.7,25.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.4 N, 40.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-40.4,26.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.7 N, 41.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-41.3,26.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.7 N, 42.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-42.4,26.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.8 N, 42.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-42.9,26.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.9 N, 43.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.3,26.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 17</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.0 N, 43.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.2,27</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 17</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.4 N, 42.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-42.9,27.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 17</name>
+      <styleUrl>#ss</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.4 N, 42.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-42.6,28.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 17</name>
+      <styleUrl>#ss</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.5 N, 42.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-42.7,29.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 18</name>
+      <styleUrl>#ss</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SS HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.5 N, 43.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1003 mb / 29.62 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.2,30.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 18</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.1 N, 43.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.6,31.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 18</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.6 N, 43.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43.9,31.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 18</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.0 N, 44.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-44.1,32</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 19</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.5 N, 44.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-44.3,32.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 19</name>
+      <styleUrl>#sd</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>SD HUMBERTO (AL092013)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.0 N, 44.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-44.5,33</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

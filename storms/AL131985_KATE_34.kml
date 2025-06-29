@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL131985</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL131985</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>1800 UTC NOV 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.1 N, 63.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>999 mb / 29.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63.8,21.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.6 N, 63.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>998 mb / 29.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63.9,21.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.7 N, 64.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>996 mb / 29.41 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64.2,21.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 16</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.5 N, 64.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>993 mb / 29.32 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64.8,21.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 16</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.1 N, 65.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>987 mb / 29.15 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.3,21.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 17</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.7 N, 66.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>981 mb / 28.97 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66,20.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 17</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.4 N, 66.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>984 mb / 29.06 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.4,20.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 17</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.7 N, 67.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>982 mb / 29.00 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.3,20.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 17</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.1 N, 68.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>977 mb / 28.85 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.8,21.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 18</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.4 N, 70.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>976 mb / 28.82 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70,21.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 18</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.6 N, 71.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>975 mb / 28.79 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.8,21.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 18</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.6 N, 73.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>975 mb / 28.79 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.3,21.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 18</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.9 N, 75.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>972 mb / 28.70 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.1,21.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 19</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.1 N, 76.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>967 mb / 28.56 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.8,22.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 19</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.1 N, 78.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>968 mb / 28.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78.4,22.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 19</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.7 N, 80.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>971 mb / 28.67 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-80.2,22.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 19</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.2 N, 81.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>976 mb / 28.82 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-81.9,23.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 20</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.9 N, 83.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>972 mb / 28.70 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-83.5,23.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 20</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.6 N, 84.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>968 mb / 28.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-84.5,24.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 20</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.2 N, 85.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>956 mb / 28.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>105 kt / 121 mph / 194 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-85.3,25.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 20</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.0 N, 86.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>955 mb / 28.20 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>105 kt / 121 mph / 194 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86,26</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 21</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.8 N, 86.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>954 mb / 28.17 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>105 kt / 121 mph / 194 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.5,26.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 21</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>27.5 N, 86.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>961 mb / 28.38 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.6,27.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 21</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.3 N, 86.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>965 mb / 28.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.5,28.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 21</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.2 N, 86.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>967 mb / 28.56 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.1,29.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>2230 UTC NOV 21</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>2230 UTC NOV 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.0 N, 85.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>967 mb / 28.56 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-85.4,30</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 22</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>30.2 N, 85.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>975 mb / 28.79 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-85.1,30.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 22</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>31.5 N, 83.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>983 mb / 29.03 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-83.5,31.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 22</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.5 N, 81.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>990 mb / 29.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-81.5,32.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 22</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.7 N, 79.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>996 mb / 29.41 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-79.2,33.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 23</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.7 N, 76.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1003 mb / 29.62 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.2,34.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 23</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.4 N, 73.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.5,34.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 23</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.0 N, 72.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72,34</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 23</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX KATE (AL131985)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>33.5 N, 70.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70.5,33.5</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

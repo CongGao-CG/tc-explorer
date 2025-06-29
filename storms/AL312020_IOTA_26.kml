@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL312020</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL312020</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>1200 UTC NOV 12</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.5 N, 70.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70.9,15.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 12</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.3 N, 71.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.9,15.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 13</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.0 N, 72.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.7,15</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 13</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.7 N, 73.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.3,14.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 13</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.4 N, 73.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.7,14.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 13</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.0 N, 74.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.1,14</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.6 N, 74.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.5,13.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.3 N, 75.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75,13.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.9 N, 75.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.7,12.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.5 N, 76.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>997 mb / 29.44 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.4,12.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 15</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.6 N, 76.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>992 mb / 29.29 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.7,12.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 15</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.0 N, 77.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>988 mb / 29.18 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77.1,13</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 15</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.1 N, 78.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>982 mb / 29.00 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78,13.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 15</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.2 N, 78.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>974 mb / 28.76 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78.9,13.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 16</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.2 N, 79.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>961 mb / 28.38 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-79.8,13.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 16</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.4 N, 80.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>935 mb / 27.61 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>120 kt / 138 mph / 222 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-80.7,13.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 16</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.5 N, 81.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>917 mb / 27.08 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>135 kt / 155 mph / 250 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-81.5,13.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 16</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.5 N, 82.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>918 mb / 27.11 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>130 kt / 150 mph / 241 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-82.3,13.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 17</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.6 N, 83.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>918 mb / 27.11 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>130 kt / 150 mph / 241 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-83,13.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0340 UTC NOV 17</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0340 UTC NOV 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.6 N, 83.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>922 mb / 27.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>125 kt / 144 mph / 232 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-83.5,13.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 17</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.7 N, 83.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>935 mb / 27.61 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>110 kt / 127 mph / 204 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-83.8,13.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 17</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.7 N, 84.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>965 mb / 28.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-84.7,13.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 17</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.7 N, 85.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>988 mb / 29.18 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-85.7,13.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 18</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.8 N, 86.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-86.7,13.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 18</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.8 N, 87.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-87.8,13.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 18</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD IOTA (AL312020)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.7 N, 89.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-89,13.7</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

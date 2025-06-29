@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL161999</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL161999</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>1800 UTC NOV 13</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.7 N, 81.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1003 mb / 29.62 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-81.6,16.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 14</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.5 N, 81.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1003 mb / 29.62 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-81.1,16.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 14</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.4 N, 80.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-80.5,16.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.4 N, 79.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-79.9,16.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 14</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.3 N, 79.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>992 mb / 29.29 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-79.3,16.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 15</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.0 N, 78.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>988 mb / 29.18 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78.6,16</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 15</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.5 N, 77.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>977 mb / 28.85 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77.7,15.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 15</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.1 N, 76.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>971 mb / 28.67 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.4,15.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 15</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.8 N, 74.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>983 mb / 29.03 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.8,14.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 16</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.1 N, 73.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>982 mb / 29.00 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.4,15.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 16</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.1 N, 72.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>974 mb / 28.76 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72,15.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 16</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.1 N, 70.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>971 mb / 28.67 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70.5,15.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 16</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.5 N, 69.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>967 mb / 28.56 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-69,15.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 17</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.9 N, 67.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>959 mb / 28.32 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.6,15.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 17</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.4 N, 66.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>952 mb / 28.11 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>105 kt / 121 mph / 194 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.5,16.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 17</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.8 N, 65.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>946 mb / 27.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>115 kt / 132 mph / 213 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-65.5,16.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 17</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.4 N, 64.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>933 mb / 27.55 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>135 kt / 155 mph / 250 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64.8,17.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 18</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.6 N, 64.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>940 mb / 27.76 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>130 kt / 150 mph / 241 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64.2,17.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 18</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.8 N, 63.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>944 mb / 27.88 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>125 kt / 144 mph / 232 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63.9,17.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 18</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.9 N, 63.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>953 mb / 28.14 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>120 kt / 138 mph / 222 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63.6,17.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 18</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 18</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.0 N, 63.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>966 mb / 28.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>110 kt / 127 mph / 204 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63.3,18</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 19</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.1 N, 63.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>975 mb / 28.79 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63.1,18.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 19</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.0 N, 62.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>979 mb / 28.91 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-62.9,18</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 19</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.9 N, 62.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>986 mb / 29.12 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-62.8,17.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 19</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 19</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.6 N, 62.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-62.5,17.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 20</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.3 N, 61.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-61.8,17.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 20</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.0 N, 61.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>995 mb / 29.38 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-61.1,17</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 20</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.5 N, 60.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>996 mb / 29.41 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-60.4,16.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 20</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 20</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.9 N, 59.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>998 mb / 29.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-59.8,15.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 21</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.0 N, 59.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>998 mb / 29.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-59,16</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 21</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.5 N, 58.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>998 mb / 29.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-58.1,16.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 21</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.2 N, 57.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>999 mb / 29.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-57.1,17.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 21</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 21</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.0 N, 56.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.7,18</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 22</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.4 N, 56.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1001 mb / 29.56 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.1,18.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 22</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.5 N, 55.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55.7,18.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC NOV 22</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC NOV 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.5 N, 55.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55.3,18.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC NOV 22</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC NOV 22</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.5 N, 54.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>20 kt / 23 mph / 37 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54.7,18.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC NOV 23</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC NOV 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.5 N, 53.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>20 kt / 23 mph / 37 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-53.8,18.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC NOV 23</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD LENNY (AL161999)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC NOV 23</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.5 N, 52.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1006 mb / 29.71 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>20 kt / 23 mph / 37 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52.8,18.5</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

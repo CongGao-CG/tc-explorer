@@ -1,0 +1,1644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL071963</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL071963</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>1200 UTC SEP 28</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>9.2 N, 46.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-46.3,9.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 28</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>9.5 N, 47.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.9,9.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 29</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>9.7 N, 49.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-49.5,9.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 29</name>
+      <styleUrl>#td</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TD FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>9.9 N, 51.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-51.1,9.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 29</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.0 N, 52.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52.8,10</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 29</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.1 N, 54.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54.4,10.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC SEP 30</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC SEP 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.3 N, 56.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56,10.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC SEP 30</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC SEP 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.4 N, 57.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-57.6,10.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC SEP 30</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC SEP 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.7 N, 59.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>994 mb / 29.35 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-59.1,10.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC SEP 30</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC SEP 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.2 N, 60.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>974 mb / 28.76 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-60.7,11.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 1</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.6 N, 62.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>975 mb / 28.79 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-62,11.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 1</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.0 N, 63.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-63.3,12</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 1</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.5 N, 64.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64.7,12.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 1</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.0 N, 66.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>967 mb / 28.56 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66,13</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 2</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.6 N, 67.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-67.3,13.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 2</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.2 N, 68.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>956 mb / 28.23 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>105 kt / 121 mph / 194 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.3,14.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 2</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.7 N, 69.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>105 kt / 121 mph / 194 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-69.2,14.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 2</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.1 N, 70.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>957 mb / 28.26 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>105 kt / 121 mph / 194 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70,15.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 3</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.5 N, 70.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>110 kt / 127 mph / 204 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70.7,15.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 3</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.9 N, 71.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>120 kt / 138 mph / 222 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.4,15.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 3</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.5 N, 72.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>125 kt / 144 mph / 232 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72,16.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 3</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.2 N, 72.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>933 mb / 27.55 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>130 kt / 150 mph / 241 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.5,17.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 4</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.1 N, 72.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>130 kt / 150 mph / 241 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.9,18.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0100 UTC OCT 4</name>
+      <styleUrl>#cat4</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0100 UTC OCT 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.2 N, 73.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>130 kt / 150 mph / 241 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73,18.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 4</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.8 N, 73.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>105 kt / 121 mph / 194 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.8,18.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 4</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.4 N, 74.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>105 kt / 121 mph / 194 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.4,19.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 4</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.0 N, 74.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>973 mb / 28.73 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>105 kt / 121 mph / 194 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.9,20</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 5</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.6 N, 75.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.7,20.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 5</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.7 N, 76.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.4,20.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 5</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.5 N, 76.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.6,20.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 5</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.3 N, 76.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.7,20.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 6</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.4 N, 77.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77.1,20.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 6</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.4 N, 77.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77.6,20.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 6</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.4 N, 77.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77.8,20.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 6</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.5 N, 78.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78,20.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 7</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.7 N, 78.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78.1,20.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 7</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>20.9 N, 78.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78.1,20.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 7</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.1 N, 78.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78.1,21.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 7</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.3 N, 78.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78,21.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 8</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.3 N, 77.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77.8,21.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 8</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.1 N, 77.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-77,21.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 8</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.1 N, 76.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.2,21.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 8</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.3 N, 75.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-75.4,21.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 9</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>21.7 N, 74.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>983 mb / 29.03 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.3,21.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 9</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>22.3 N, 72.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>977 mb / 28.85 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-72.9,22.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 9</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>23.3 N, 71.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>966 mb / 28.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.6,23.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 9</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>24.6 N, 70.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>965 mb / 28.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-70,24.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 10</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>25.8 N, 68.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>965 mb / 28.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68.3,25.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 10</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>26.9 N, 66.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.5,26.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 10</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>28.0 N, 64.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>969 mb / 28.61 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64.8,28</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 10</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>29.9 N, 62.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>972 mb / 28.70 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-62.4,29.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 11</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>32.2 N, 59.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>968 mb / 28.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-59.8,32.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 11</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>34.2 N, 58.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-58.3,34.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 11</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>36.2 N, 57.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>963 mb / 28.44 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-57,36.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 11</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>38.1 N, 56.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56,38.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 12</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>39.8 N, 55.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-55,39.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 12</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>41.5 N, 54.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54,41.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 12</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>43.0 N, 51.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-51.2,43</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 12</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 12</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>44.5 N, 47.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-47.5,44.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 13</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>46.0 N, 44.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-44.5,46</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 13</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>49.0 N, 44.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-44,49</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 13</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>53.0 N, 43.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-43,53</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 13</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 13</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>54.5 N, 40.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-40.5,54.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 14</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>57.0 N, 39.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-39,57</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 14</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>60.5 N, 37.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-37,60.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 14</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>62.5 N, 33.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-33,62.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 14</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 14</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>64.0 N, 30.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-30,64</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 15</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>65.0 N, 31.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-31,65</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 15</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>64.5 N, 32.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-32,64.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 15</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>64.0 N, 32.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-32,64</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 15</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 15</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>63.8 N, 32.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-32,63.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 16</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>63.6 N, 31.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-31.5,63.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 16</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>63.5 N, 31.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-31.5,63.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 16</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>63.3 N, 31.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-31.5,63.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 16</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 16</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>63.1 N, 31.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-31.5,63.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC OCT 17</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC OCT 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>63.0 N, 32.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-32.5,63</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC OCT 17</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC OCT 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>62.8 N, 33.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-33.5,62.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC OCT 17</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC OCT 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>62.6 N, 34.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-34.5,62.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC OCT 17</name>
+      <styleUrl>#ex</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>EX FLORA (AL071963)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC OCT 17</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>62.8 N, 33.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>N/A mb / N/A in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-33.5,62.8</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

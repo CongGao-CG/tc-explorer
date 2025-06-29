@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>AL022022</name>
+    <open>0</open>
+
+    <!-- =====  Document header ===== -->
+    <description><![CDATA[
+      <table>
+        <tr><td><b>Title:</b> Tropical Cyclone Best Track for AL022022</td></tr>
+        <tr><td><b>Date Created:</b> Jun 27 2025</td></tr>
+      </table>
+    ]]></description>
+
+    <!-- =====  Styles (ids must be unique)  ===== -->
+	<Style id="pt"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat5"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat5_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="db"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat3"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat3_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ss"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="lo"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat4"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat4_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat2"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat2_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ts"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ts_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="cat1"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>cat1_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ex"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="st"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="tc"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="wv"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="td"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>td_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="sd"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>ex_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+	<Style id="ty"> 
+		<IconStyle> 
+			<scale>1.0</scale> 
+			<Icon> 
+				<href>typhoon_nhemi.png</href> 
+			</Icon> 
+             <hotSpot x="15" y="17" xunits="pixels" yunits="pixels"/>
+		</IconStyle> 
+		<LabelStyle> 
+			<scale>1.0</scale> 
+		</LabelStyle> 
+	</Style>
+
+    <Placemark>
+      <name>1800 UTC JUN 27</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUN 27</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>8.3 N, 50.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-50.5,8.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUN 28</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUN 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>8.7 N, 52.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-52.2,8.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUN 28</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUN 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>9.1 N, 54.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-54.2,9.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUN 28</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUN 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>9.6 N, 56.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-56.5,9.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUN 28</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUN 28</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.2 N, 58.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-58.9,10.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUN 29</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUN 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.7 N, 61.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-61.6,10.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUN 29</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUN 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.1 N, 64.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-64,11.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUN 29</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUN 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.4 N, 66.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-66.2,11.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUN 29</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUN 29</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.7 N, 68.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-68,11.7</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUN 30</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUN 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.9 N, 69.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-69.7,11.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUN 30</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUN 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.0 N, 71.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1009 mb / 29.80 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-71.4,12</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUN 30</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUN 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.0 N, 73.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-73.1,12</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUN 30</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUN 30</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.0 N, 74.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1007 mb / 29.74 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-74.9,12</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 1</name>
+      <styleUrl>#db</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>DB BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.9 N, 76.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-76.7,11.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 1</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.6 N, 78.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-78.5,11.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 1</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.3 N, 80.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-80.2,11.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 1</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 1</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.2 N, 81.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1004 mb / 29.65 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-81.8,11.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>10.9 N, 83.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>996 mb / 29.41 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-83.1,10.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0300 UTC JUL 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0300 UTC JUL 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.0 N, 83.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>996 mb / 29.41 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-83.8,11</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.1 N, 84.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1000 mb / 29.53 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-84.5,11.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.2 N, 85.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-85.9,11.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 2</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 2</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.2 N, 87.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>999 mb / 29.50 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-87.4,11.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 3</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.2 N, 88.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>997 mb / 29.44 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-88.9,11.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 3</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.5 N, 90.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>997 mb / 29.44 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-90.4,11.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 3</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>11.8 N, 91.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>995 mb / 29.38 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-91.9,11.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 3</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 3</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.2 N, 93.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>993 mb / 29.32 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>60 kt / 69 mph / 111 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-93.4,12.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 4</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>12.9 N, 94.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>989 mb / 29.21 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-94.9,12.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 4</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.4 N, 96.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>987 mb / 29.15 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>70 kt / 81 mph / 130 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-96.6,13.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 4</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.6 N, 98.2 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>984 mb / 29.06 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-98.2,13.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 4</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 4</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>13.8 N, 99.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>978 mb / 28.88 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-99.6,13.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 5</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.4 N, 100.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>974 mb / 28.76 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-100.9,14.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 5</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>14.9 N, 102.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>968 mb / 28.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-102.4,14.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 5</name>
+      <styleUrl>#cat3</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.1 N, 103.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>964 mb / 28.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>100 kt / 115 mph / 185 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-103.8,15.1</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 5</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 5</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.4 N, 105.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>967 mb / 28.56 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>95 kt / 109 mph / 176 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-105.1,15.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 6</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.6 N, 106.4 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>970 mb / 28.64 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>90 kt / 104 mph / 167 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-106.4,15.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 6</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>15.8 N, 107.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>974 mb / 28.76 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-107.6,15.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 6</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.0 N, 108.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>975 mb / 28.79 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-108.5,16</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 6</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 6</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.3 N, 109.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>975 mb / 28.79 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-109.5,16.3</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 7</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.6 N, 110.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>980 mb / 28.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-110.6,16.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 7</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>16.9 N, 111.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>980 mb / 28.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-111.8,16.9</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 7</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.2 N, 113.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>980 mb / 28.94 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>80 kt / 92 mph / 148 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-113.1,17.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 7</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 7</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.5 N, 114.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>976 mb / 28.82 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-114.5,17.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 8</name>
+      <styleUrl>#cat2</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>17.8 N, 116.1 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>976 mb / 28.82 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>85 kt / 98 mph / 157 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-116.1,17.8</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 8</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.0 N, 117.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>982 mb / 29.00 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>75 kt / 86 mph / 139 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-117.7,18</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 8</name>
+      <styleUrl>#cat1</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>HU BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.2 N, 119.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>989 mb / 29.21 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>65 kt / 75 mph / 120 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-119.3,18.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 8</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 8</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>18.6 N, 121.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>998 mb / 29.47 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>55 kt / 63 mph / 102 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-121,18.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 9</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.0 N, 122.8 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1001 mb / 29.56 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>50 kt / 58 mph / 93 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-122.8,19</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 9</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.2 N, 124.7 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1002 mb / 29.59 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>45 kt / 52 mph / 83 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-124.7,19.2</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 9</name>
+      <styleUrl>#ts</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>TS BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.4 N, 126.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1005 mb / 29.68 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-126.6,19.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 9</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 9</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.5 N, 128.6 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>40 kt / 46 mph / 74 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-128.6,19.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 10</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.6 N, 130.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-130.5,19.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0600 UTC JUL 10</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0600 UTC JUL 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.5 N, 132.3 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>35 kt / 40 mph / 65 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-132.3,19.5</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1200 UTC JUL 10</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1200 UTC JUL 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.4 N, 134.0 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1008 mb / 29.77 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>30 kt / 35 mph / 56 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-134,19.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>1800 UTC JUL 10</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>1800 UTC JUL 10</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.4 N, 135.5 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-135.5,19.4</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>0000 UTC JUL 11</name>
+      <styleUrl>#lo</styleUrl>
+      <description><![CDATA[
+        <table>
+          <tr><td>LO BONNIE (AL022022)</td></tr>
+          <tr><td><hr></td></tr>
+          <tr><td>0000 UTC JUL 11</td></tr>
+          <tr><td>Storm Location:</td></tr>
+          <tr><td><b>19.4 N, 136.9 W</b></td></tr>
+          <tr><td>Min Sea Level Pressure:</td></tr>
+          <tr><td>1010 mb / 29.83 in Hg</td></tr>
+          <tr><td>Maximum Intensity:</td></tr>
+          <tr><td>25 kt / 29 mph / 46 kph</td></tr>
+        </table>
+      ]]></description>
+      <Point><coordinates>-136.9,19.4</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>
