@@ -2,101 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tropical Cyclone Explorer</title>
-  <!-- Tailwind for quick styling -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Leaflet -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha512-p20qK0C7Y4eiSOk7o+uG5MdrfzQNl5lO6ZkcnU9Eq+cptdUZZdw7gC5JMEkR9ZL+NxCJhQPWr26Qc1yM6Mi5Qw=="
-    crossorigin=""
-  />
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha512-pHO0bS1zZUzAhaS2flAKm9O30KURspvFc7T9xvoMzc3WtBaNXRZdES4kz0UM4cKap23Ks4Nsp0L4q8sJz8+gTg=="
-    crossorigin=""
-  ></script>
-  <!-- leaflet-omnivore can read KML directly -->
-  <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
+  <style>
+    html,body{height:100%}
+    #map{height:100%;width:100%}
+    .leaflet-tooltip.tc-label{font-size:10px;font-weight:600;background:rgba(255,255,255,.9);border:none;padding:1px 4px;border-radius:2px;pointer-events:none}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-plugins@3.0.0/layer/vector/KML.min.js"></script>
 </head>
-<body class="h-screen w-screen flex">
-  <!-- Sidebar -->
-  <aside class="w-72 p-4 bg-gray-100 overflow-y-auto">
+<body class="h-full w-full flex">
+  <aside class="w-80 p-4 bg-gray-100 overflow-y-auto">
     <h1 class="text-2xl font-bold mb-4">Tropical Cyclones</h1>
-    <input
-      id="search"
-      type="text"
-      placeholder="Search storms…"
-      class="mb-4 w-full p-2 border rounded"
-    />
+    <input id="search" type="text" placeholder="Search storms…" class="mb-4 w-full p-2 border rounded" />
     <ul id="storm-list" class="space-y-2"></ul>
   </aside>
 
-  <!-- Map -->
-  <main class="flex-1">
-    <div id="map" class="h-full w-full"></div>
-  </main>
+  <main class="flex-1"><div id="map"></div></main>
 
   <script>
-    // Initialise map
-    const map = L.map("map").setView([20, 0], 2);
+    /* ---------- Base map ---------- */
+    const map=L.map('map').setView([20,0],3);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:19}).addTo(map);
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "© OpenStreetMap contributors",
-    }).addTo(map);
+    let currentLayer=null;
+    let catalogue=[];
 
-    let currentLayer = null;
+    /* ---------- Load catalogue ---------- */
+    fetch('storms/storms.json')
+      .then(r=>r.ok?r.json():Promise.reject(r.status))
+      .then(data=>{catalogue=data;renderList(data,true);})
+      .catch(code=>alert(`storms.json error – HTTP ${code}`));
 
-    // Load the JSON catalogue of storms
-    fetch("storms/storms.json")
-      .then((res) => res.json())
-      .then((data) => {
-        window.stormCatalogue = data;
-        renderList(data);
+    const listEl=document.getElementById('storm-list');
+    const searchEl=document.getElementById('search');
+
+    /* ---------- Render list ---------- */
+    function renderList(arr,sortByYearDesc=false){
+      const sorted=arr.slice().sort((a,b)=>{
+        if(sortByYearDesc){
+          const yr=b.year-a.year; if(yr!==0) return yr;
+        }
+        return a.id.localeCompare(b.id);
       });
-
-    /**
-     * Render clickable list of storms
-     */
-    function renderList(arr) {
-      const list = document.getElementById("storm-list");
-      list.innerHTML = "";
-      arr.forEach((storm) => {
-        const li = document.createElement("li");
-        li.className =
-          "cursor-pointer hover:bg-blue-100 p-2 rounded transition-colors";
-        li.textContent = `${storm.name} (${storm.year})`;
-        li.addEventListener("click", () => loadStorm(storm));
-        list.appendChild(li);
+      listEl.innerHTML='';
+      sorted.forEach(s=>{
+        const li=document.createElement('li');
+        li.className='cursor-pointer hover:bg-blue-100 p-2 rounded';
+        li.textContent=`${s.id} – ${s.name||'Unnamed'} (${s.year})`;
+        li.onclick=()=>loadStorm(s);
+        listEl.appendChild(li);
       });
     }
 
-    // Simple client-side search
-    document.getElementById("search").addEventListener("input", (e) => {
-      const q = e.target.value.toLowerCase();
-      renderList(
-        window.stormCatalogue.filter(
-          (s) =>
-            s.name.toLowerCase().includes(q) || String(s.year).includes(q)
-        )
+    /* ---------- Search ---------- */
+    searchEl.oninput=e=>{
+      const q=e.target.value.trim().toLowerCase();
+      if(!q){ renderList(catalogue,true); return; }
+      const filtered=catalogue.filter(s=>
+        s.id.toLowerCase().includes(q)||
+        (s.name && s.name.toLowerCase().includes(q))||
+        String(s.year).includes(q)
       );
-    });
+      renderList(filtered,false);
+    };
 
-    /**
-     * Load a KML layer and zoom to it
-     */
-    function loadStorm(storm) {
-      if (currentLayer) map.removeLayer(currentLayer);
+    /* ---------- Load storm ---------- */
+    function loadStorm(storm){
+      if(currentLayer) map.removeLayer(currentLayer);
+      currentLayer=new L.KML(storm.kml,{async:true});
+      currentLayer.on('loaded',()=>{addLabelsRecursive(currentLayer);map.fitBounds(currentLayer.getBounds());});
+      map.addLayer(currentLayer);
+    }
 
-      currentLayer = omnivore
-        .kml(storm.kml)
-        .on("ready", function () {
-          map.fitBounds(currentLayer.getBounds());
-        })
-        .addTo(map);
+    /* ---------- Labels ---------- */
+    function addLabelsRecursive(layer){
+      if(layer.getLayers){layer.getLayers().forEach(addLabelsRecursive);}  
+      if(typeof layer.bindTooltip!=='function') return;
+      const label=getLabel(layer);
+      if(label && !layer.getTooltip()){
+        layer.bindTooltip(label,{permanent:true,direction:'right',className:'tc-label',offset:[6,0]});
+      }
+    }
+
+    function getLabel(layer){
+      return layer?.feature?.properties?.name || layer.options?.title || layer.options?.name || ((layer.getPopup&&layer.getPopup())?(layer.getPopup().getContent().match(/<h2>(.*?)<\/h2>/i)||[])[1]:'');
     }
   </script>
 </body>
