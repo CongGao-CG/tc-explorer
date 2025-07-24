@@ -48198,6 +48198,12 @@
     "kml": "storms/SH232019_WALLACE_43.kml"
   },
   {
+    "id": "WP082019",
+    "name": "Wipha",
+    "year": 2019,
+    "kml": "storms/WP082019_WIPHA_25.kml"
+  },
+  {
     "id": "WP022019",
     "name": "Wutip",
     "year": 2019,
