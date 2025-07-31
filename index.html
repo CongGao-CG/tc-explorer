@@ -44,36 +44,42 @@
       if(zoom>9) step=2;
       if(zoom>11) step=1;
       
+      // Get visible bounds with some padding
+      const west=Math.max(-180,bounds.getWest()-step);
+      const east=Math.min(180,bounds.getEast()+step);
+      const south=Math.max(-85,bounds.getSouth()-step); // Limit to Web Mercator bounds
+      const north=Math.min(85,bounds.getNorth()+step);
+      
       // Draw latitude lines
       for(let lat=-90;lat<=90;lat+=step){
-        if(lat<bounds.getSouth()-step||lat>bounds.getNorth()+step) continue;
-        const line=L.polyline([[lat,-180],[lat,180]],{color:'#ccc',weight:0.5,dashArray:'2,4',interactive:false});
+        if(lat<south||lat>north) continue;
+        const line=L.polyline([[lat,west],[lat,east]],{color:'#999',weight:1,opacity:0.5,dashArray:'2,4',interactive:false});
         gridLayer.addLayer(line);
         
-        // Add labels at visible longitude edges
-        const labelLng=Math.max(bounds.getWest(),Math.min(bounds.getEast(),0));
+        // Add label
+        const labelLng=west+1;
         const label=L.divIcon({
-          html:`<div style="font-size:10px;color:#666;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:2px">${lat}°</div>`,
-          iconSize:[30,12],
-          iconAnchor:[15,6],
-          className:'grid-label-icon'
+          html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${lat}°</div>`,
+          iconSize:[40,16],
+          iconAnchor:[0,8],
+          className:''
         });
         gridLayer.addLayer(L.marker([lat,labelLng],{icon:label,interactive:false}));
       }
       
       // Draw longitude lines
       for(let lng=-180;lng<=180;lng+=step){
-        if(lng<bounds.getWest()-step||lng>bounds.getEast()+step) continue;
-        const line=L.polyline([[-90,lng],[90,lng]],{color:'#ccc',weight:0.5,dashArray:'2,4',interactive:false});
+        if(lng<west||lng>east) continue;
+        const line=L.polyline([[south,lng],[north,lng]],{color:'#999',weight:1,opacity:0.5,dashArray:'2,4',interactive:false});
         gridLayer.addLayer(line);
         
-        // Add labels at visible latitude edges
-        const labelLat=Math.max(bounds.getSouth(),Math.min(bounds.getNorth(),0));
+        // Add label
+        const labelLat=north-1;
         const label=L.divIcon({
-          html:`<div style="font-size:10px;color:#666;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:2px">${lng}°</div>`,
-          iconSize:[30,12],
-          iconAnchor:[15,6],
-          className:'grid-label-icon'
+          html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${lng}°</div>`,
+          iconSize:[40,16],
+          iconAnchor:[20,0],
+          className:''
         });
         gridLayer.addLayer(L.marker([labelLat,lng],{icon:label,interactive:false}));
       }
