@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tropical Cyclone Explorer - Google Maps</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body { height: 100%; margin: 0; padding: 0; }
+    #map { height: 100%; width: 100%; }
+    .gm-style-iw { max-width: 300px; }
+    /* Custom info window styling */
+    .storm-info { font-size: 14px; line-height: 1.4; }
+    .storm-info h3 { margin: 0 0 8px 0; font-weight: bold; }
+    /* Time label styling */
+    .storm-time-label {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2px 4px;
+      border-radius: 3px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body class="h-full w-full flex">
+  <aside class="w-80 p-4 bg-gray-100 overflow-y-auto">
+    <h1 class="text-2xl font-bold mb-4">Tropical Cyclones</h1>
+    <input id="search" type="text" placeholder="Search storms…" class="mb-4 w-full p-2 border rounded" />
+    <div class="mb-4 text-sm text-gray-600">
+      <p>Click on a storm to load its track</p>
+    </div>
+    <ul id="storm-list" class="space-y-2"></ul>
+  </aside>
+  <main class="flex-1">
+    <div id="map"></div>
+  </main>
+  
+  <script>
+    let map;
+    let currentKmlLayer = null;
+    let catalogue = [];
+    let infoWindow;
+    window.customMarkers = [];
+    
+    // Initialize map
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 20, lng: 0 },
+        zoom: 3,
+        mapTypeId: 'terrain',
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+          position: google.maps.ControlPosition.TOP_RIGHT
+        }
+      });
+      
+      infoWindow = new google.maps.InfoWindow();
+      
+      // Load the storm catalogue
+      loadCatalogue();
+    }
+    
+    // Load storm catalogue
+    function loadCatalogue() {
+      fetch('storms/storms.json')
+        .then(r => r.ok ? r.json() : Promise.reject(r.status))
+        .then(data => {
+          catalogue = data;
+          renderList(data, true);
+        })
+        .catch(code => alert(`storms.json error – HTTP ${code}`));
+    }
+    
+    const listEl = document.getElementById('storm-list');
+    const searchEl = document.getElementById('search');
+    
+    // Render storm list
+    function renderList(arr, sortByYearDesc = false) {
+      const sorted = arr.slice().sort((a, b) => {
+        if (sortByYearDesc) {
+          const yr = b.year - a.year;
+          if (yr !== 0) return yr;
+        }
+        return a.id.localeCompare(b.id);
+      });
+      
+      listEl.innerHTML = '';
+      sorted.forEach(s => {
+        const li = document.createElement('li');
+        li.className = 'cursor-pointer hover:bg-blue-100 p-2 rounded transition-colors';
+        li.innerHTML = `
+          <div class="font-medium">${s.id} – ${s.name || 'Unnamed'}</div>
+          <div class="text-sm text-gray-600">${s.year}</div>
+        `;
+        li.onclick = () => loadStorm(s);
+        listEl.appendChild(li);
+      });
+    }
+    
+    // Search functionality
+    searchEl.oninput = e => {
+      const q = e.target.value.trim().toLowerCase();
+      if (!q) {
+        renderList(catalogue, true);
+        return;
+      }
+      const filtered = catalogue.filter(s =>
+        s.id.toLowerCase().includes(q) ||
+        (s.name && s.name.toLowerCase().includes(q)) ||
+        String(s.year).includes(q)
+      );
+      renderList(filtered, false);
+    };
+    
+    // Load and display storm KML
+    function loadStorm(storm) {
+      // Remove existing KML layer if any
+      if (currentKmlLayer) {
+        currentKmlLayer.setMap(null);
+      }
+      
+      // Clear any existing custom markers
+      if (window.customMarkers) {
+        window.customMarkers.forEach(marker => marker.setMap(null));
+      }
+      window.customMarkers = [];
+      
+      // Construct full URL for KML file
+      let kmlUrl = storm.kml;
+      
+      // Check if it's already a full URL
+      if (!kmlUrl.startsWith('http://') && !kmlUrl.startsWith('https://')) {
+        // Construct GitHub Pages URL
+        const baseUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+          ? window.location.origin // For local testing
+          : 'https://conggao-cg.github.io/tc-explorer'; // GitHub Pages URL
+        
+        kmlUrl = `${baseUrl}/${kmlUrl}`;
+      }
+      
+      console.log('Loading KML from:', kmlUrl);
+      
+      // Option 1: Use KmlLayer with preprocessing
+      // First, fetch and preprocess the KML to fix icon URLs
+      fetch(storm.kml)
+        .then(response => response.text())
+        .then(kmlText => {
+          // Fix icon URLs in the KML
+          const baseUrl = 'https://conggao-cg.github.io/tc-explorer';
+          const processedKml = kmlText.replace(
+            /(<href>)((?!http)[^<]+)(<\/href>)/g,
+            `$1${baseUrl}/$2$3`
+          );
+          
+          // Parse KML to extract time information
+          parseAndDisplayKml(processedKml, storm);
+        })
+        .catch(error => {
+          console.error('Error loading KML:', error);
+          // Fallback to standard KmlLayer
+          loadKmlLayer(kmlUrl);
+        });
+    }
+    
+    // Standard KmlLayer loading (fallback)
+    function loadKmlLayer(kmlUrl) {
+      currentKmlLayer = new google.maps.KmlLayer({
+        url: kmlUrl,
+        map: map,
+        preserveViewport: false,
+        suppressInfoWindows: false
+      });
+      
+      google.maps.event.addListener(currentKmlLayer, 'status_changed', function() {
+        const status = currentKmlLayer.getStatus();
+        if (status !== 'OK') {
+          console.error('KML loading error:', status);
+          alert(`Error loading storm data: ${status}`);
+        }
+      });
+    }
+    
+    // Parse KML and create custom markers with time labels
+    function parseAndDisplayKml(kmlText, storm) {
+      const parser = new DOMParser();
+      const kmlDoc = parser.parseFromString(kmlText, 'text/xml');
+      
+      // Get all Placemarks
+      const placemarks = kmlDoc.getElementsByTagName('Placemark');
+      const bounds = new google.maps.LatLngBounds();
+      
+      // Base URL for icons
+      const iconBaseUrl = 'https://conggao-cg.github.io/tc-explorer/storms/';
+      
+      Array.from(placemarks).forEach(placemark => {
+        // Get coordinates
+        const coordinates = placemark.getElementsByTagName('coordinates')[0];
+        if (!coordinates) return;
+        
+        const coordText = coordinates.textContent.trim();
+        const [lng, lat] = coordText.split(',').map(parseFloat);
+        const position = new google.maps.LatLng(lat, lng);
+        bounds.extend(position);
+        
+        // Get time
+        const when = placemark.getElementsByTagName('when')[0];
+        const timeStamp = placemark.getElementsByTagName('TimeStamp')[0];
+        let timeText = '';
+        
+        if (when) {
+          timeText = formatTime(when.textContent);
+        } else if (timeStamp) {
+          const timeWhen = timeStamp.getElementsByTagName('when')[0];
+          if (timeWhen) timeText = formatTime(timeWhen.textContent);
+        }
+        
+        // Get name and description
+        const name = placemark.getElementsByTagName('name')[0];
+        const nameText = name ? name.textContent : '';
+        
+        // Get icon URL
+        const style = placemark.getElementsByTagName('Style')[0];
+        let iconUrl = null;
+        if (style) {
+          const iconStyle = style.getElementsByTagName('IconStyle')[0];
+          if (iconStyle) {
+            const icon = iconStyle.getElementsByTagName('Icon')[0];
+            if (icon) {
+              const href = icon.getElementsByTagName('href')[0];
+              if (href) {
+                iconUrl = href.textContent;
+                // Fix relative URLs
+                if (!iconUrl.startsWith('http')) {
+                  iconUrl = iconBaseUrl + iconUrl.replace('storms/', '');
+                }
+              }
+            }
+          }
+        }
+        
+        // Create marker
+        const marker = new google.maps.Marker({
+          position: position,
+          map: map,
+          title: nameText + (timeText ? ' - ' + timeText : ''),
+          icon: iconUrl ? {
+            url: iconUrl,
+            scaledSize: new google.maps.Size(20, 20),
+            anchor: new google.maps.Point(10, 10)
+          } : null
+        });
+        
+        // Add label for time
+        if (timeText && nameText) {
+          const label = new google.maps.Marker({
+            position: position,
+            map: map,
+            icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              scale: 0
+            },
+            label: {
+              text: timeText,
+              color: '#000',
+              fontSize: '10px',
+              fontWeight: 'bold',
+              className: 'storm-time-label'
+            }
+          });
+          window.customMarkers.push(label);
+        }
+        
+        // Add info window
+        const description = placemark.getElementsByTagName('description')[0];
+        if (description) {
+          const infoContent = `
+            <div class="storm-info">
+              <h3>${nameText}</h3>
+              <p><strong>Time:</strong> ${timeText}</p>
+              <div>${description.textContent}</div>
+            </div>
+          `;
+          
+          marker.addListener('click', function() {
+            infoWindow.setContent(infoContent);
+            infoWindow.open(map, marker);
+          });
+        }
+        
+        window.customMarkers.push(marker);
+      });
+      
+      // Draw lines between points
+      const lineCoordinates = [];
+      Array.from(placemarks).forEach(placemark => {
+        const coordinates = placemark.getElementsByTagName('coordinates')[0];
+        if (coordinates) {
+          const coordText = coordinates.textContent.trim();
+          const [lng, lat] = coordText.split(',').map(parseFloat);
+          lineCoordinates.push(new google.maps.LatLng(lat, lng));
+        }
+      });
+      
+      if (lineCoordinates.length > 1) {
+        const stormPath = new google.maps.Polyline({
+          path: lineCoordinates,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2
+        });
+        stormPath.setMap(map);
+        window.customMarkers.push(stormPath);
+      }
+      
+      // Fit map to bounds
+      map.fitBounds(bounds);
+    }
+    
+    // Format time from ISO string
+    function formatTime(isoString) {
+      if (!isoString) return '';
+      const date = new Date(isoString);
+      const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
+      const day = date.getUTCDate().toString().padStart(2, '0');
+      const hours = date.getUTCHours().toString().padStart(2, '0');
+      return `${month}/${day} ${hours}:00`;
+    }
+  </script>
+  
+  <!-- Load Google Maps API -->
+  <!-- Replace YOUR_API_KEY_HERE with your actual Google Maps API key -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX_YvYFsw9M3Q7wMFoL2QDh7dI_ASyAps&callback=initMap&libraries=visualization">
+  </script>
+</body>
+</html>
