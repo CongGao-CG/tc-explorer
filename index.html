@@ -5,100 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tropical Cyclone Explorer</title>
 
-  <!-- Assets -->
+  <!-- ── Tailwind (UI) ─────────────────────────────── -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-plugins@3.0.0/layer/vector/KML.min.js"></script>
+
+  <!-- ── OpenLayers (map engine) ───────────────────── -->
+  <link  href="https://cdn.jsdelivr.net/npm/ol@9.1.0/ol.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/ol@9.1.0/dist/ol.js"></script>
 
   <style>
     html,body{height:100%}
     #map{height:100%;width:100%}
-    .leaflet-tooltip.tc-label{
-      font-size:10px;font-weight:600;
-      background:rgba(255,255,255,.9);
-      border:none;padding:1px 4px;border-radius:2px;
-      pointer-events:none
-    }
+    /* simple tooltip for storm IDs */
+    .ol-tooltip{background:rgba(255,255,255,.9);border:1px solid #ccc;padding:2px 4px;font-size:11px;border-radius:2px;white-space:nowrap}
   </style>
 </head>
 
 <body class="h-full w-full flex">
-<!-- ─────────────── Sidebar ─────────────── -->
+<!-- ─────────────────────────  Sidebar  ────────────────────────── -->
 <aside class="w-80 p-4 bg-gray-100 overflow-y-auto">
   <h1 class="text-2xl font-bold mb-4">Tropical Cyclones</h1>
   <input id="search" type="text" placeholder="Search storms…" class="mb-4 w-full p-2 border rounded" />
   <ul   id="storm-list" class="space-y-2"></ul>
 </aside>
 
-<!-- ─────────────── Map ─────────────── -->
+<!-- ───────────────────────────  Map  ──────────────────────────── -->
 <main class="flex-1"><div id="map"></div></main>
 
 <script>
 /* ------------------------------------------------------------------ */
-/*  Base map                                                          */
+/* 1.  OpenLayers base map & vector layer                             */
 /* ------------------------------------------------------------------ */
-const map=L.map('map').setView([20,0],3);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-  attribution:'© OpenStreetMap contributors',
-  maxZoom:19,
-  noWrap:false
-}).addTo(map);
+const raster = new ol.layer.Tile({
+  source: new ol.source.OSM()
+});
+
+/* `wrapX:false` keeps one copy of the data; OpenLayers still draws
+   across the antimeridian seamlessly */
+const vectorSource = new ol.source.Vector({wrapX:false});
+
+const vectorLayer = new ol.layer.Vector({
+  source: vectorSource,
+  style : new ol.style.Style({
+    stroke: new ol.style.Stroke({color:'#d22',width:2})
+  })
+});
+
+const map = new ol.Map({
+  target : 'map',
+  layers : [raster, vectorLayer],
+  view   : new ol.View({
+    center: ol.proj.fromLonLat([0,20]),
+    zoom  : 3
+  })
+});
 
 /* ------------------------------------------------------------------ */
-/*  Lat/Lon grid (unchanged)                                          */
+/* 2.  Tooltip on hover (storm point/segment names)                   */
 /* ------------------------------------------------------------------ */
-const gridLayer=L.layerGroup().addTo(map);
-function normLon(l){while(l> 180)l-=360;while(l<-180)l+=360;return l;}
-function drawGrid(){
-  gridLayer.clearLayers();
-  const b=map.getBounds(), z=map.getZoom();
-  let step=30;if(z>3)step=20;if(z>5)step=10;if(z>7)step=5;if(z>9)step=2;if(z>11)step=1;
-  const W=b.getWest(),E=b.getEast(),S=Math.max(-85,b.getSouth()),N=Math.min(85,b.getNorth());
-  for(let lat=-90;lat<=90;lat+=step){
-    if(lat<S-step||lat>N+step)continue;
-    gridLayer.addLayer(L.polyline([[lat,W],[lat,E]],{color:'#999',weight:1,opacity:.5,dashArray:'2,4',interactive:false}));
-    const startLng=Math.floor(W/60)*60;
-    for(let lng=startLng;lng<=E;lng+=60){
-      gridLayer.addLayer(L.marker([lat,lng],{interactive:false,
-        icon:L.divIcon({html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${lat}°</div>`,
-        iconSize:[40,16],iconAnchor:[0,8],className:''})}));
-    }
+const tooltip = document.createElement('div');
+tooltip.className = 'ol-tooltip';
+const overlay = new ol.Overlay({element: tooltip, offset:[10,0], positioning:'bottom-left'});
+map.addOverlay(overlay);
+
+map.on('pointermove', (e)=>{
+  const feat = map.forEachFeatureAtPixel(e.pixel,f=>f);
+  if(feat && feat.get('name')){
+    tooltip.innerHTML = feat.get('name');
+    overlay.setPosition(e.coordinate);
+    tooltip.style.display = 'block';
+  }else{
+    tooltip.style.display = 'none';
   }
-  const startLng=Math.floor(W/step)*step,endLng=Math.ceil(E/step)*step;
-  for(let lng=startLng;lng<=endLng;lng+=step){
-    gridLayer.addLayer(L.polyline([[S,lng],[N,lng]],{color:'#999',weight:1,opacity:.5,dashArray:'2,4',interactive:false}));
-    gridLayer.addLayer(L.marker([N-2,lng],{interactive:false,
-      icon:L.divIcon({html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${normLon(lng)}°</div>`,
-      iconSize:[40,16],iconAnchor:[20,0],className:''})}));
-  }
-}
-map.on('moveend zoomend',drawGrid);setTimeout(drawGrid,100);
+});
 
 /* ------------------------------------------------------------------ */
-/*  Sidebar catalogue                                                 */
+/* 3.  Catalogue sidebar                                              */
 /* ------------------------------------------------------------------ */
-let currentLayer=null,catalogue=[];
+let catalogue=[];
 fetch('storms/storms.json')
   .then(r=>r.ok?r.json():Promise.reject(r.status))
-  .then(d=>{catalogue=d;renderList(d,true);})
-  .catch(c=>alert(`storms.json HTTP ${c}`));
+  .then(d=>{catalogue=d; renderList(d,true);})
+  .catch(c=>alert(`storms.json – HTTP ${c}`));
 
-const listEl=document.getElementById('storm-list'),searchEl=document.getElementById('search');
-function renderList(arr,desc=false){
-  const s=arr.slice().sort((a,b)=>{
-    if(desc){const y=b.year-a.year;if(y)return y;}
+const listEl   = document.getElementById('storm-list');
+const searchEl = document.getElementById('search');
+
+function renderList(arr,yearDesc=false){
+  const sorted = arr.slice().sort((a,b)=>{
+    if(yearDesc){const y=b.year-a.year; if(y) return y;}
     return a.id.localeCompare(b.id);
   });
   listEl.innerHTML='';
-  s.forEach(st=>{
+  sorted.forEach(s=>{
     const li=document.createElement('li');
     li.className='cursor-pointer hover:bg-blue-100 p-2 rounded';
-    li.textContent=`${st.id} – ${st.name||'Unnamed'} (${st.year})`;
-    li.onclick=()=>loadStorm(st);
+    li.textContent=`${s.id} – ${s.name||'Unnamed'} (${s.year})`;
+    li.onclick=()=>loadStorm(s);
     listEl.appendChild(li);
   });
 }
+
 searchEl.oninput=e=>{
   const q=e.target.value.trim().toLowerCase();
   if(!q){renderList(catalogue,true);return;}
@@ -110,78 +116,26 @@ searchEl.oninput=e=>{
 };
 
 /* ------------------------------------------------------------------ */
-/*  Antimeridian helpers                                              */
-/* ------------------------------------------------------------------ */
-/*  1️⃣  Unwrap so successive points differ by <180 °                  */
-function unwrapTrack(flat){
-  const res=[];let shift=0;
-  for(let i=0;i<flat.length;i++){
-    let {lat,lng}=flat[i];
-    let adjLng=lng+shift;
-    if(i){
-      const prev=res[res.length-1].lng;
-      let d=adjLng-prev;
-      if(d> 180){shift-=360;adjLng=lng+shift;}
-      if(d<-180){shift+=360;adjLng=lng+shift;}
-    }
-    res.push(L.latLng(lat,adjLng));
-  }
-  return res;
-}
-/*  2️⃣  Bring wrapped longitudes back to main world copy              */
-function rewrapForDisplay(unwrapped){
-  // choose a single 360°-copy that minimises total span
-  const longitudes=unwrapped.map(p=>p.lng);
-  const centre=(Math.min(...longitudes)+Math.max(...longitudes))/2;
-  const k=Math.round(centre/360);          // which 360° band
-  return unwrapped.map(p=>L.latLng(p.lat,p.lng-360*k));
-}
-
-/*  3️⃣  Apply to every polyline                                       */
-function fixDateline(layer){
-  if(layer instanceof L.Polyline && !(layer instanceof L.Polygon)){
-    const flat=L.LineUtil.isFlat(layer.getLatLngs())
-               ?layer.getLatLngs()
-               :layer.getLatLngs().flat(Infinity);
-    const fixed=rewrapForDisplay(unwrapTrack(flat));
-    layer.setLatLngs(fixed);
-    layer.setStyle({noClip:true});         // avoid Leaflet’s hard-edge clip
-    return;
-  }
-  if(layer.eachLayer) layer.eachLayer(fixDateline);
-}
-
-/* ------------------------------------------------------------------ */
-/*  Load one storm                                                    */
+/* 4.  Storm loader (KML → vector layer)                              */
 /* ------------------------------------------------------------------ */
 function loadStorm(storm){
-  if(currentLayer) map.removeLayer(currentLayer);
-  currentLayer=new L.KML(storm.kml,{async:true});
-  currentLayer.on('loaded',()=>{
-    fixDateline(currentLayer);
-    addLabelsRecursive(currentLayer);
-    map.fitBounds(currentLayer.getBounds(),{padding:[20,20]});
-  });
-  map.addLayer(currentLayer);
-}
+  fetch(storm.kml)
+    .then(r=>r.text())
+    .then(xml=>{
+      // Parse KML → EPSG:3857 (Web-Mercator) in one step
+      const fmt      = new ol.format.KML({extractStyles:true});
+      const features = fmt.readFeatures(xml,{
+        dataProjection   : 'EPSG:4326',
+        featureProjection: 'EPSG:3857'
+      });
 
-/* ------------------------------------------------------------------ */
-/*  Labels (unchanged)                                                */
-/* ------------------------------------------------------------------ */
-function addLabelsRecursive(layer){
-  if(layer.getLayers)layer.getLayers().forEach(addLabelsRecursive);
-  if(typeof layer.bindTooltip!=='function')return;
-  const lbl=getLabel(layer);
-  if(lbl&&!layer.getTooltip())layer.bindTooltip(lbl,{permanent:true,direction:'right',
-                  className:'tc-label',offset:[6,0]});
-}
-function getLabel(layer){
-  return layer?.feature?.properties?.name
-      || layer.options?.title
-      || layer.options?.name
-      || (layer.getPopup&&layer.getPopup()
-          ?(layer.getPopup().getContent().match(/<h2>(.*?)<\/h2>/i)||[])[1]
-          :'');
+      vectorSource.clear();
+      vectorSource.addFeatures(features);
+
+      const ext = vectorSource.getExtent();
+      map.getView().fit(ext, {padding:[40,40], maxZoom:7});
+    })
+    .catch(()=>alert(`Could not load ${storm.kml}`));
 }
 </script>
 </body>
