@@ -110,6 +110,8 @@
      currentLayer = new ol.layer.Vector({
        source: kmlSource,
        style: function(feature) {
+         // This styling function remains the same.
+         // It will style the original points and the new line we create.
          const styles = [];
          if (feature.getGeometry().getType() === 'LineString') {
            styles.push(new ol.style.Style({
@@ -131,35 +133,68 @@
 
      map.addLayer(currentLayer);
 
-     // When features are loaded, create a line based on the file's point order
+     // Helper function to parse date/time from KML description
+     function extractDate(feature) {
+       const description = feature.get('description') || '';
+       // Use regex to find date and time strings
+       const dateMatch = description.match(/Date:<\/strong>\s*(\d{2}\/\d{2}\/\d{4})/);
+       const timeMatch = description.match(/Time:<\/strong>\s*(\d{2}:\d{2})\s*UTC/);
+
+       if (dateMatch && timeMatch) {
+         const dateStr = dateMatch[1]; // "MM/DD/YYYY"
+         const timeStr = timeMatch[1]; // "HH:mm"
+         // Reformat to ISO 8601 for reliable parsing: "YYYY-MM-DDTHH:mm:ssZ"
+         const [month, day, year] = dateStr.split('/');
+         const isoStr = `${year}-${month}-${day}T${timeStr}:00Z`;
+         return new Date(isoStr);
+       }
+       // Return an early date as a fallback if parsing fails
+       return new Date(0);
+     }
+
+     // When features are loaded, sort points, create a line, and fit the view
      kmlSource.once('change', () => {
        if (kmlSource.getState() === 'ready') {
          const worldWidth = ol.extent.getWidth(map.getView().getProjection().getExtent());
          
-         // 1. Get all point features, trusting the order from the KML file. DO NOT SORT.
-         const pointFeatures = kmlSource.getFeatures().filter(
-            feature => feature.getGeometry().getType() === 'Point'
-         );
+         // 1. Get all features (which are all points) and sort them by date
+         const pointFeatures = kmlSource.getFeatures();
+         pointFeatures.sort((a, b) => extractDate(a) - extractDate(b));
          
          if (pointFeatures.length > 1) {
-           // 2. Create coordinates directly from the features' original order
+           // 2. Create a continuous coordinate array from the sorted points
            const coords = pointFeatures.map(p => p.getGeometry().getCoordinates());
-
-           // Correct for antimeridian crossing
            for (let i = 1; i < coords.length; i++) {
              const prevLon = coords[i-1][0];
              if (Math.abs(coords[i][0] - prevLon) > worldWidth / 2) {
-               coords[i][0] += (coords[i][0] < prevLon) ? worldWidth : -worldWidth;
+               if (coords[i][0] < prevLon) {
+                 coords[i][0] += worldWidth;
+               } else {
+                 coords[i][0] -= worldWidth;
+               }
              }
            }
            
-           // 3. Create the LineString feature and add it to the map
+           // 3. Create a new LineString feature from the adjusted coordinates
            const lineGeom = new ol.geom.LineString(coords);
            const lineFeature = new ol.Feature({ geometry: lineGeom });
-           kmlSource.addFeature(lineFeature);
+           // kmlSource.addFeature(lineFeature); // Add the new line to the map
+           
+           // 4. Adjust original point features to match the new continuous line
+           const lineExtent = lineGeom.getExtent();
+           const lineCenterLon = (lineExtent[0] + lineExtent[2]) / 2;
+
+           pointFeatures.forEach(point => {
+             const pointGeom = point.getGeometry();
+             const pCoord = pointGeom.getCoordinates();
+             if (Math.abs(pCoord[0] - lineCenterLon) > worldWidth / 2) {
+                pCoord[0] += (pCoord[0] < lineCenterLon) ? worldWidth : -worldWidth;
+                pointGeom.setCoordinates(pCoord);
+             }
+           });
          }
          
-         // 4. Fit the view
+         // 5. Fit the view to the extent of ALL features (new line + adjusted points)
          const extent = kmlSource.getExtent();
          if (!ol.extent.isEmpty(extent)) {
            map.getView().fit(extent, {
