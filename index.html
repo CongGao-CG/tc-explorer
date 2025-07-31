@@ -144,7 +144,7 @@
 
       map.addLayer(currentLayer);
 
-      // When features are loaded, fit view and add labels
+      // When features are loaded, fit view
       kmlSource.once('change', () => {
         if (kmlSource.getState() === 'ready') {
           const extent = kmlSource.getExtent();
