@@ -178,7 +178,7 @@
            // 3. Create a new LineString feature from the adjusted coordinates
            const lineGeom = new ol.geom.LineString(coords);
            const lineFeature = new ol.Feature({ geometry: lineGeom });
-           // kmlSource.addFeature(lineFeature); // Add the new line to the map
+           kmlSource.addFeature(lineFeature); // Add the new line to the map
            
            // 4. Adjust original point features to match the new continuous line
            const lineExtent = lineGeom.getExtent();
