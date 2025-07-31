@@ -4,177 +4,244 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tropical Cyclone Explorer</title>
+
+  <!-- Tailwind & Leaflet assets -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-plugins@3.0.0/layer/vector/KML.min.js"></script>
+
   <style>
     html,body{height:100%}
     #map{height:100%;width:100%}
-    .leaflet-tooltip.tc-label{font-size:10px;font-weight:600;background:rgba(255,255,255,.9);border:none;padding:1px 4px;border-radius:2px;pointer-events:none}
-    .grid-line{stroke:#ccc;stroke-width:0.5;stroke-dasharray:2,4;fill:none}
-    .grid-label{font-size:11px;fill:#666;font-family:Arial,sans-serif}
+    .leaflet-tooltip.tc-label{
+      font-size:10px;font-weight:600;
+      background:rgba(255,255,255,.9);
+      border:none;padding:1px 4px;border-radius:2px;
+      pointer-events:none
+    }
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-plugins@3.0.0/layer/vector/KML.min.js"></script>
 </head>
+
 <body class="h-full w-full flex">
+  <!-- ---------- Sidebar ---------- -->
   <aside class="w-80 p-4 bg-gray-100 overflow-y-auto">
     <h1 class="text-2xl font-bold mb-4">Tropical Cyclones</h1>
     <input id="search" type="text" placeholder="Search storms…" class="mb-4 w-full p-2 border rounded" />
     <ul id="storm-list" class="space-y-2"></ul>
   </aside>
+
+  <!-- ---------- Map ---------- -->
   <main class="flex-1"><div id="map"></div></main>
+
   <script>
-    /* ---------- Base map ---------- */
-    const map=L.map('map').setView([20,0],3);
-    
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-      attribution:'© OpenStreetMap contributors',
-      maxZoom:19,
-      noWrap:false // This enables continuous horizontal scrolling
-    }).addTo(map);
-    
-    /* ---------- Lat/Lon Grid ---------- */
-    const gridLayer=L.layerGroup().addTo(map);
-    
-    function normalizelon(lon){
-      // Normalize longitude to -180 to 180 range
-      while(lon>180) lon-=360;
-      while(lon<-180) lon+=360;
-      return lon;
-    }
-    
-    function drawGrid(){
-      gridLayer.clearLayers();
-      const bounds=map.getBounds();
-      const zoom=map.getZoom();
-      
-      // Determine grid spacing based on zoom level
-      let step=30;
-      if(zoom>3) step=20;
-      if(zoom>5) step=10;
-      if(zoom>7) step=5;
-      if(zoom>9) step=2;
-      if(zoom>11) step=1;
-      
-      // Get visible bounds
-      const west=bounds.getWest();
-      const east=bounds.getEast();
-      const south=Math.max(-85,bounds.getSouth());
-      const north=Math.min(85,bounds.getNorth());
-      
-      // Draw latitude lines
-      for(let lat=-90;lat<=90;lat+=step){
-        if(lat<south-step||lat>north+step) continue;
-        
-        // Draw line across visible area
-        const line=L.polyline([[lat,west],[lat,east]],{
-          color:'#999',
-          weight:1,
-          opacity:0.5,
-          dashArray:'2,4',
-          interactive:false
-        });
-        gridLayer.addLayer(line);
-        
-        // Add labels
-        const startLng=Math.floor(west/60)*60;
-        for(let lng=startLng;lng<=east;lng+=60){
-          const label=L.divIcon({
+  /* ------------------------------------------------------------------ */
+  /*  Base map (with horizontal wrap)                                   */
+  /* ------------------------------------------------------------------ */
+  const map = L.map('map').setView([20, 0], 3);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution : '© OpenStreetMap contributors',
+    maxZoom     : 19,
+    noWrap      : false                  // allow infinite horizontal panning
+  }).addTo(map);
+
+  /* ------------------------------------------------------------------ */
+  /*  Lat/Lon grid (simple – no changes from previous version)          */
+  /* ------------------------------------------------------------------ */
+  const gridLayer = L.layerGroup().addTo(map);
+
+  function normalizelon(lon){
+    while (lon >  180) lon -= 360;
+    while (lon < -180) lon += 360;
+    return lon;
+  }
+
+  function drawGrid(){
+    gridLayer.clearLayers();
+    const b   = map.getBounds(),
+          z   = map.getZoom();
+
+    let step = 30;            // coarse grid – refine by zoom
+    if (z>3)  step = 20;
+    if (z>5)  step = 10;
+    if (z>7)  step = 5;
+    if (z>9)  step = 2;
+    if (z>11) step = 1;
+
+    const W=b.getWest(), E=b.getEast(),
+          S=Math.max(-85,b.getSouth()),
+          N=Math.min( 85,b.getNorth());
+
+    // latitude lines
+    for (let lat=-90; lat<=90; lat+=step){
+      if (lat<S-step || lat>N+step) continue;
+
+      gridLayer.addLayer(L.polyline([[lat,W],[lat,E]],{
+        color:'#999', weight:1, opacity:.5, dashArray:'2,4', interactive:false
+      }));
+
+      const startLng=Math.floor(W/60)*60;
+      for (let lng=startLng; lng<=E; lng+=60){
+        gridLayer.addLayer(L.marker([lat,lng],{
+          interactive:false,
+          icon:L.divIcon({
             html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${lat}°</div>`,
-            iconSize:[40,16],
-            iconAnchor:[0,8],
-            className:''
-          });
-          gridLayer.addLayer(L.marker([lat,lng],{icon:label,interactive:false}));
-        }
-      }
-      
-      // Draw longitude lines
-      const startLng=Math.floor(west/step)*step;
-      const endLng=Math.ceil(east/step)*step;
-      
-      for(let lng=startLng;lng<=endLng;lng+=step){
-        const line=L.polyline([[south,lng],[north,lng]],{
-          color:'#999',
-          weight:1,
-          opacity:0.5,
-          dashArray:'2,4',
-          interactive:false
-        });
-        gridLayer.addLayer(line);
-        
-        // Add label with normalized longitude
-        const normLng=normalizelon(lng);
-        const label=L.divIcon({
-          html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${normLng}°</div>`,
-          iconSize:[40,16],
-          iconAnchor:[20,0],
-          className:''
-        });
-        gridLayer.addLayer(L.marker([north-2,lng],{icon:label,interactive:false}));
+            iconSize:[40,16], iconAnchor:[0,8], className:''
+          })
+        }));
       }
     }
-    
-    // Draw grid on map events
-    map.on('moveend zoomend',drawGrid);
-    setTimeout(drawGrid,100); // Initial draw with small delay
-    
-    let currentLayer=null;
-    let catalogue=[];
-    /* ---------- Load catalogue ---------- */
-    fetch('storms/storms.json')
-      .then(r=>r.ok?r.json():Promise.reject(r.status))
-      .then(data=>{catalogue=data;renderList(data,true);})
-      .catch(code=>alert(`storms.json error – HTTP ${code}`));
-    const listEl=document.getElementById('storm-list');
-    const searchEl=document.getElementById('search');
-    /* ---------- Render list ---------- */
-    function renderList(arr,sortByYearDesc=false){
-      const sorted=arr.slice().sort((a,b)=>{
-        if(sortByYearDesc){
-          const yr=b.year-a.year; if(yr!==0) return yr;
-        }
-        return a.id.localeCompare(b.id);
-      });
-      listEl.innerHTML='';
-      sorted.forEach(s=>{
-        const li=document.createElement('li');
-        li.className='cursor-pointer hover:bg-blue-100 p-2 rounded';
-        li.textContent=`${s.id} – ${s.name||'Unnamed'} (${s.year})`;
-        li.onclick=()=>loadStorm(s);
-        listEl.appendChild(li);
-      });
+
+    // longitude lines
+    const startLng=Math.floor(W/step)*step,
+          endLng  =Math.ceil (E/step)*step;
+
+    for (let lng=startLng; lng<=endLng; lng+=step){
+      gridLayer.addLayer(L.polyline([[S,lng],[N,lng]],{
+        color:'#999', weight:1, opacity:.5, dashArray:'2,4', interactive:false
+      }));
+
+      const norm = normalizelon(lng);
+      gridLayer.addLayer(L.marker([N-2,lng],{
+        interactive:false,
+        icon:L.divIcon({
+          html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${norm}°</div>`,
+          iconSize:[40,16], iconAnchor:[20,0], className:''
+        })
+      }));
     }
-    /* ---------- Search ---------- */
-    searchEl.oninput=e=>{
-      const q=e.target.value.trim().toLowerCase();
-      if(!q){ renderList(catalogue,true); return; }
-      const filtered=catalogue.filter(s=>
-        s.id.toLowerCase().includes(q)||
-        (s.name && s.name.toLowerCase().includes(q))||
+  }
+
+  map.on('moveend zoomend', drawGrid);
+  setTimeout(drawGrid, 100);   // initial draw
+
+  /* ------------------------------------------------------------------ */
+  /*  Storm catalogue & sidebar                                         */
+  /* ------------------------------------------------------------------ */
+  let currentLayer = null,
+      catalogue    = [];
+
+  fetch('storms/storms.json')
+    .then(r => r.ok ? r.json() : Promise.reject(r.status))
+    .then(d => { catalogue = d; renderList(d,true); })
+    .catch(code => alert(`storms.json error – HTTP ${code}`));
+
+  const listEl   = document.getElementById('storm-list'),
+        searchEl = document.getElementById('search');
+
+  function renderList(arr,sortByYearDesc=false){
+    const sorted = arr.slice().sort((a,b)=>{
+      if (sortByYearDesc){
+        const yr=b.year-a.year; if(yr) return yr;
+      }
+      return a.id.localeCompare(b.id);
+    });
+
+    listEl.innerHTML='';
+    sorted.forEach(s=>{
+      const li=document.createElement('li');
+      li.className='cursor-pointer hover:bg-blue-100 p-2 rounded';
+      li.textContent=`${s.id} – ${s.name||'Unnamed'} (${s.year})`;
+      li.onclick=()=>loadStorm(s);
+      listEl.appendChild(li);
+    });
+  }
+
+  searchEl.oninput=e=>{
+    const q=e.target.value.trim().toLowerCase();
+    if(!q){ renderList(catalogue,true); return; }
+    renderList(
+      catalogue.filter(s=>
+        s.id.toLowerCase().includes(q) ||
+        (s.name && s.name.toLowerCase().includes(q)) ||
         String(s.year).includes(q)
-      );
-      renderList(filtered,false);
-    };
-    /* ---------- Load storm ---------- */
-    function loadStorm(storm){
-      if(currentLayer) map.removeLayer(currentLayer);
-      currentLayer=new L.KML(storm.kml,{async:true});
-      currentLayer.on('loaded',()=>{addLabelsRecursive(currentLayer);map.fitBounds(currentLayer.getBounds());});
-      map.addLayer(currentLayer);
-    }
-    /* ---------- Labels ---------- */
-    function addLabelsRecursive(layer){
-      if(layer.getLayers){layer.getLayers().forEach(addLabelsRecursive);}  
-      if(typeof layer.bindTooltip!=='function') return;
-      const label=getLabel(layer);
-      if(label && !layer.getTooltip()){
-        layer.bindTooltip(label,{permanent:true,direction:'right',className:'tc-label',offset:[6,0]});
+      ), false
+    );
+  };
+
+  /* ------------------------------------------------------------------ */
+  /*  Dateline-safe polyline handling                                   */
+  /* ------------------------------------------------------------------ */
+  /** “Unwrap” a sequence of LatLngs so the path never jumps >180°.       *
+   *  Returns a *flat* array, safe for L.Polyline.setLatLngs().          */
+  function unwrapLatLngs(latlngs){
+    const flat = L.LineUtil.isFlat(latlngs) ? latlngs
+                 : latlngs.flat(Infinity);          // polygons → outer ring
+    const out  = [];
+    let offset = 0;
+
+    for (let i=0;i<flat.length;i++){
+      let {lat,lng} = flat[i];
+
+      // keep continuity: if Δλ > 180°, shift subsequent points ±360°
+      if (i){
+        const prev = out[i-1].lng;
+        const diff = lng + offset - prev;
+
+        if (diff > 180)  offset -= 360;
+        if (diff < -180) offset += 360;
       }
+      out.push(L.latLng(lat, lng + offset));
     }
-    function getLabel(layer){
-      return layer?.feature?.properties?.name || layer.options?.title || layer.options?.name || ((layer.getPopup&&layer.getPopup())?(layer.getPopup().getContent().match(/<h2>(.*?)<\/h2>/i)||[])[1]:'');
+    return out;
+  }
+
+  /** Recursively fix every polyline / polygon in a layer group */
+  function fixDateline(layer){
+    if (layer instanceof L.Polyline){
+      layer.setLatLngs( unwrapLatLngs(layer.getLatLngs()) );
+      return;
     }
+    if (layer.eachLayer) layer.eachLayer(fixDateline);
+  }
+
+  /* ------------------------------------------------------------------ */
+  /*  Load & display a single storm                                     */
+  /* ------------------------------------------------------------------ */
+  function loadStorm(storm){
+    if (currentLayer) map.removeLayer(currentLayer);
+
+    currentLayer = new L.KML(storm.kml,{async:true});
+    currentLayer.on('loaded',()=>{
+      fixDateline(currentLayer);              // <<< key line for Date Line
+      addLabelsRecursive(currentLayer);
+
+      // Fit view – normalise centre longitude to −180…180 so the map
+      // recentres on the “main” world copy.
+      const b     = currentLayer.getBounds();
+      const c     = b.getCenter();
+      const normC = L.latLng(c.lat, normalizelon(c.lng));
+      map.fitBounds(b);
+      map.panTo(normC);                       // avoid off-centre wrap
+    });
+
+    map.addLayer(currentLayer);
+  }
+
+  /* ------------------------------------------------------------------ */
+  /*  Labels (unchanged)                                                */
+  /* ------------------------------------------------------------------ */
+  function addLabelsRecursive(layer){
+    if (layer.getLayers) layer.getLayers().forEach(addLabelsRecursive);
+    if (typeof layer.bindTooltip !== 'function') return;
+
+    const label = getLabel(layer);
+    if (label && !layer.getTooltip())
+      layer.bindTooltip(label,{
+        permanent:true, direction:'right',
+        className:'tc-label', offset:[6,0]
+      });
+  }
+
+  function getLabel(layer){
+    return layer?.feature?.properties?.name
+        || layer.options?.title
+        || layer.options?.name
+        || (layer.getPopup && layer.getPopup()
+            ? (layer.getPopup().getContent().match(/<h2>(.*?)<\/h2>/i)||[])[1]
+            : '');
+  }
   </script>
 </body>
 </html>
