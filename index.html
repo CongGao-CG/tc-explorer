@@ -4,37 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tropical Cyclone Explorer</title>
-  <!-- Tailwind for quick utility styling -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- OpenLayers CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.2.0/ol.css">
-  <script src="https://cdn.jsdelivr.net/npm/ol@v10.2.0/dist/ol.js"></script>
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.2.1/ol.css">
+  <script src="https://cdn.jsdelivr.net/npm/ol@v10.2.1/dist/ol.js"></script>
   <style>
     html,body{height:100%}
     #map{height:100%;width:100%}
-    /* Tooltip-like label styling (we implement through ol.style.Text) */
-    .tc-label{font-size:10px;font-weight:600;background:rgba(255,255,255,.9);border:none;padding:1px 4px;border-radius:2px;pointer-events:none}
+    .ol-tooltip{position:absolute;background:rgba(255,255,255,.9);border:none;padding:1px 4px;border-radius:2px;font-size:10px;font-weight:600;pointer-events:none;white-space:nowrap}
+    .ol-popup{position:absolute;background-color:white;box-shadow:0 1px 4px rgba(0,0,0,0.2);padding:15px;border-radius:10px;border:1px solid #cccccc;bottom:12px;left:-50px;min-width:150px}
+    .ol-popup:after,.ol-popup:before{top:100%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+    .ol-popup:after{border-top-color:white;border-width:10px;left:48px;margin-left:-10px}
+    .ol-popup:before{border-top-color:#cccccc;border-width:11px;left:48px;margin-left:-11px}
+    .ol-popup-closer{text-decoration:none;position:absolute;top:2px;right:8px}
+    .ol-popup-closer:after{content:"✖"}
   </style>
 </head>
 <body class="h-full w-full flex">
-  <!-- Side catalogue panel -->
   <aside class="w-80 p-4 bg-gray-100 overflow-y-auto">
     <h1 class="text-2xl font-bold mb-4">Tropical Cyclones</h1>
     <input id="search" type="text" placeholder="Search storms…" class="mb-4 w-full p-2 border rounded" />
     <ul id="storm-list" class="space-y-2"></ul>
   </aside>
-
-  <!-- Map container -->
   <main class="flex-1"><div id="map"></div></main>
-
   <script>
-    /* ---------- Base map (OpenLayers) ---------- */
+    /* ---------- Base map ---------- */
     const map = new ol.Map({
       target: 'map',
       layers: [
-        new ol.layer.Tile({ source: new ol.source.OSM() })
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        })
       ],
       view: new ol.View({
         center: ol.proj.fromLonLat([0, 20]),
@@ -43,22 +42,27 @@
     });
 
     let currentLayer = null;
+    let currentOverlays = [];
     let catalogue = [];
 
     /* ---------- Load catalogue ---------- */
     fetch('storms/storms.json')
       .then(r => r.ok ? r.json() : Promise.reject(r.status))
-      .then(data => { catalogue = data; renderList(data, true); })
+      .then(data => {
+        catalogue = data;
+        renderList(data, true);
+      })
       .catch(code => alert(`storms.json error – HTTP ${code}`));
 
     const listEl = document.getElementById('storm-list');
     const searchEl = document.getElementById('search');
 
     /* ---------- Render list ---------- */
-    function renderList(arr, sortByYearDesc = false){
-      const sorted = arr.slice().sort((a,b)=>{
-        if(sortByYearDesc){
-          const yr = b.year - a.year; if(yr !== 0) return yr;
+    function renderList(arr, sortByYearDesc = false) {
+      const sorted = arr.slice().sort((a, b) => {
+        if (sortByYearDesc) {
+          const yr = b.year - a.year;
+          if (yr !== 0) return yr;
         }
         return a.id.localeCompare(b.id);
       });
@@ -75,7 +79,10 @@
     /* ---------- Search ---------- */
     searchEl.oninput = e => {
       const q = e.target.value.trim().toLowerCase();
-      if(!q){ renderList(catalogue, true); return; }
+      if (!q) {
+        renderList(catalogue, true);
+        return;
+      }
       const filtered = catalogue.filter(s =>
         s.id.toLowerCase().includes(q) ||
         (s.name && s.name.toLowerCase().includes(q)) ||
@@ -84,46 +91,153 @@
       renderList(filtered, false);
     };
 
-    /* ---------- Load selected storm KML ---------- */
-    function loadStorm(storm){
-      if(currentLayer) map.removeLayer(currentLayer);
+    /* ---------- Load storm ---------- */
+    function loadStorm(storm) {
+      // Remove existing layer and overlays
+      if (currentLayer) {
+        map.removeLayer(currentLayer);
+      }
+      currentOverlays.forEach(overlay => map.removeOverlay(overlay));
+      currentOverlays = [];
+
+      // Load KML
+      const kmlSource = new ol.source.Vector({
+        url: storm.kml,
+        format: new ol.format.KML()
+      });
 
       currentLayer = new ol.layer.Vector({
-        source: new ol.source.Vector({
-          url: storm.kml,
-          format: new ol.format.KML({ extractStyles: true })
-        })
+        source: kmlSource,
+        style: function(feature) {
+          // Basic style for lines and points
+          const styles = [];
+          
+          // Line style
+          if (feature.getGeometry().getType() === 'LineString') {
+            styles.push(new ol.style.Style({
+              stroke: new ol.style.Stroke({
+                color: '#ff0000',
+                width: 2
+              })
+            }));
+          }
+          
+          // Point style
+          if (feature.getGeometry().getType() === 'Point') {
+            styles.push(new ol.style.Style({
+              image: new ol.style.Circle({
+                radius: 4,
+                fill: new ol.style.Fill({
+                  color: '#ff0000'
+                }),
+                stroke: new ol.style.Stroke({
+                  color: '#ffffff',
+                  width: 1
+                })
+              })
+            }));
+          }
+          
+          return styles;
+        }
       });
+
       map.addLayer(currentLayer);
 
-      // When the KML finishes loading, zoom & label
-      currentLayer.getSource().on('change', () => {
-        if(currentLayer.getSource().getState() === 'ready'){
-          map.getView().fit(currentLayer.getSource().getExtent(), { padding: [50,50,50,50] });
-          addLabels(currentLayer);
+      // When features are loaded, fit view and add labels
+      kmlSource.once('change', () => {
+        if (kmlSource.getState() === 'ready') {
+          const extent = kmlSource.getExtent();
+          if (!ol.extent.isEmpty(extent)) {
+            map.getView().fit(extent, {
+              padding: [50, 50, 50, 50],
+              duration: 500
+            });
+          }
+          
+          // Add labels for points
+          kmlSource.getFeatures().forEach(feature => {
+            if (feature.getGeometry().getType() === 'Point') {
+              const name = feature.get('name');
+              if (name) {
+                const coordinates = feature.getGeometry().getCoordinates();
+                const labelElement = document.createElement('div');
+                labelElement.className = 'ol-tooltip';
+                labelElement.textContent = name;
+                
+                const overlay = new ol.Overlay({
+                  element: labelElement,
+                  offset: [10, 0],
+                  positioning: 'center-left'
+                });
+                overlay.setPosition(coordinates);
+                map.addOverlay(overlay);
+                currentOverlays.push(overlay);
+              }
+            }
+          });
         }
       });
     }
 
-    /* ---------- Add text labels after load ---------- */
-    function addLabels(layer){
-      const features = layer.getSource().getFeatures();
-      features.forEach(f => {
-        const name = f.get('name');
-        if(!name) return;
-        f.setStyle(new ol.style.Style({
-          text: new ol.style.Text({
-            text: name,
-            font: '10px sans-serif',
-            overflow: true,
-            offsetX: 6,
-            backgroundFill: new ol.style.Fill({ color: 'rgba(255,255,255,0.9)' }),
-            padding: [1,4,1,4],
-            fill: new ol.style.Fill({ color: '#000' })
-          })
-        }));
+    /* ---------- Popup for feature info ---------- */
+    const popupElement = document.createElement('div');
+    popupElement.className = 'ol-popup';
+    const popupCloser = document.createElement('a');
+    popupCloser.className = 'ol-popup-closer';
+    popupCloser.href = '#';
+    const popupContent = document.createElement('div');
+    popupElement.appendChild(popupCloser);
+    popupElement.appendChild(popupContent);
+
+    const popup = new ol.Overlay({
+      element: popupElement,
+      autoPan: true,
+      autoPanAnimation: {
+        duration: 250
+      }
+    });
+    map.addOverlay(popup);
+
+    popupCloser.onclick = function() {
+      popup.setPosition(undefined);
+      popupCloser.blur();
+      return false;
+    };
+
+    // Click handler for features
+    map.on('click', function(evt) {
+      const feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
+        return feature;
       });
-    }
+      
+      if (feature) {
+        const coordinates = evt.coordinate;
+        const properties = feature.getProperties();
+        let content = '';
+        
+        if (properties.name) {
+          content += `<h2 style="margin:0 0 5px 0;font-size:14px">${properties.name}</h2>`;
+        }
+        if (properties.description) {
+          content += `<div style="font-size:12px">${properties.description}</div>`;
+        }
+        
+        if (content) {
+          popupContent.innerHTML = content;
+          popup.setPosition(coordinates);
+        }
+      } else {
+        popup.setPosition(undefined);
+      }
+    });
+
+    // Change cursor on hover
+    map.on('pointermove', function(evt) {
+      const pixel = map.getEventPixel(evt.originalEvent);
+      const hit = map.hasFeatureAtPixel(pixel);
+      map.getTarget().style.cursor = hit ? 'pointer' : '';
+    });
   </script>
 </body>
 </html>
