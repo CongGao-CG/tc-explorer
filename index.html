@@ -103,59 +103,84 @@
       // Load KML
       const kmlSource = new ol.source.Vector({
         url: storm.kml,
-        format: new ol.format.KML()
+        format: new ol.format.KML(),
+        wrapX: false // avoid duplicate geometries across 180°
       });
 
       currentLayer = new ol.layer.Vector({
         source: kmlSource,
         style: function(feature) {
-          // Basic style for lines and points
+          const g = feature.getGeometry();
           const styles = [];
-          
-          // Line style
-          if (feature.getGeometry().getType() === 'LineString') {
+          if (g.getType() === 'LineString') {
             styles.push(new ol.style.Style({
               stroke: new ol.style.Stroke({
                 color: '#ff0000',
                 width: 2
               })
             }));
-          }
-          
-          // Point style
-          if (feature.getGeometry().getType() === 'Point') {
+          } else if (g.getType() === 'Point') {
             styles.push(new ol.style.Style({
               image: new ol.style.Circle({
                 radius: 4,
-                fill: new ol.style.Fill({
-                  color: '#ff0000'
-                }),
-                stroke: new ol.style.Stroke({
-                  color: '#ffffff',
-                  width: 1
-                })
+                fill: new ol.style.Fill({ color: '#ff0000' }),
+                stroke: new ol.style.Stroke({ color: '#ffffff', width: 1 })
               })
             }));
           }
-          
           return styles;
         }
       });
 
       map.addLayer(currentLayer);
 
-      // When features are loaded, fit view
+      /* ---------- Fit view (dateline-aware) ---------- */
       kmlSource.once('change', () => {
-        if (kmlSource.getState() === 'ready') {
-          const extent = kmlSource.getExtent();
-          if (!ol.extent.isEmpty(extent)) {
-            map.getView().fit(extent, {
-              padding: [50, 50, 50, 50],
-              duration: 500
-            });
-          }
-          
+        if (kmlSource.getState() !== 'ready') return;
+
+        const feats = kmlSource.getFeatures();
+        if (!feats.length) return;
+
+        let extA = [ Infinity,  Infinity, -Infinity, -Infinity]; // -180…+180
+        let extB = [ Infinity,  Infinity, -Infinity, -Infinity]; //   0…+360
+
+        feats.forEach(f => {
+          f.getGeometry().forEachCoordinate(coord => {
+            const lon = coord[0];
+            const lat = coord[1];
+            // raw (A)
+            ol.extent.extend(extA, [lon, lat, lon, lat]);
+            // shifted (B)
+            const lon360 = lon < 0 ? lon + 360 : lon;
+            ol.extent.extend(extB, [lon360, lat, lon360, lat]);
+          }, this, 'XY');
+        });
+
+        const widthA = ol.extent.getWidth(extA);
+        const widthB = ol.extent.getWidth(extB);
+        let best = widthA <= widthB ? extA : extB;
+
+        // convert back to -180…+180 if we used extB
+        if (best === extB) {
+          best = [
+            best[0] > 180 ? best[0] - 360 : best[0],
+            best[1],
+            best[2] > 180 ? best[2] - 360 : best[2],
+            best[3]
+          ];
         }
+
+        const projExtent = ol.proj.transformExtent(
+          best,
+          'EPSG:4326',
+          map.getView().getProjection()
+        );
+
+        map.getView().fit(projExtent, {
+          padding: [50, 50, 50, 50],
+          duration: 500,
+          maxZoom: 8
+        });
       });
     }
 
@@ -189,19 +214,19 @@
       const feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
         return feature;
       });
-      
+
       if (feature) {
         const coordinates = evt.coordinate;
         const properties = feature.getProperties();
         let content = '';
-        
+
         if (properties.name) {
           content += `<h2 style="margin:0 0 5px 0;font-size:14px">${properties.name}</h2>`;
         }
         if (properties.description) {
           content += `<div style="font-size:12px">${properties.description}</div>`;
         }
-        
+
         if (content) {
           popupContent.innerHTML = content;
           popup.setPosition(coordinates);
