@@ -27,121 +27,244 @@
   </aside>
   <main class="flex-1"><div id="map"></div></main>
   <script>
-    /* ---------- Map ---------- */
+    /* ---------- Base map ---------- */
     const map = new ol.Map({
       target: 'map',
-      layers: [new ol.layer.Tile({source: new ol.source.OSM()})],
-      view: new ol.View({center: ol.proj.fromLonLat([0, 15]), zoom: 2})
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        })
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([0, 20]),
+        zoom: 3
+      })
     });
 
-    let currentLayer=null;
-    let catalogue=[];
+    let currentLayer = null;
+    let currentOverlays = [];
+    let catalogue = [];
 
     /* ---------- Load catalogue ---------- */
     fetch('storms/storms.json')
-      .then(r=>r.ok?r.json():Promise.reject(r.status))
-      .then(data=>{ catalogue=data; renderList(data,true); })
-      .catch(code=>alert(`storms.json error – HTTP ${code}`));
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(data => {
+        catalogue = data;
+        renderList(data, true);
+      })
+      .catch(code => alert(`storms.json error – HTTP ${code}`));
 
-    const listEl=document.getElementById('storm-list');
-    const searchEl=document.getElementById('search');
+    const listEl = document.getElementById('storm-list');
+    const searchEl = document.getElementById('search');
 
-    function renderList(arr,sortDesc=false){
-      const sorted=arr.slice().sort((a,b)=>{
-        if(sortDesc){ const yr=b.year-a.year; if(yr!==0) return yr; }
+    /* ---------- Render list ---------- */
+    function renderList(arr, sortByYearDesc = false) {
+      const sorted = arr.slice().sort((a, b) => {
+        if (sortByYearDesc) {
+          const yr = b.year - a.year;
+          if (yr !== 0) return yr;
+        }
         return a.id.localeCompare(b.id);
       });
-      listEl.innerHTML='';
-      sorted.forEach(s=>{
-        const li=document.createElement('li');
-        li.className='cursor-pointer hover:bg-blue-100 p-2 rounded';
-        li.textContent=`${s.id} – ${s.name||'Unnamed'} (${s.year})`;
-        li.onclick=()=>loadStorm(s);
+      listEl.innerHTML = '';
+      sorted.forEach(s => {
+        const li = document.createElement('li');
+        li.className = 'cursor-pointer hover:bg-blue-100 p-2 rounded';
+        li.textContent = `${s.id} – ${s.name || 'Unnamed'} (${s.year})`;
+        li.onclick = () => loadStorm(s);
         listEl.appendChild(li);
       });
     }
 
-    searchEl.oninput=e=>{
-      const q=e.target.value.trim().toLowerCase();
-      if(!q){ renderList(catalogue,true); return; }
-      renderList(catalogue.filter(s=>
-        s.id.toLowerCase().includes(q)||
-        (s.name&&s.name.toLowerCase().includes(q))||
+    /* ---------- Search ---------- */
+    searchEl.oninput = e => {
+      const q = e.target.value.trim().toLowerCase();
+      if (!q) {
+        renderList(catalogue, true);
+        return;
+      }
+      const filtered = catalogue.filter(s =>
+        s.id.toLowerCase().includes(q) ||
+        (s.name && s.name.toLowerCase().includes(q)) ||
         String(s.year).includes(q)
-      ),false);
+      );
+      renderList(filtered, false);
     };
 
-    /* ---------- Dateline unwrapping ---------- */
-    function unwrapAndClamp(feature){
-      const geom=feature.getGeometry();
-      const type=geom.getType();
-      if(type==='LineString'){
-        let ll=geom.getCoordinates().map(c=>ol.proj.toLonLat(c));
-        // unwrap
-        for(let i=1;i<ll.length;i++){
-          let prev=ll[i-1][0], cur=ll[i][0];
-          let diff=cur-prev;
-          if(diff>180)   cur-=360;
-          else if(diff<-180) cur+=360;
-          ll[i][0]=cur;
-        }
-        // shift entire line into [-180,180]
-        const lons=ll.map(c=>c[0]);
-        const meanLon=lons.reduce((a,b)=>a+b,0)/lons.length;
-        let shift=0;
-        if(meanLon>180) shift=-360;
-        if(meanLon<-180) shift=360;
-        if(shift!==0) ll=ll.map(([lon,lat])=>[lon+shift,lat]);
-        geom.setCoordinates(ll.map(c=>ol.proj.fromLonLat(c)));
-      }else if(type==='Point'){
-        let [lon,lat]=ol.proj.toLonLat(geom.getCoordinates());
-        if(lon>180) lon-=360;
-        if(lon<-180) lon+=360;
-        geom.setCoordinates(ol.proj.fromLonLat([lon,lat]));
-      }
-    }
-
     /* ---------- Load storm ---------- */
-    function loadStorm(storm){
-      if(currentLayer) map.removeLayer(currentLayer);
-      const src=new ol.source.Vector({url:storm.kml,format:new ol.format.KML(),wrapX:false});
-      currentLayer=new ol.layer.Vector({
-        source:src,
-        style:feat=>{
-          const t=feat.getGeometry().getType();
-          if(t==='LineString') return new ol.style.Style({stroke:new ol.style.Stroke({color:'#ff0000',width:2})});
-          if(t==='Point') return new ol.style.Style({image:new ol.style.Circle({radius:4,fill:new ol.style.Fill({color:'#ff0000'}),stroke:new ol.style.Stroke({color:'#fff',width:1})})});
-        }
-      });
-      map.addLayer(currentLayer);
+   /* ---------- Load storm ---------- */
+   function loadStorm(storm) {
+     // Remove existing layer and overlays
+     if (currentLayer) {
+       map.removeLayer(currentLayer);
+     }
+     currentOverlays.forEach(overlay => map.removeOverlay(overlay));
+     currentOverlays = [];
 
-      src.once('change',()=>{
-        if(src.getState()!=='ready') return;
-        src.getFeatures().forEach(unwrapAndClamp);
-        const ext=src.getExtent();
-        if(!ol.extent.isEmpty(ext)) map.getView().fit(ext,{padding:[50,50,50,50],duration:400});
-      });
-    }
+     // Load KML with wrapX: false
+     const kmlSource = new ol.source.Vector({
+       url: storm.kml,
+       format: new ol.format.KML(),
+       wrapX: false
+     });
 
-    /* ---------- Popup ---------- */
-    const popupEl=document.createElement('div'); popupEl.className='ol-popup';
-    const popupCloser=document.createElement('a'); popupCloser.className='ol-popup-closer'; popupCloser.href='#';
-    const popupContent=document.createElement('div');
-    popupEl.appendChild(popupCloser); popupEl.appendChild(popupContent);
-    const popup=new ol.Overlay({element:popupEl,autoPan:true,autoPanAnimation:{duration:250}});
-    map.addOverlay(popup);
-    popupCloser.onclick=()=>{popup.setPosition(undefined); popupCloser.blur(); return false;};
-    map.on('click',evt=>{
-      const feat=map.forEachFeatureAtPixel(evt.pixel,f=>f);
-      if(feat){
-        const p=feat.getProperties();
-        let html='';
-        if(p.name) html+=`<h2 style=\"margin:0 0 5px 0;font-size:14px\">${p.name}</h2>`;
-        if(p.description) html+=`<div style=\"font-size:12px\">${p.description}</div>`;
-        if(html){ popupContent.innerHTML=html; popup.setPosition(evt.coordinate);} }
-      else popup.setPosition(undefined);
+     currentLayer = new ol.layer.Vector({
+       source: kmlSource,
+       style: function(feature) {
+         // This styling function remains the same.
+         // It will style the original points and the new line we create.
+         const styles = [];
+         if (feature.getGeometry().getType() === 'LineString') {
+           styles.push(new ol.style.Style({
+             stroke: new ol.style.Stroke({ color: '#ff0000', width: 2 })
+           }));
+         }
+         if (feature.getGeometry().getType() === 'Point') {
+           styles.push(new ol.style.Style({
+             image: new ol.style.Circle({
+               radius: 4,
+               fill: new ol.style.Fill({ color: '#ff0000' }),
+               stroke: new ol.style.Stroke({ color: '#ffffff', width: 1 })
+             })
+           }));
+         }
+         return styles;
+       }
+     });
+
+     map.addLayer(currentLayer);
+
+     // Helper function to parse date/time from KML description
+     function extractDate(feature) {
+       const description = feature.get('description') || '';
+       // Use regex to find date and time strings
+       const dateMatch = description.match(/Date:<\/strong>\s*(\d{2}\/\d{2}\/\d{4})/);
+       const timeMatch = description.match(/Time:<\/strong>\s*(\d{2}:\d{2})\s*UTC/);
+
+       if (dateMatch && timeMatch) {
+         const dateStr = dateMatch[1]; // "MM/DD/YYYY"
+         const timeStr = timeMatch[1]; // "HH:mm"
+         // Reformat to ISO 8601 for reliable parsing: "YYYY-MM-DDTHH:mm:ssZ"
+         const [month, day, year] = dateStr.split('/');
+         const isoStr = `${year}-${month}-${day}T${timeStr}:00Z`;
+         return new Date(isoStr);
+       }
+       // Return an early date as a fallback if parsing fails
+       return new Date(0);
+     }
+
+     // When features are loaded, sort points, create a line, and fit the view
+     kmlSource.once('change', () => {
+       if (kmlSource.getState() === 'ready') {
+         const worldWidth = ol.extent.getWidth(map.getView().getProjection().getExtent());
+         
+         // 1. Get all features (which are all points) and sort them by date
+         const pointFeatures = kmlSource.getFeatures();
+         pointFeatures.sort((a, b) => extractDate(a) - extractDate(b));
+         
+         if (pointFeatures.length > 1) {
+           // 2. Create a continuous coordinate array from the sorted points
+           const coords = pointFeatures.map(p => p.getGeometry().getCoordinates());
+           for (let i = 1; i < coords.length; i++) {
+             const prevLon = coords[i-1][0];
+             if (Math.abs(coords[i][0] - prevLon) > worldWidth / 2) {
+               if (coords[i][0] < prevLon) {
+                 coords[i][0] += worldWidth;
+               } else {
+                 coords[i][0] -= worldWidth;
+               }
+             }
+           }
+           
+           // 3. Create a new LineString feature from the adjusted coordinates
+           const lineGeom = new ol.geom.LineString(coords);
+           const lineFeature = new ol.Feature({ geometry: lineGeom });
+           kmlSource.addFeature(lineFeature); // Add the new line to the map
+           
+           // 4. Adjust original point features to match the new continuous line
+           const lineExtent = lineGeom.getExtent();
+           const lineCenterLon = (lineExtent[0] + lineExtent[2]) / 2;
+
+           pointFeatures.forEach(point => {
+             const pointGeom = point.getGeometry();
+             const pCoord = pointGeom.getCoordinates();
+             if (Math.abs(pCoord[0] - lineCenterLon) > worldWidth / 2) {
+                pCoord[0] += (pCoord[0] < lineCenterLon) ? worldWidth : -worldWidth;
+                pointGeom.setCoordinates(pCoord);
+             }
+           });
+         }
+         
+         // 5. Fit the view to the extent of ALL features (new line + adjusted points)
+         const extent = kmlSource.getExtent();
+         if (!ol.extent.isEmpty(extent)) {
+           map.getView().fit(extent, {
+             padding: [50, 50, 50, 50],
+             duration: 500
+           });
+         }
+       }
+     });
+   }
+
+    /* ---------- Popup for feature info ---------- */
+    const popupElement = document.createElement('div');
+    popupElement.className = 'ol-popup';
+    const popupCloser = document.createElement('a');
+    popupCloser.className = 'ol-popup-closer';
+    popupCloser.href = '#';
+    const popupContent = document.createElement('div');
+    popupElement.appendChild(popupCloser);
+    popupElement.appendChild(popupContent);
+
+    const popup = new ol.Overlay({
+      element: popupElement,
+      autoPan: true,
+      autoPanAnimation: {
+        duration: 250
+      }
     });
-    map.on('pointermove',evt=>{map.getTargetElement().style.cursor=map.hasFeatureAtPixel(evt.pixel)?'pointer':'';});
+    map.addOverlay(popup);
+
+    popupCloser.onclick = function() {
+      popup.setPosition(undefined);
+      popupCloser.blur();
+      return false;
+    };
+
+    // Click handler for features
+    map.on('click', function(evt) {
+      const feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
+        return feature;
+      });
+      
+      if (feature) {
+        const coordinates = evt.coordinate;
+        const properties = feature.getProperties();
+        let content = '';
+        
+        if (properties.name) {
+          content += `<h2 style="margin:0 0 5px 0;font-size:14px">${properties.name}</h2>`;
+        }
+        if (properties.description) {
+          content += `<div style="font-size:12px">${properties.description}</div>`;
+        }
+        
+        if (content) {
+          popupContent.innerHTML = content;
+          popup.setPosition(coordinates);
+        }
+      } else {
+        popup.setPosition(undefined);
+      }
+    });
+
+    // Change cursor on hover
+    map.on('pointermove', function(evt) {
+      const pixel = map.getEventPixel(evt.originalEvent);
+      const hit = map.hasFeatureAtPixel(pixel);
+      map.getTarget().style.cursor = hit ? 'pointer' : '';
+    });
   </script>
 </body>
 </html>
