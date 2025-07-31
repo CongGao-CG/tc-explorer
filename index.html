@@ -92,159 +92,98 @@
     };
 
    /* ---------- Load storm ---------- */
-   function loadStorm(storm) {
-     // Remove existing layer and overlays
-     if (currentLayer) {
-       map.removeLayer(currentLayer);
-     }
-     currentOverlays.forEach(overlay => map.removeOverlay(overlay));
-     currentOverlays = [];
-
-     // Load KML with wrapX: false
-     const kmlSource = new ol.source.Vector({
-       url: storm.kml,
-       format: new ol.format.KML(),
-       wrapX: false
-     });
-
-     currentLayer = new ol.layer.Vector({
-       source: kmlSource,
-       style: function(feature) {
-         // This styling function remains the same.
-         // It will style the original points and the new line we create.
-         const styles = [];
-         if (feature.getGeometry().getType() === 'LineString') {
-           styles.push(new ol.style.Style({
-             stroke: new ol.style.Stroke({ color: '#ff0000', width: 2 })
-           }));
-         }
-         if (feature.getGeometry().getType() === 'Point') {
-           styles.push(new ol.style.Style({
-             image: new ol.style.Circle({
-               radius: 4,
-               fill: new ol.style.Fill({ color: '#ff0000' }),
-               stroke: new ol.style.Stroke({ color: '#ffffff', width: 1 })
-             })
-           }));
-         }
-         return styles;
-       }
-     });
-
-     map.addLayer(currentLayer);
-
-     // Helper function to parse date/time from KML description
-function extractDate(feature) {
-  const description = feature.get('description') || '';
-  const name = feature.get('name') || '';
-  
-  // First try the original format from description
-  const dateMatch = description.match(/Date:<\/strong>\s*(\d{2}\/\d{2}\/\d{4})/);
-  const timeMatch = description.match(/Time:<\/strong>\s*(\d{2}:\d{2})\s*UTC/);
-  
-  if (dateMatch && timeMatch) {
-    const dateStr = dateMatch[1];
-    const timeStr = timeMatch[1];
-    const [month, day, year] = dateStr.split('/');
-    const isoStr = `${year}-${month}-${day}T${timeStr}:00Z`;
-    return new Date(isoStr);
+function loadStorm(storm) {
+  // Remove existing layer and overlays
+  if (currentLayer) {
+    map.removeLayer(currentLayer);
   }
-  
-  // Try parsing from the name field (e.g., "1200 UTC JUN 19")
-  // This pattern matches: HHMM UTC MON DD
-  const nameMatch = name.match(/(\d{4})\s*UTC\s*([A-Z]{3})\s*(\d{1,2})/);
-  if (nameMatch) {
-    const time = nameMatch[1]; // "1200"
-    const monthStr = nameMatch[2]; // "JUN"
-    const day = nameMatch[3]; // "19"
-    
-    // Convert month abbreviation to number
-    const months = {
-      'JAN': '01', 'FEB': '02', 'MAR': '03', 'APR': '04',
-      'MAY': '05', 'JUN': '06', 'JUL': '07', 'AUG': '08',
-      'SEP': '09', 'OCT': '10', 'NOV': '11', 'DEC': '12'
-    };
-    
-    const month = months[monthStr];
-    if (month) {
-      // Need to determine the year - you might need to add logic here
-      // For now, let's assume current year
-      const year = new Date().getFullYear();
-      const hours = time.substring(0, 2);
-      const minutes = time.substring(2, 4);
-      const isoStr = `${year}-${month}-${day.padStart(2, '0')}T${hours}:${minutes}:00Z`;
-      return new Date(isoStr);
+  currentOverlays.forEach(overlay => map.removeOverlay(overlay));
+  currentOverlays = [];
+
+  // Load KML with wrapX: false
+  const kmlSource = new ol.source.Vector({
+    url: storm.kml,
+    format: new ol.format.KML(),
+    wrapX: false
+  });
+
+  currentLayer = new ol.layer.Vector({
+    source: kmlSource,
+    style: function(feature) {
+      const styles = [];
+      if (feature.getGeometry().getType() === 'LineString') {
+        styles.push(new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: '#ff0000', width: 2 })
+        }));
+      }
+      if (feature.getGeometry().getType() === 'Point') {
+        styles.push(new ol.style.Style({
+          image: new ol.style.Circle({
+            radius: 4,
+            fill: new ol.style.Fill({ color: '#ff0000' }),
+            stroke: new ol.style.Stroke({ color: '#ffffff', width: 1 })
+          })
+        }));
+      }
+      return styles;
     }
-  }
-  
-  // Try another format: "YYYY-MM-DD HH:MM UTC" in name or description
-  const isoMatch = (name + ' ' + description).match(/(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})\s*UTC/);
-  if (isoMatch) {
-    const [, year, month, day, hours, minutes] = isoMatch;
-    return new Date(`${year}-${month}-${day}T${hours}:${minutes}:00Z`);
-  }
-  
-  // Log the unparseable feature for debugging
-  console.warn('Failed to parse date for feature:', name);
-  console.warn('Description:', description);
-  
-  // Return current date as fallback (better than epoch)
-  return new Date();
-}
+  });
 
-     // When features are loaded, sort points, create a line, and fit the view
-     kmlSource.once('change', () => {
-       if (kmlSource.getState() === 'ready') {
-         const worldWidth = ol.extent.getWidth(map.getView().getProjection().getExtent());
-         
-         // 1. Get all features (which are all points) and sort them by date
-         const pointFeatures = kmlSource.getFeatures();
-         pointFeatures.sort((a, b) => extractDate(a) - extractDate(b));
-         
-         if (pointFeatures.length > 1) {
-           // 2. Create a continuous coordinate array from the sorted points
-           const coords = pointFeatures.map(p => p.getGeometry().getCoordinates());
-           for (let i = 1; i < coords.length; i++) {
-             const prevLon = coords[i-1][0];
-             if (Math.abs(coords[i][0] - prevLon) > worldWidth / 2) {
-               if (coords[i][0] < prevLon) {
-                 coords[i][0] += worldWidth;
-               } else {
-                 coords[i][0] -= worldWidth;
-               }
-             }
-           }
-           
-           // 3. Create a new LineString feature from the adjusted coordinates
-           const lineGeom = new ol.geom.LineString(coords);
-           const lineFeature = new ol.Feature({ geometry: lineGeom });
-           kmlSource.addFeature(lineFeature); // Add the new line to the map
-           
-           // 4. Adjust original point features to match the new continuous line
-           const lineExtent = lineGeom.getExtent();
-           const lineCenterLon = (lineExtent[0] + lineExtent[2]) / 2;
+  map.addLayer(currentLayer);
 
-           pointFeatures.forEach(point => {
-             const pointGeom = point.getGeometry();
-             const pCoord = pointGeom.getCoordinates();
-             if (Math.abs(pCoord[0] - lineCenterLon) > worldWidth / 2) {
-                pCoord[0] += (pCoord[0] < lineCenterLon) ? worldWidth : -worldWidth;
-                pointGeom.setCoordinates(pCoord);
-             }
-           });
-         }
-         
-         // 5. Fit the view to the extent of ALL features (new line + adjusted points)
-         const extent = kmlSource.getExtent();
-         if (!ol.extent.isEmpty(extent)) {
-           map.getView().fit(extent, {
-             padding: [50, 50, 50, 50],
-             duration: 500
-           });
-         }
-       }
-     });
-   }
+  // When features are loaded, create a line and fit the view
+  kmlSource.once('change', () => {
+    if (kmlSource.getState() === 'ready') {
+      // Get all point features in their original order (no sorting!)
+      const pointFeatures = kmlSource.getFeatures().filter(f => 
+        f.getGeometry().getType() === 'Point'
+      );
+      
+      if (pointFeatures.length > 1) {
+        // Create coordinate array from points in their original order
+        const coords = pointFeatures.map(p => [...p.getGeometry().getCoordinates()]);
+        
+        // Fix date line crossings
+        for (let i = 1; i < coords.length; i++) {
+          const diff = coords[i][0] - coords[i-1][0];
+          
+          if (diff > 180) {
+            // Crossed date line westward
+            coords[i][0] -= 360;
+          } else if (diff < -180) {
+            // Crossed date line eastward  
+            coords[i][0] += 360;
+          }
+        }
+        
+        // Create a new LineString feature
+        const lineGeom = new ol.geom.LineString(coords);
+        const lineFeature = new ol.Feature({ geometry: lineGeom });
+        kmlSource.addFeature(lineFeature);
+        
+        // Adjust original point features to match the line's coordinate system
+        const lineExtent = lineGeom.getExtent();
+        const lineCenterLon = (lineExtent[0] + lineExtent[2]) / 2;
+        const worldWidth = 360;
+
+        pointFeatures.forEach((point, index) => {
+          const pointGeom = point.getGeometry();
+          // Use the adjusted coordinates from our line
+          pointGeom.setCoordinates([...coords[index]]);
+        });
+      }
+      
+      // Fit the view to all features
+      const extent = kmlSource.getExtent();
+      if (!ol.extent.isEmpty(extent)) {
+        map.getView().fit(extent, {
+          padding: [50, 50, 50, 50],
+          duration: 500
+        });
+      }
+    }
+  });
+}   
 
     /* ---------- Popup for feature info ---------- */
     const popupElement = document.createElement('div');
