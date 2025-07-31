@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tropical Cyclone Explorer</title>
 
-  <!-- ◆ Assets -->
+  <!-- Assets -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -24,14 +24,14 @@
 </head>
 
 <body class="h-full w-full flex">
-<!-- ─────────────────────────  Sidebar  ────────────────────────── -->
+<!-- ─────────────── Sidebar ─────────────── -->
 <aside class="w-80 p-4 bg-gray-100 overflow-y-auto">
   <h1 class="text-2xl font-bold mb-4">Tropical Cyclones</h1>
   <input id="search" type="text" placeholder="Search storms…" class="mb-4 w-full p-2 border rounded" />
   <ul   id="storm-list" class="space-y-2"></ul>
 </aside>
 
-<!-- ───────────────────────────  Map  ──────────────────────────── -->
+<!-- ─────────────── Map ─────────────── -->
 <main class="flex-1"><div id="map"></div></main>
 
 <script>
@@ -42,20 +42,19 @@ const map=L.map('map').setView([20,0],3);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
   attribution:'© OpenStreetMap contributors',
   maxZoom:19,
-  noWrap:false                     // keep wrap so the world repeats
+  noWrap:false
 }).addTo(map);
 
 /* ------------------------------------------------------------------ */
-/*  Simple lat/lon grid (unchanged)                                   */
+/*  Lat/Lon grid (unchanged)                                          */
 /* ------------------------------------------------------------------ */
 const gridLayer=L.layerGroup().addTo(map);
-function normalizelon(lon){while(lon>180)lon-=360;while(lon<-180)lon+=360;return lon;}
+function normLon(l){while(l> 180)l-=360;while(l<-180)l+=360;return l;}
 function drawGrid(){
   gridLayer.clearLayers();
   const b=map.getBounds(), z=map.getZoom();
-  let step=30; if(z>3)step=20;if(z>5)step=10;if(z>7)step=5;if(z>9)step=2;if(z>11)step=1;
+  let step=30;if(z>3)step=20;if(z>5)step=10;if(z>7)step=5;if(z>9)step=2;if(z>11)step=1;
   const W=b.getWest(),E=b.getEast(),S=Math.max(-85,b.getSouth()),N=Math.min(85,b.getNorth());
-
   for(let lat=-90;lat<=90;lat+=step){
     if(lat<S-step||lat>N+step)continue;
     gridLayer.addLayer(L.polyline([[lat,W],[lat,E]],{color:'#999',weight:1,opacity:.5,dashArray:'2,4',interactive:false}));
@@ -69,28 +68,26 @@ function drawGrid(){
   const startLng=Math.floor(W/step)*step,endLng=Math.ceil(E/step)*step;
   for(let lng=startLng;lng<=endLng;lng+=step){
     gridLayer.addLayer(L.polyline([[S,lng],[N,lng]],{color:'#999',weight:1,opacity:.5,dashArray:'2,4',interactive:false}));
-    const norm=normalizelon(lng);
     gridLayer.addLayer(L.marker([N-2,lng],{interactive:false,
-      icon:L.divIcon({html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${norm}°</div>`,
+      icon:L.divIcon({html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${normLon(lng)}°</div>`,
       iconSize:[40,16],iconAnchor:[20,0],className:''})}));
   }
 }
-map.on('moveend zoomend',drawGrid); setTimeout(drawGrid,100);
+map.on('moveend zoomend',drawGrid);setTimeout(drawGrid,100);
 
 /* ------------------------------------------------------------------ */
-/*  Catalogue sidebar                                                 */
+/*  Sidebar catalogue                                                 */
 /* ------------------------------------------------------------------ */
-let currentLayer=null, catalogue=[];
+let currentLayer=null,catalogue=[];
 fetch('storms/storms.json')
   .then(r=>r.ok?r.json():Promise.reject(r.status))
   .then(d=>{catalogue=d;renderList(d,true);})
-  .catch(code=>alert(`storms.json error – HTTP ${code}`));
+  .catch(c=>alert(`storms.json HTTP ${c}`));
 
-const listEl=document.getElementById('storm-list'), searchEl=document.getElementById('search');
-
-function renderList(arr,yearDesc=false){
+const listEl=document.getElementById('storm-list'),searchEl=document.getElementById('search');
+function renderList(arr,desc=false){
   const s=arr.slice().sort((a,b)=>{
-    if(yearDesc){const y=b.year-a.year;if(y)return y;}
+    if(desc){const y=b.year-a.year;if(y)return y;}
     return a.id.localeCompare(b.id);
   });
   listEl.innerHTML='';
@@ -113,45 +110,43 @@ searchEl.oninput=e=>{
 };
 
 /* ------------------------------------------------------------------ */
-/*  Dateline helper: split at ±180°                                   */
+/*  Antimeridian helpers                                              */
 /* ------------------------------------------------------------------ */
-function splitAtDateline(latlngsFlat){
-  const parts=[[]];
-  const n=latlngsFlat.length;
-  for(let i=0;i<n;i++){
-    const cur=L.latLng(latlngsFlat[i].lat,normalizelon(latlngsFlat[i].lng));
-    if(i){                       // check the segment (prev → cur)
-      const prev=parts[parts.length-1][parts[parts.length-1].length-1];
-      let dlon=cur.lng-prev.lng;
-      if(dlon>180) dlon-=360;
-      if(dlon<-180) dlon+=360;
-      if(Math.abs(dlon)>180-1e-6){  // crossing!
-        const crossLon=dlon>0?180:-180;
-        const frac=(crossLon-prev.lng)/dlon;
-        const crossLat=prev.lat+frac*(cur.lat-prev.lat);
-
-        // point ON the dateline (close current part)
-        parts[parts.length-1].push(L.latLng(crossLat,crossLon));
-        // start new part on the opposite side
-        const newLon=crossLon===180?-180:180;
-        parts.push([L.latLng(crossLat,newLon)]);
-      }
+/*  1️⃣  Unwrap so successive points differ by <180 °                  */
+function unwrapTrack(flat){
+  const res=[];let shift=0;
+  for(let i=0;i<flat.length;i++){
+    let {lat,lng}=flat[i];
+    let adjLng=lng+shift;
+    if(i){
+      const prev=res[res.length-1].lng;
+      let d=adjLng-prev;
+      if(d> 180){shift-=360;adjLng=lng+shift;}
+      if(d<-180){shift+=360;adjLng=lng+shift;}
     }
-    parts[parts.length-1].push(cur);
+    res.push(L.latLng(lat,adjLng));
   }
-  return parts.filter(p=>p.length>1);  // Leaflet needs ≥2 points per part
+  return res;
+}
+/*  2️⃣  Bring wrapped longitudes back to main world copy              */
+function rewrapForDisplay(unwrapped){
+  // choose a single 360°-copy that minimises total span
+  const longitudes=unwrapped.map(p=>p.lng);
+  const centre=(Math.min(...longitudes)+Math.max(...longitudes))/2;
+  const k=Math.round(centre/360);          // which 360° band
+  return unwrapped.map(p=>L.latLng(p.lat,p.lng-360*k));
 }
 
-function fixPolyline(poly){
-  const flat   = L.LineUtil.isFlat(poly.getLatLngs())
-                  ? poly.getLatLngs()
-                  : poly.getLatLngs().flat(Infinity);
-  poly.setLatLngs(splitAtDateline(flat));
-}
-
+/*  3️⃣  Apply to every polyline                                       */
 function fixDateline(layer){
   if(layer instanceof L.Polyline && !(layer instanceof L.Polygon)){
-    fixPolyline(layer); return;
+    const flat=L.LineUtil.isFlat(layer.getLatLngs())
+               ?layer.getLatLngs()
+               :layer.getLatLngs().flat(Infinity);
+    const fixed=rewrapForDisplay(unwrapTrack(flat));
+    layer.setLatLngs(fixed);
+    layer.setStyle({noClip:true});         // avoid Leaflet’s hard-edge clip
+    return;
   }
   if(layer.eachLayer) layer.eachLayer(fixDateline);
 }
@@ -161,10 +156,9 @@ function fixDateline(layer){
 /* ------------------------------------------------------------------ */
 function loadStorm(storm){
   if(currentLayer) map.removeLayer(currentLayer);
-
   currentLayer=new L.KML(storm.kml,{async:true});
   currentLayer.on('loaded',()=>{
-    fixDateline(currentLayer);          // ← key dateline splitter
+    fixDateline(currentLayer);
     addLabelsRecursive(currentLayer);
     map.fitBounds(currentLayer.getBounds(),{padding:[20,20]});
   });
@@ -177,10 +171,9 @@ function loadStorm(storm){
 function addLabelsRecursive(layer){
   if(layer.getLayers)layer.getLayers().forEach(addLabelsRecursive);
   if(typeof layer.bindTooltip!=='function')return;
-  const label=getLabel(layer);
-  if(label&&!layer.getTooltip()){
-    layer.bindTooltip(label,{permanent:true,direction:'right',className:'tc-label',offset:[6,0]});
-  }
+  const lbl=getLabel(layer);
+  if(lbl&&!layer.getTooltip())layer.bindTooltip(lbl,{permanent:true,direction:'right',
+                  className:'tc-label',offset:[6,0]});
 }
 function getLabel(layer){
   return layer?.feature?.properties?.name
