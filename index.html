@@ -3,172 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tropical Cyclone Explorer - Google Maps</title>
+  <title>Tropical Cyclone Explorer</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html, body { height: 100%; margin: 0; padding: 0; }
-    #map { height: 100%; width: 100%; }
-    .gm-style-iw { max-width: 300px; }
-    /* Custom info window styling */
-    .storm-info { font-size: 14px; line-height: 1.4; }
-    .storm-info h3 { margin: 0 0 8px 0; font-weight: bold; }
+    html,body{height:100%}
+    #map{height:100%;width:100%}
+    .leaflet-tooltip.tc-label{font-size:10px;font-weight:600;background:rgba(255,255,255,.9);border:none;padding:1px 4px;border-radius:2px;pointer-events:none}
   </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-plugins@3.0.0/layer/vector/KML.min.js"></script>
 </head>
 <body class="h-full w-full flex">
   <aside class="w-80 p-4 bg-gray-100 overflow-y-auto">
     <h1 class="text-2xl font-bold mb-4">Tropical Cyclones</h1>
     <input id="search" type="text" placeholder="Search storms…" class="mb-4 w-full p-2 border rounded" />
-    <div class="mb-4 text-sm text-gray-600">
-      <p>Click on a storm to load its track</p>
-    </div>
     <ul id="storm-list" class="space-y-2"></ul>
   </aside>
-  <main class="flex-1">
-    <div id="map"></div>
-  </main>
-  
+
+  <main class="flex-1"><div id="map"></div></main>
+
   <script>
-    let map;
-    let currentKmlLayer = null;
-    let catalogue = [];
-    let infoWindow;
-    
-    // Initialize map
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 20, lng: 0 },
-        zoom: 3,
-        mapTypeId: 'terrain',
-        mapTypeControl: true,
-        mapTypeControlOptions: {
-          position: google.maps.ControlPosition.TOP_RIGHT
-        }
-      });
-      
-      infoWindow = new google.maps.InfoWindow();
-      
-      // Load the storm catalogue
-      loadCatalogue();
-    }
-    
-    // Load storm catalogue
-    function loadCatalogue() {
-      fetch('storms/storms.json')
-        .then(r => r.ok ? r.json() : Promise.reject(r.status))
-        .then(data => {
-          catalogue = data;
-          renderList(data, true);
-        })
-        .catch(code => alert(`storms.json error – HTTP ${code}`));
-    }
-    
-    const listEl = document.getElementById('storm-list');
-    const searchEl = document.getElementById('search');
-    
-    // Render storm list
-    function renderList(arr, sortByYearDesc = false) {
-      const sorted = arr.slice().sort((a, b) => {
-        if (sortByYearDesc) {
-          const yr = b.year - a.year;
-          if (yr !== 0) return yr;
+    /* ---------- Base map ---------- */
+    const map=L.map('map').setView([20,0],3);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:19}).addTo(map);
+
+    let currentLayer=null;
+    let catalogue=[];
+
+    /* ---------- Load catalogue ---------- */
+    fetch('storms/storms.json')
+      .then(r=>r.ok?r.json():Promise.reject(r.status))
+      .then(data=>{catalogue=data;renderList(data,true);})
+      .catch(code=>alert(`storms.json error – HTTP ${code}`));
+
+    const listEl=document.getElementById('storm-list');
+    const searchEl=document.getElementById('search');
+
+    /* ---------- Render list ---------- */
+    function renderList(arr,sortByYearDesc=false){
+      const sorted=arr.slice().sort((a,b)=>{
+        if(sortByYearDesc){
+          const yr=b.year-a.year; if(yr!==0) return yr;
         }
         return a.id.localeCompare(b.id);
       });
-      
-      listEl.innerHTML = '';
-      sorted.forEach(s => {
-        const li = document.createElement('li');
-        li.className = 'cursor-pointer hover:bg-blue-100 p-2 rounded transition-colors';
-        li.innerHTML = `
-          <div class="font-medium">${s.id} – ${s.name || 'Unnamed'}</div>
-          <div class="text-sm text-gray-600">${s.year}</div>
-        `;
-        li.onclick = () => loadStorm(s);
+      listEl.innerHTML='';
+      sorted.forEach(s=>{
+        const li=document.createElement('li');
+        li.className='cursor-pointer hover:bg-blue-100 p-2 rounded';
+        li.textContent=`${s.id} – ${s.name||'Unnamed'} (${s.year})`;
+        li.onclick=()=>loadStorm(s);
         listEl.appendChild(li);
       });
     }
-    
-    // Search functionality
-    searchEl.oninput = e => {
-      const q = e.target.value.trim().toLowerCase();
-      if (!q) {
-        renderList(catalogue, true);
-        return;
-      }
-      const filtered = catalogue.filter(s =>
-        s.id.toLowerCase().includes(q) ||
-        (s.name && s.name.toLowerCase().includes(q)) ||
+
+    /* ---------- Search ---------- */
+    searchEl.oninput=e=>{
+      const q=e.target.value.trim().toLowerCase();
+      if(!q){ renderList(catalogue,true); return; }
+      const filtered=catalogue.filter(s=>
+        s.id.toLowerCase().includes(q)||
+        (s.name && s.name.toLowerCase().includes(q))||
         String(s.year).includes(q)
       );
-      renderList(filtered, false);
+      renderList(filtered,false);
     };
-    
-    // Load and display storm KML
-    function loadStorm(storm) {
-      // Remove existing KML layer if any
-      if (currentKmlLayer) {
-        currentKmlLayer.setMap(null);
-      }
-      
-      // Construct full URL for KML file
-      let kmlUrl = storm.kml;
-      
-      // Check if it's already a full URL
-      if (!kmlUrl.startsWith('http://') && !kmlUrl.startsWith('https://')) {
-        // Construct GitHub Pages URL
-        const baseUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-          ? window.location.origin // For local testing
-          : 'https://conggao-cg.github.io/tc-explorer'; // GitHub Pages URL
-        
-        kmlUrl = `${baseUrl}/${kmlUrl}`;
-      }
-      
-      console.log('Loading KML from:', kmlUrl);
-      
-      // Create KML layer
-      currentKmlLayer = new google.maps.KmlLayer({
-        url: kmlUrl,
-        map: map,
-        preserveViewport: false,
-        suppressInfoWindows: false
-      });
-      
-      // Handle KML load events
-      google.maps.event.addListener(currentKmlLayer, 'status_changed', function() {
-        const status = currentKmlLayer.getStatus();
-        if (status !== 'OK') {
-          console.error('KML loading error:', status);
-          let errorMsg = `Error loading storm data: ${status}`;
-          
-          if (status === 'DOCUMENT_NOT_FOUND') {
-            errorMsg += '\n\nPossible solutions:\n';
-            errorMsg += '1. Enable GitHub Pages for your repository\n';
-            errorMsg += '2. Make sure the KML file exists at: ' + kmlUrl + '\n';
-            errorMsg += '3. Check that the filename in storms.json matches the actual file';
-          }
-          
-          alert(errorMsg);
-        } else {
-          console.log('KML loaded successfully');
-        }
-      });
-      
-      // Add click listener for custom info windows
-      google.maps.event.addListener(currentKmlLayer, 'click', function(kmlEvent) {
-        const content = kmlEvent.featureData.infoWindowHtml;
-        if (content) {
-          infoWindow.setContent(`<div class="storm-info">${content}</div>`);
-          infoWindow.setPosition(kmlEvent.latLng);
-          infoWindow.open(map);
-        }
-      });
+
+    /* ---------- Load storm ---------- */
+    function loadStorm(storm){
+      if(currentLayer) map.removeLayer(currentLayer);
+      currentLayer=new L.KML(storm.kml,{async:true});
+      currentLayer.on('loaded',()=>{addLabelsRecursive(currentLayer);map.fitBounds(currentLayer.getBounds());});
+      map.addLayer(currentLayer);
     }
-  </script>
-  
-  <!-- Load Google Maps API -->
-  <!-- Replace YOUR_API_KEY_HERE with your actual Google Maps API key -->
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX_YvYFsw9M3Q7wMFoL2QDh7dI_ASyAps&callback=initMap&libraries=visualization">
+
+    /* ---------- Labels ---------- */
+    function addLabelsRecursive(layer){
+      if(layer.getLayers){layer.getLayers().forEach(addLabelsRecursive);}  
+      if(typeof layer.bindTooltip!=='function') return;
+      const label=getLabel(layer);
+      if(label && !layer.getTooltip()){
+        layer.bindTooltip(label,{permanent:true,direction:'right',className:'tc-label',offset:[6,0]});
+      }
+    }
+
+    function getLabel(layer){
+      return layer?.feature?.properties?.name || layer.options?.title || layer.options?.name || ((layer.getPopup&&layer.getPopup())?(layer.getPopup().getContent().match(/<h2>(.*?)<\/h2>/i)||[])[1]:'');
+    }
   </script>
 </body>
 </html>
