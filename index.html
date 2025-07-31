@@ -24,21 +24,24 @@
   </aside>
   <main class="flex-1"><div id="map"></div></main>
   <script>
-    /* ---------- Base map with continuous world ---------- */
-    const map=L.map('map',{
-      worldCopyJump:false,
-      maxBounds:[[-90,-Infinity],[90,Infinity]],
-      maxBoundsViscosity:1.0
-    }).setView([20,0],3);
+    /* ---------- Base map ---------- */
+    const map=L.map('map').setView([20,0],3);
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
       attribution:'© OpenStreetMap contributors',
       maxZoom:19,
-      noWrap:false // Allow tiles to repeat horizontally
+      noWrap:false // This enables continuous horizontal scrolling
     }).addTo(map);
     
     /* ---------- Lat/Lon Grid ---------- */
     const gridLayer=L.layerGroup().addTo(map);
+    
+    function normalizelon(lon){
+      // Normalize longitude to -180 to 180 range
+      while(lon>180) lon-=360;
+      while(lon<-180) lon+=360;
+      return lon;
+    }
     
     function drawGrid(){
       gridLayer.clearLayers();
@@ -56,18 +59,26 @@
       // Get visible bounds
       const west=bounds.getWest();
       const east=bounds.getEast();
-      const south=Math.max(-85,bounds.getSouth()-step);
-      const north=Math.min(85,bounds.getNorth()+step);
+      const south=Math.max(-85,bounds.getSouth());
+      const north=Math.min(85,bounds.getNorth());
       
       // Draw latitude lines
       for(let lat=-90;lat<=90;lat+=step){
-        if(lat<south||lat>north) continue;
-        const line=L.polyline([[lat,west],[lat,east]],{color:'#999',weight:1,opacity:0.5,dashArray:'2,4',interactive:false});
+        if(lat<south-step||lat>north+step) continue;
+        
+        // Draw line across visible area
+        const line=L.polyline([[lat,west],[lat,east]],{
+          color:'#999',
+          weight:1,
+          opacity:0.5,
+          dashArray:'2,4',
+          interactive:false
+        });
         gridLayer.addLayer(line);
         
-        // Add label at regular intervals across the visible area
-        const labelInterval=Math.min(60,Math.max(30,step*3));
-        for(let lng=Math.floor(west/labelInterval)*labelInterval;lng<=east;lng+=labelInterval){
+        // Add labels
+        const startLng=Math.floor(west/60)*60;
+        for(let lng=startLng;lng<=east;lng+=60){
           const label=L.divIcon({
             html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${lat}°</div>`,
             iconSize:[40,16],
@@ -78,32 +89,35 @@
         }
       }
       
-      // Draw longitude lines - normalize to standard -180 to 180 range for display
-      for(let baseLng=-180;baseLng<=180;baseLng+=step){
-        // Draw multiple copies of each longitude line across the visible area
-        for(let worldCopy=Math.floor(west/360);worldCopy<=Math.ceil(east/360);worldCopy++){
-          const lng=baseLng+worldCopy*360;
-          if(lng<west||lng>east) continue;
-          
-          const line=L.polyline([[south,lng],[north,lng]],{color:'#999',weight:1,opacity:0.5,dashArray:'2,4',interactive:false});
-          gridLayer.addLayer(line);
-          
-          // Add label showing normalized longitude
-          const displayLng=((baseLng+180)%360-180); // Normalize to -180 to 180
-          const label=L.divIcon({
-            html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${displayLng}°</div>`,
-            iconSize:[40,16],
-            iconAnchor:[20,0],
-            className:''
-          });
-          gridLayer.addLayer(L.marker([north-1,lng],{icon:label,interactive:false}));
-        }
+      // Draw longitude lines
+      const startLng=Math.floor(west/step)*step;
+      const endLng=Math.ceil(east/step)*step;
+      
+      for(let lng=startLng;lng<=endLng;lng+=step){
+        const line=L.polyline([[south,lng],[north,lng]],{
+          color:'#999',
+          weight:1,
+          opacity:0.5,
+          dashArray:'2,4',
+          interactive:false
+        });
+        gridLayer.addLayer(line);
+        
+        // Add label with normalized longitude
+        const normLng=normalizelon(lng);
+        const label=L.divIcon({
+          html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${normLng}°</div>`,
+          iconSize:[40,16],
+          iconAnchor:[20,0],
+          className:''
+        });
+        gridLayer.addLayer(L.marker([north-2,lng],{icon:label,interactive:false}));
       }
     }
     
     // Draw grid on map events
     map.on('moveend zoomend',drawGrid);
-    drawGrid(); // Initial draw
+    setTimeout(drawGrid,100); // Initial draw with small delay
     
     let currentLayer=null;
     let catalogue=[];
