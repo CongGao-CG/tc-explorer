@@ -100,90 +100,87 @@ function loadStorm(storm) {
   currentOverlays.forEach(overlay => map.removeOverlay(overlay));
   currentOverlays = [];
 
-  // Load KML with wrapX: false
-  const kmlSource = new ol.source.Vector({
-    url: storm.kml,
-    format: new ol.format.KML(),
-    wrapX: false
-  });
-
-  currentLayer = new ol.layer.Vector({
-    source: kmlSource,
-    style: function(feature) {
-      const styles = [];
-      if (feature.getGeometry().getType() === 'LineString') {
-        styles.push(new ol.style.Style({
-          stroke: new ol.style.Stroke({ color: '#ff0000', width: 2 })
-        }));
-      }
-      if (feature.getGeometry().getType() === 'Point') {
-        styles.push(new ol.style.Style({
-          image: new ol.style.Circle({
-            radius: 4,
-            fill: new ol.style.Fill({ color: '#ff0000' }),
-            stroke: new ol.style.Stroke({ color: '#ffffff', width: 1 })
-          })
-        }));
-      }
-      return styles;
-    }
-  });
-
-  map.addLayer(currentLayer);
-
-  // When features are loaded, create a line and fit the view
-  kmlSource.once('change', () => {
-    if (kmlSource.getState() === 'ready') {
-      // Get all point features in their original order (no sorting!)
-      const pointFeatures = kmlSource.getFeatures().filter(f => 
-        f.getGeometry().getType() === 'Point'
-      );
+  // First, fetch the KML as text
+  fetch(storm.kml)
+    .then(response => response.text())
+    .then(kmlText => {
+      // Parse as XML
+      const parser = new DOMParser();
+      const kmlDoc = parser.parseFromString(kmlText, 'text/xml');
       
-      if (pointFeatures.length > 1) {
-        // Create coordinate array from points in their original order
-        const coords = pointFeatures.map(p => [...p.getGeometry().getCoordinates()]);
+      // Extract placemarks in order
+      const placemarks = kmlDoc.getElementsByTagName('Placemark');
+      const orderedCoords = [];
+      const pointFeatures = [];
+      
+      // Process placemarks in the order they appear in the file
+      for (let i = 0; i < placemarks.length; i++) {
+        const placemark = placemarks[i];
+        const coordElement = placemark.getElementsByTagName('coordinates')[0];
         
-        // Fix date line crossings
-        for (let i = 1; i < coords.length; i++) {
-          const diff = coords[i][0] - coords[i-1][0];
+        if (coordElement) {
+          const coordText = coordElement.textContent.trim();
+          const [lon, lat] = coordText.split(',').map(Number);
+          orderedCoords.push([lon, lat]);
           
-          if (diff > 180) {
-            // Crossed date line westward
-            coords[i][0] -= 360;
-          } else if (diff < -180) {
-            // Crossed date line eastward  
-            coords[i][0] += 360;
-          }
+          // Create point feature
+          const pointGeom = new ol.geom.Point([lon, lat]);
+          const feature = new ol.Feature({
+            geometry: pointGeom,
+            name: placemark.getElementsByTagName('name')[0]?.textContent,
+            description: placemark.getElementsByTagName('description')[0]?.textContent
+          });
+          pointFeatures.push(feature);
         }
-        
-        // Create a new LineString feature
-        const lineGeom = new ol.geom.LineString(coords);
-        const lineFeature = new ol.Feature({ geometry: lineGeom });
-        kmlSource.addFeature(lineFeature);
-        
-        // Adjust original point features to match the line's coordinate system
-        const lineExtent = lineGeom.getExtent();
-        const lineCenterLon = (lineExtent[0] + lineExtent[2]) / 2;
-        const worldWidth = 360;
-
-        pointFeatures.forEach((point, index) => {
-          const pointGeom = point.getGeometry();
-          // Use the adjusted coordinates from our line
-          pointGeom.setCoordinates([...coords[index]]);
-        });
       }
       
-      // Fit the view to all features
-      const extent = kmlSource.getExtent();
+      // Create vector source and add features
+      const vectorSource = new ol.source.Vector({
+        features: pointFeatures
+      });
+      
+      // Create line from ordered coordinates
+      if (orderedCoords.length > 1) {
+        const lineGeom = new ol.geom.LineString(orderedCoords);
+        const lineFeature = new ol.Feature({ geometry: lineGeom });
+        vectorSource.addFeature(lineFeature);
+      }
+      
+      // Create layer with styling
+      currentLayer = new ol.layer.Vector({
+        source: vectorSource,
+        style: function(feature) {
+          const styles = [];
+          if (feature.getGeometry().getType() === 'LineString') {
+            styles.push(new ol.style.Style({
+              stroke: new ol.style.Stroke({ color: '#ff0000', width: 2 })
+            }));
+          }
+          if (feature.getGeometry().getType() === 'Point') {
+            styles.push(new ol.style.Style({
+              image: new ol.style.Circle({
+                radius: 4,
+                fill: new ol.style.Fill({ color: '#ff0000' }),
+                stroke: new ol.style.Stroke({ color: '#ffffff', width: 1 })
+              })
+            }));
+          }
+          return styles;
+        }
+      });
+      
+      map.addLayer(currentLayer);
+      
+      // Fit view
+      const extent = vectorSource.getExtent();
       if (!ol.extent.isEmpty(extent)) {
         map.getView().fit(extent, {
           padding: [50, 50, 50, 50],
           duration: 500
         });
       }
-    }
-  });
-}   
+    });
+}
 
     /* ---------- Popup for feature info ---------- */
     const popupElement = document.createElement('div');
