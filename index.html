@@ -9,8 +9,6 @@
     html,body{height:100%}
     #map{height:100%;width:100%}
     .leaflet-tooltip.tc-label{font-size:10px;font-weight:600;background:rgba(255,255,255,.9);border:none;padding:1px 4px;border-radius:2px;pointer-events:none}
-    .grid-line{stroke:#ccc;stroke-width:0.5;stroke-dasharray:2,4;fill:none}
-    .grid-label{font-size:11px;fill:#666;font-family:Arial,sans-serif}
   </style>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -22,112 +20,26 @@
     <input id="search" type="text" placeholder="Search storms…" class="mb-4 w-full p-2 border rounded" />
     <ul id="storm-list" class="space-y-2"></ul>
   </aside>
+
   <main class="flex-1"><div id="map"></div></main>
+
   <script>
     /* ---------- Base map ---------- */
     const map=L.map('map').setView([20,0],3);
-    
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-      attribution:'© OpenStreetMap contributors',
-      maxZoom:19,
-      noWrap:false // This enables continuous horizontal scrolling
-    }).addTo(map);
-    
-    /* ---------- Lat/Lon Grid ---------- */
-    const gridLayer=L.layerGroup().addTo(map);
-    
-    function normalizelon(lon){
-      // Normalize longitude to -180 to 180 range
-      while(lon>180) lon-=360;
-      while(lon<-180) lon+=360;
-      return lon;
-    }
-    
-    function drawGrid(){
-      gridLayer.clearLayers();
-      const bounds=map.getBounds();
-      const zoom=map.getZoom();
-      
-      // Determine grid spacing based on zoom level
-      let step=30;
-      if(zoom>3) step=20;
-      if(zoom>5) step=10;
-      if(zoom>7) step=5;
-      if(zoom>9) step=2;
-      if(zoom>11) step=1;
-      
-      // Get visible bounds
-      const west=bounds.getWest();
-      const east=bounds.getEast();
-      const south=Math.max(-85,bounds.getSouth());
-      const north=Math.min(85,bounds.getNorth());
-      
-      // Draw latitude lines
-      for(let lat=-90;lat<=90;lat+=step){
-        if(lat<south-step||lat>north+step) continue;
-        
-        // Draw line across visible area
-        const line=L.polyline([[lat,west],[lat,east]],{
-          color:'#999',
-          weight:1,
-          opacity:0.5,
-          dashArray:'2,4',
-          interactive:false
-        });
-        gridLayer.addLayer(line);
-        
-        // Add labels
-        const startLng=Math.floor(west/60)*60;
-        for(let lng=startLng;lng<=east;lng+=60){
-          const label=L.divIcon({
-            html:<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${lat}°</div>,
-            iconSize:[40,16],
-            iconAnchor:[0,8],
-            className:''
-          });
-          gridLayer.addLayer(L.marker([lat,lng],{icon:label,interactive:false}));
-        }
-      }
-      
-      // Draw longitude lines
-      const startLng=Math.floor(west/step)*step;
-      const endLng=Math.ceil(east/step)*step;
-      
-      for(let lng=startLng;lng<=endLng;lng+=step){
-        const line=L.polyline([[south,lng],[north,lng]],{
-          color:'#999',
-          weight:1,
-          opacity:0.5,
-          dashArray:'2,4',
-          interactive:false
-        });
-        gridLayer.addLayer(line);
-        
-        // Add label with normalized longitude
-        const normLng=normalizelon(lng);
-        const label=L.divIcon({
-          html:<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${normLng}°</div>,
-          iconSize:[40,16],
-          iconAnchor:[20,0],
-          className:''
-        });
-        gridLayer.addLayer(L.marker([north-2,lng],{icon:label,interactive:false}));
-      }
-    }
-    
-    // Draw grid on map events
-    map.on('moveend zoomend',drawGrid);
-    setTimeout(drawGrid,100); // Initial draw with small delay
-    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:19}).addTo(map);
+
     let currentLayer=null;
     let catalogue=[];
+
     /* ---------- Load catalogue ---------- */
     fetch('storms/storms.json')
       .then(r=>r.ok?r.json():Promise.reject(r.status))
       .then(data=>{catalogue=data;renderList(data,true);})
-      .catch(code=>alert(storms.json error – HTTP ${code}));
+      .catch(code=>alert(`storms.json error – HTTP ${code}`));
+
     const listEl=document.getElementById('storm-list');
     const searchEl=document.getElementById('search');
+
     /* ---------- Render list ---------- */
     function renderList(arr,sortByYearDesc=false){
       const sorted=arr.slice().sort((a,b)=>{
@@ -140,11 +52,12 @@
       sorted.forEach(s=>{
         const li=document.createElement('li');
         li.className='cursor-pointer hover:bg-blue-100 p-2 rounded';
-        li.textContent=${s.id} – ${s.name||'Unnamed'} (${s.year});
+        li.textContent=`${s.id} – ${s.name||'Unnamed'} (${s.year})`;
         li.onclick=()=>loadStorm(s);
         listEl.appendChild(li);
       });
     }
+
     /* ---------- Search ---------- */
     searchEl.oninput=e=>{
       const q=e.target.value.trim().toLowerCase();
@@ -156,6 +69,7 @@
       );
       renderList(filtered,false);
     };
+
     /* ---------- Load storm ---------- */
     function loadStorm(storm){
       if(currentLayer) map.removeLayer(currentLayer);
@@ -163,6 +77,7 @@
       currentLayer.on('loaded',()=>{addLabelsRecursive(currentLayer);map.fitBounds(currentLayer.getBounds());});
       map.addLayer(currentLayer);
     }
+
     /* ---------- Labels ---------- */
     function addLabelsRecursive(layer){
       if(layer.getLayers){layer.getLayers().forEach(addLabelsRecursive);}  
@@ -172,6 +87,7 @@
         layer.bindTooltip(label,{permanent:true,direction:'right',className:'tc-label',offset:[6,0]});
       }
     }
+
     function getLabel(layer){
       return layer?.feature?.properties?.name || layer.options?.title || layer.options?.name || ((layer.getPopup&&layer.getPopup())?(layer.getPopup().getContent().match(/<h2>(.*?)<\/h2>/i)||[])[1]:'');
     }
