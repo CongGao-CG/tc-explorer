@@ -101,29 +101,39 @@
       currentOverlays = [];
 
       // Load KML
+      const kmlFormat = new ol.format.KML({
+        extractStyles: true,  // Extract styles from KML
+        showPointNames: false, // We'll handle labels ourselves
+        crossOrigin: 'anonymous' // Allow loading external icons
+      });
+
       const kmlSource = new ol.source.Vector({
         url: storm.kml,
-        format: new ol.format.KML()
+        format: kmlFormat,
+        crossOrigin: 'anonymous'
       });
 
       currentLayer = new ol.layer.Vector({
         source: kmlSource,
-        style: function(feature) {
-          // Basic style for lines and points
-          const styles = [];
+        style: function(feature, resolution) {
+          // First try to use the style from KML
+          const kmlStyle = feature.getStyle();
+          if (kmlStyle) {
+            return kmlStyle;
+          }
           
-          // Line style
-          if (feature.getGeometry().getType() === 'LineString') {
+          // Fallback styles if KML doesn't provide them
+          const styles = [];
+          const geometry = feature.getGeometry();
+          
+          if (geometry.getType() === 'LineString') {
             styles.push(new ol.style.Style({
               stroke: new ol.style.Stroke({
                 color: '#ff0000',
                 width: 2
               })
             }));
-          }
-          
-          // Point style
-          if (feature.getGeometry().getType() === 'Point') {
+          } else if (geometry.getType() === 'Point') {
             styles.push(new ol.style.Style({
               image: new ol.style.Circle({
                 radius: 4,
