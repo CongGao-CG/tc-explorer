@@ -27,123 +27,117 @@
   </aside>
   <main class="flex-1"><div id="map"></div></main>
   <script>
-    /* ---------- Base map ---------- */
+    /* ---------- Map ---------- */
     const map = new ol.Map({
       target: 'map',
       layers: [new ol.layer.Tile({source: new ol.source.OSM()})],
-      view: new ol.View({center: ol.proj.fromLonLat([0, 20]), zoom: 3})
+      view: new ol.View({center: ol.proj.fromLonLat([0, 15]), zoom: 2})
     });
 
-    let currentLayer = null;
-    let catalogue = [];
+    let currentLayer=null;
+    let catalogue=[];
 
     /* ---------- Load catalogue ---------- */
     fetch('storms/storms.json')
-      .then(r => r.ok ? r.json() : Promise.reject(r.status))
-      .then(data => { catalogue = data; renderList(data, true); })
-      .catch(code => alert(`storms.json error – HTTP ${code}`));
+      .then(r=>r.ok?r.json():Promise.reject(r.status))
+      .then(data=>{ catalogue=data; renderList(data,true); })
+      .catch(code=>alert(`storms.json error – HTTP ${code}`));
 
-    const listEl   = document.getElementById('storm-list');
-    const searchEl = document.getElementById('search');
+    const listEl=document.getElementById('storm-list');
+    const searchEl=document.getElementById('search');
 
-    /* ---------- Render list ---------- */
-    function renderList(arr, sortByYearDesc = false) {
-      const sorted = arr.slice().sort((a, b) => {
-        if (sortByYearDesc) {
-          const yr = b.year - a.year; if (yr !== 0) return yr;
-        }
+    function renderList(arr,sortDesc=false){
+      const sorted=arr.slice().sort((a,b)=>{
+        if(sortDesc){ const yr=b.year-a.year; if(yr!==0) return yr; }
         return a.id.localeCompare(b.id);
       });
-      listEl.innerHTML = '';
-      sorted.forEach(s => {
-        const li = document.createElement('li');
-        li.className = 'cursor-pointer hover:bg-blue-100 p-2 rounded';
-        li.textContent = `${s.id} – ${s.name || 'Unnamed'} (${s.year})`;
-        li.onclick = () => loadStorm(s);
+      listEl.innerHTML='';
+      sorted.forEach(s=>{
+        const li=document.createElement('li');
+        li.className='cursor-pointer hover:bg-blue-100 p-2 rounded';
+        li.textContent=`${s.id} – ${s.name||'Unnamed'} (${s.year})`;
+        li.onclick=()=>loadStorm(s);
         listEl.appendChild(li);
       });
     }
 
-    /* ---------- Search ---------- */
-    searchEl.oninput = e => {
-      const q = e.target.value.trim().toLowerCase();
-      if (!q) { renderList(catalogue, true); return; }
-      const filtered = catalogue.filter(s =>
-        s.id.toLowerCase().includes(q) ||
-        (s.name && s.name.toLowerCase().includes(q)) ||
+    searchEl.oninput=e=>{
+      const q=e.target.value.trim().toLowerCase();
+      if(!q){ renderList(catalogue,true); return; }
+      renderList(catalogue.filter(s=>
+        s.id.toLowerCase().includes(q)||
+        (s.name&&s.name.toLowerCase().includes(q))||
         String(s.year).includes(q)
-      );
-      renderList(filtered, false);
+      ),false);
     };
 
-    /* ---------- Dateline-aware fitting ---------- */
-    function fitStormView(source){
-      const feats = source.getFeatures();
-      if(!feats.length) return;
-      const lons=[], lats=[];
-      feats.forEach(f=>{
-        const geom=f.getGeometry();
-        const coords = (geom.getType()==='LineString')? geom.getCoordinates(): [geom.getCoordinates()];
-        coords.forEach(c=>{
-          const ll = ol.proj.toLonLat(c);
-          lons.push(ll[0]); lats.push(ll[1]);
-        });
-      });
-      if(!lons.length) return;
-      const minLat=Math.min(...lats), maxLat=Math.max(...lats);
-      const minLon=Math.min(...lons), maxLon=Math.max(...lons);
-      const span = maxLon - minLon;
-      const size = map.getSize();
-
-      if(span<=180){
-        const ext = ol.proj.transformExtent([minLon,minLat,maxLon,maxLat],'EPSG:4326','EPSG:3857');
-        map.getView().fit(ext,{padding:[50,50,50,50],duration:500});
-      }else{
-        // crosses dateline – work in 0–360 domain
-        const shifted = lons.map(l=> (l<0? l+360:l));
-        const minS=Math.min(...shifted), maxS=Math.max(...shifted);
-        const centerLonShift=(minS+maxS)/2;
-        const centerLon = centerLonShift>180? centerLonShift-360 : centerLonShift;
-        const centerLat=(minLat+maxLat)/2;
-
-        const extShift4326=[minS,minLat,maxS,maxLat];
-        const extShift3857=ol.proj.transformExtent(extShift4326,'EPSG:4326','EPSG:3857');
-        const res = map.getView().getResolutionForExtent(extShift3857,size);
-
-        map.getView().animate({center: ol.proj.fromLonLat([centerLon,centerLat]), resolution: res, duration:500});
+    /* ---------- Dateline unwrapping ---------- */
+    function unwrapAndClamp(feature){
+      const geom=feature.getGeometry();
+      const type=geom.getType();
+      if(type==='LineString'){
+        let ll=geom.getCoordinates().map(c=>ol.proj.toLonLat(c));
+        // unwrap
+        for(let i=1;i<ll.length;i++){
+          let prev=ll[i-1][0], cur=ll[i][0];
+          let diff=cur-prev;
+          if(diff>180)   cur-=360;
+          else if(diff<-180) cur+=360;
+          ll[i][0]=cur;
+        }
+        // shift entire line into [-180,180]
+        const lons=ll.map(c=>c[0]);
+        const meanLon=lons.reduce((a,b)=>a+b,0)/lons.length;
+        let shift=0;
+        if(meanLon>180) shift=-360;
+        if(meanLon<-180) shift=360;
+        if(shift!==0) ll=ll.map(([lon,lat])=>[lon+shift,lat]);
+        geom.setCoordinates(ll.map(c=>ol.proj.fromLonLat(c)));
+      }else if(type==='Point'){
+        let [lon,lat]=ol.proj.toLonLat(geom.getCoordinates());
+        if(lon>180) lon-=360;
+        if(lon<-180) lon+=360;
+        geom.setCoordinates(ol.proj.fromLonLat([lon,lat]));
       }
     }
 
     /* ---------- Load storm ---------- */
-    function loadStorm(storm) {
-      if (currentLayer) map.removeLayer(currentLayer);
-      const kmlSource = new ol.source.Vector({ url: storm.kml, format: new ol.format.KML(), wrapX:false });
-      currentLayer = new ol.layer.Vector({
-        source: kmlSource,
-        style: feature => {
-          const t = feature.getGeometry().getType();
-          if (t==='LineString') return new ol.style.Style({ stroke: new ol.style.Stroke({color:'#ff0000',width:2}) });
-          if (t==='Point')      return new ol.style.Style({ image: new ol.style.Circle({radius:4,fill:new ol.style.Fill({color:'#ff0000'}),stroke:new ol.style.Stroke({color:'#ffffff',width:1})}) });
+    function loadStorm(storm){
+      if(currentLayer) map.removeLayer(currentLayer);
+      const src=new ol.source.Vector({url:storm.kml,format:new ol.format.KML(),wrapX:false});
+      currentLayer=new ol.layer.Vector({
+        source:src,
+        style:feat=>{
+          const t=feat.getGeometry().getType();
+          if(t==='LineString') return new ol.style.Style({stroke:new ol.style.Stroke({color:'#ff0000',width:2})});
+          if(t==='Point') return new ol.style.Style({image:new ol.style.Circle({radius:4,fill:new ol.style.Fill({color:'#ff0000'}),stroke:new ol.style.Stroke({color:'#fff',width:1})})});
         }
       });
       map.addLayer(currentLayer);
-      kmlSource.once('change', ()=>{ if(kmlSource.getState()==='ready') fitStormView(kmlSource); });
+
+      src.once('change',()=>{
+        if(src.getState()!=='ready') return;
+        src.getFeatures().forEach(unwrapAndClamp);
+        const ext=src.getExtent();
+        if(!ol.extent.isEmpty(ext)) map.getView().fit(ext,{padding:[50,50,50,50],duration:400});
+      });
     }
 
     /* ---------- Popup ---------- */
-    const popupElement=document.createElement('div'); popupElement.className='ol-popup';
+    const popupEl=document.createElement('div'); popupEl.className='ol-popup';
     const popupCloser=document.createElement('a'); popupCloser.className='ol-popup-closer'; popupCloser.href='#';
     const popupContent=document.createElement('div');
-    popupElement.appendChild(popupCloser); popupElement.appendChild(popupContent);
-    const popup=new ol.Overlay({element:popupElement,autoPan:true,autoPanAnimation:{duration:250}});
+    popupEl.appendChild(popupCloser); popupEl.appendChild(popupContent);
+    const popup=new ol.Overlay({element:popupEl,autoPan:true,autoPanAnimation:{duration:250}});
     map.addOverlay(popup);
-    popupCloser.onclick=()=>{popup.setPosition(undefined);popupCloser.blur();return false;};
+    popupCloser.onclick=()=>{popup.setPosition(undefined); popupCloser.blur(); return false;};
     map.on('click',evt=>{
-      const feature=map.forEachFeatureAtPixel(evt.pixel,f=>f);
-      if(feature){
-        const p=feature.getProperties();
-        let html=''; if(p.name)html+=`<h2 style="margin:0 0 5px 0;font-size:14px">${p.name}</h2>`;
-        if(p.description)html+=`<div style="font-size:12px">${p.description}</div>`;
+      const feat=map.forEachFeatureAtPixel(evt.pixel,f=>f);
+      if(feat){
+        const p=feat.getProperties();
+        let html='';
+        if(p.name) html+=`<h2 style=\"margin:0 0 5px 0;font-size:14px\">${p.name}</h2>`;
+        if(p.description) html+=`<div style=\"font-size:12px\">${p.description}</div>`;
         if(html){ popupContent.innerHTML=html; popup.setPosition(evt.coordinate);} }
       else popup.setPosition(undefined);
     });
