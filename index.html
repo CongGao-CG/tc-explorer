@@ -145,7 +145,6 @@
       map.addLayer(currentLayer);
 
       // When features are loaded, fit view
-// When features are loaded, fit view
       kmlSource.once('change', () => {
         if (kmlSource.getState() === 'ready') {
           const features = kmlSource.getFeatures();
