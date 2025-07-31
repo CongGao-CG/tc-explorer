@@ -137,27 +137,27 @@
 function extractDate(feature) {
   const description = feature.get('description') || '';
   const name = feature.get('name') || '';
-  
+ 
   // First try the original format from description
   const dateMatch = description.match(/Date:<\/strong>\s*(\d{2}\/\d{2}\/\d{4})/);
   const timeMatch = description.match(/Time:<\/strong>\s*(\d{2}:\d{2})\s*UTC/);
-  
+          
   if (dateMatch && timeMatch) {
     const dateStr = dateMatch[1];
     const timeStr = timeMatch[1];
     const [month, day, year] = dateStr.split('/');
     const isoStr = `${year}-${month}-${day}T${timeStr}:00Z`;
     return new Date(isoStr);
-  }
-  
-  // Try parsing from the name field (e.g., "1200 UTC JUN 19")
-  // This pattern matches: HHMM UTC MON DD
-  const nameMatch = name.match(/(\d{4})\s*UTC\s*([A-Z]{3})\s*(\d{1,2})/);
-  if (nameMatch) {
-    const time = nameMatch[1]; // "1200"
-    const monthStr = nameMatch[2]; // "JUN"
-    const day = nameMatch[3]; // "19"
-    
+  } 
+ 
+  // Try parsing from description with year (e.g., "1800 UTC OCT 30, 1992")
+  const descriptionDateMatch = description.match(/(\d{4})\s*UTC\s*([A-Z]{3})\s*(\d{1,2}),\s*(\d{4})/);
+  if (descriptionDateMatch) {
+    const time = descriptionDateMatch[1]; // "1800"
+    const monthStr = descriptionDateMatch[2]; // "OCT"
+    const day = descriptionDateMatch[3]; // "30"
+    const year = descriptionDateMatch[4]; // "1992"
+      
     // Convert month abbreviation to number
     const months = {
       'JAN': '01', 'FEB': '02', 'MAR': '03', 'APR': '04',
@@ -167,8 +167,30 @@ function extractDate(feature) {
     
     const month = months[monthStr];
     if (month) {
-      // Need to determine the year - you might need to add logic here
-      // For now, let's assume current year
+      const hours = time.substring(0, 2);
+      const minutes = time.substring(2, 4);
+      const isoStr = `${year}-${month}-${day.padStart(2, '0')}T${hours}:${minutes}:00Z`;
+      return new Date(isoStr);
+    }
+  }
+ 
+  // Try parsing from the name field (e.g., "1200 UTC JUN 19") - fallback without year
+  const nameMatch = name.match(/(\d{4})\s*UTC\s*([A-Z]{3})\s*(\d{1,2})/);
+  if (nameMatch) {
+    const time = nameMatch[1]; // "1200"
+    const monthStr = nameMatch[2]; // "JUN"
+    const day = nameMatch[3]; // "19"
+      
+    // Convert month abbreviation to number
+    const months = {
+      'JAN': '01', 'FEB': '02', 'MAR': '03', 'APR': '04',
+      'MAY': '05', 'JUN': '06', 'JUL': '07', 'AUG': '08',
+      'SEP': '09', 'OCT': '10', 'NOV': '11', 'DEC': '12'
+    };
+    
+    const month = months[monthStr];
+    if (month) {
+      // Need to determine the year - assume current year as fallback
       const year = new Date().getFullYear();
       const hours = time.substring(0, 2);
       const minutes = time.substring(2, 4);
@@ -176,18 +198,18 @@ function extractDate(feature) {
       return new Date(isoStr);
     }
   }
-  
+ 
   // Try another format: "YYYY-MM-DD HH:MM UTC" in name or description
   const isoMatch = (name + ' ' + description).match(/(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})\s*UTC/);
   if (isoMatch) {
     const [, year, month, day, hours, minutes] = isoMatch;
     return new Date(`${year}-${month}-${day}T${hours}:${minutes}:00Z`);
   }
-  
+ 
   // Log the unparseable feature for debugging
   console.warn('Failed to parse date for feature:', name);
   console.warn('Description:', description);
-  
+
   // Return current date as fallback (better than epoch)
   return new Date();
 }

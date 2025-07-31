@@ -201,7 +201,7 @@
         <table>
           <tr><td>SD UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>1200 UTC OCT 12</td></tr>
+          <tr><td>1200 UTC OCT 12, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>24.5 N, 68.5 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -219,7 +219,7 @@
         <table>
           <tr><td>SS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>1800 UTC OCT 12</td></tr>
+          <tr><td>1800 UTC OCT 12, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>25.0 N, 67.9 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -237,7 +237,7 @@
         <table>
           <tr><td>SS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>0000 UTC OCT 13</td></tr>
+          <tr><td>0000 UTC OCT 13, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>25.5 N, 67.0 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -255,7 +255,7 @@
         <table>
           <tr><td>SS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>0600 UTC OCT 13</td></tr>
+          <tr><td>0600 UTC OCT 13, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>25.9 N, 65.5 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -273,7 +273,7 @@
         <table>
           <tr><td>SS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>1200 UTC OCT 13</td></tr>
+          <tr><td>1200 UTC OCT 13, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>26.3 N, 64.2 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -291,7 +291,7 @@
         <table>
           <tr><td>SS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>1800 UTC OCT 13</td></tr>
+          <tr><td>1800 UTC OCT 13, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>26.7 N, 63.6 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -309,7 +309,7 @@
         <table>
           <tr><td>SS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>0000 UTC OCT 14</td></tr>
+          <tr><td>0000 UTC OCT 14, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>27.0 N, 63.8 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -327,7 +327,7 @@
         <table>
           <tr><td>SS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>0600 UTC OCT 14</td></tr>
+          <tr><td>0600 UTC OCT 14, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>27.0 N, 65.0 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -345,7 +345,7 @@
         <table>
           <tr><td>SS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>1200 UTC OCT 14</td></tr>
+          <tr><td>1200 UTC OCT 14, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>27.0 N, 66.3 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -363,7 +363,7 @@
         <table>
           <tr><td>SS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>1800 UTC OCT 14</td></tr>
+          <tr><td>1800 UTC OCT 14, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>27.2 N, 67.0 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -381,7 +381,7 @@
         <table>
           <tr><td>TS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>0000 UTC OCT 15</td></tr>
+          <tr><td>0000 UTC OCT 15, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>27.5 N, 67.3 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -399,7 +399,7 @@
         <table>
           <tr><td>TS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>0600 UTC OCT 15</td></tr>
+          <tr><td>0600 UTC OCT 15, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>27.8 N, 67.4 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -417,7 +417,7 @@
         <table>
           <tr><td>TS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>1200 UTC OCT 15</td></tr>
+          <tr><td>1200 UTC OCT 15, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>28.3 N, 67.4 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -435,7 +435,7 @@
         <table>
           <tr><td>TS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>1800 UTC OCT 15</td></tr>
+          <tr><td>1800 UTC OCT 15, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>29.1 N, 67.4 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -453,7 +453,7 @@
         <table>
           <tr><td>TS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>0000 UTC OCT 16</td></tr>
+          <tr><td>0000 UTC OCT 16, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>30.0 N, 67.1 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -471,7 +471,7 @@
         <table>
           <tr><td>TS UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>0600 UTC OCT 16</td></tr>
+          <tr><td>0600 UTC OCT 16, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>30.7 N, 66.6 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -489,7 +489,7 @@
         <table>
           <tr><td>HU UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>1200 UTC OCT 16</td></tr>
+          <tr><td>1200 UTC OCT 16, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>31.5 N, 66.0 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -507,7 +507,7 @@
         <table>
           <tr><td>HU UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>1800 UTC OCT 16</td></tr>
+          <tr><td>1800 UTC OCT 16, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>32.5 N, 64.7 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -525,7 +525,7 @@
         <table>
           <tr><td>HU UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>0000 UTC OCT 17</td></tr>
+          <tr><td>0000 UTC OCT 17, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>34.0 N, 63.4 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -543,7 +543,7 @@
         <table>
           <tr><td>HU UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>0600 UTC OCT 17</td></tr>
+          <tr><td>0600 UTC OCT 17, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>36.4 N, 62.0 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -561,7 +561,7 @@
         <table>
           <tr><td>HU UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>1200 UTC OCT 17</td></tr>
+          <tr><td>1200 UTC OCT 17, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>39.0 N, 60.5 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
@@ -579,7 +579,7 @@
         <table>
           <tr><td>HU UNNAMED (AL181970)</td></tr>
           <tr><td><hr></td></tr>
-          <tr><td>1800 UTC OCT 17</td></tr>
+          <tr><td>1800 UTC OCT 17, 1970</td></tr>
           <tr><td>Storm Location:</td></tr>
           <tr><td><b>42.0 N, 59.0 W</b></td></tr>
           <tr><td>Min Sea Level Pressure:</td></tr>
