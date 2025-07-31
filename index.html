@@ -14,8 +14,7 @@
   </style>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-plugins@3.0.0/layer/vector/KML.min.js"></script>
-</head>
+  </head>
 <body class="h-full w-full flex">
   <aside class="w-80 p-4 bg-gray-100 overflow-y-auto">
     <h1 class="text-2xl font-bold mb-4">Tropical Cyclones</h1>
@@ -48,76 +47,34 @@
       const bounds=map.getBounds();
       const zoom=map.getZoom();
       
-      // Determine grid spacing based on zoom level
       let step=30;
-      if(zoom>3) step=20;
-      if(zoom>5) step=10;
-      if(zoom>7) step=5;
-      if(zoom>9) step=2;
-      if(zoom>11) step=1;
+      if(zoom>3) step=20; if(zoom>5) step=10; if(zoom>7) step=5;
+      if(zoom>9) step=2; if(zoom>11) step=1;
       
-      // Get visible bounds
-      const west=bounds.getWest();
-      const east=bounds.getEast();
-      const south=Math.max(-85,bounds.getSouth());
-      const north=Math.min(85,bounds.getNorth());
+      const west=bounds.getWest(); const east=bounds.getEast();
+      const south=Math.max(-85,bounds.getSouth()); const north=Math.min(85,bounds.getNorth());
       
-      // Draw latitude lines
       for(let lat=-90;lat<=90;lat+=step){
         if(lat<south-step||lat>north+step) continue;
-        
-        // Draw line across visible area
-        const line=L.polyline([[lat,west],[lat,east]],{
-          color:'#999',
-          weight:1,
-          opacity:0.5,
-          dashArray:'2,4',
-          interactive:false
-        });
-        gridLayer.addLayer(line);
-        
-        // Add labels
+        gridLayer.addLayer(L.polyline([[lat,west],[lat,east]],{color:'#999',weight:1,opacity:0.5,dashArray:'2,4',interactive:false}));
         const startLng=Math.floor(west/60)*60;
         for(let lng=startLng;lng<=east;lng+=60){
-          const label=L.divIcon({
-            html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${lat}°</div>`,
-            iconSize:[40,16],
-            iconAnchor:[0,8],
-            className:''
-          });
+          const label=L.divIcon({html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${lat}°</div>`,iconSize:[40,16],iconAnchor:[0,8],className:''});
           gridLayer.addLayer(L.marker([lat,lng],{icon:label,interactive:false}));
         }
       }
       
-      // Draw longitude lines
-      const startLng=Math.floor(west/step)*step;
-      const endLng=Math.ceil(east/step)*step;
-      
+      const startLng=Math.floor(west/step)*step; const endLng=Math.ceil(east/step)*step;
       for(let lng=startLng;lng<=endLng;lng+=step){
-        const line=L.polyline([[south,lng],[north,lng]],{
-          color:'#999',
-          weight:1,
-          opacity:0.5,
-          dashArray:'2,4',
-          interactive:false
-        });
-        gridLayer.addLayer(line);
-        
-        // Add label with normalized longitude
+        gridLayer.addLayer(L.polyline([[south,lng],[north,lng]],{color:'#999',weight:1,opacity:0.5,dashArray:'2,4',interactive:false}));
         const normLng=normalizelon(lng);
-        const label=L.divIcon({
-          html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${normLng}°</div>`,
-          iconSize:[40,16],
-          iconAnchor:[20,0],
-          className:''
-        });
+        const label=L.divIcon({html:`<div style="font-size:11px;color:#666;background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:2px;border:1px solid #ddd">${normLng}°</div>`,iconSize:[40,16],iconAnchor:[20,0],className:''});
         gridLayer.addLayer(L.marker([north-2,lng],{icon:label,interactive:false}));
       }
     }
     
-    // Draw grid on map events
     map.on('moveend zoomend',drawGrid);
-    setTimeout(drawGrid,100); // Initial draw with small delay
+    setTimeout(drawGrid,100);
     
     let currentLayer=null;
     let catalogue=[];
@@ -128,6 +85,7 @@
       .catch(code=>alert(`storms.json error – HTTP ${code}`));
     const listEl=document.getElementById('storm-list');
     const searchEl=document.getElementById('search');
+
     /* ---------- Render list ---------- */
     function renderList(arr,sortByYearDesc=false){
       const sorted=arr.slice().sort((a,b)=>{
@@ -156,66 +114,93 @@
       );
       renderList(filtered,false);
     };
-    /* ---------- Load storm ---------- */
-    function loadStorm(storm){
-      if(currentLayer) map.removeLayer(currentLayer);
-      currentLayer=new L.KML(storm.kml,{async:true});
-      currentLayer.on('loaded',()=>{
-        fixDateLine(currentLayer); // Fix polylines that cross the date line
-        addLabelsRecursive(currentLayer);
-        map.fitBounds(currentLayer.getBounds());
-      });
-      map.addLayer(currentLayer);
-    }
-    /* ---------- Fix Date Line Crossing ---------- */
-    function fixDateLine(layer) {
-      // Recursively loop through all child layers
-      if (typeof layer.eachLayer === 'function') {
-        layer.eachLayer(fixDateLine);
-        return;
-      }
-      // Check if layer is a polyline and not a polygon
-      if (!(layer instanceof L.Polyline) || (layer instanceof L.Polygon)) {
-        return;
-      }
-      const latlngs = layer.getLatLngs();
-      if (!latlngs.length) return;
-      
-      // Check if it's a MultiPolyline or a single Polyline
-      const isMulti = !L.Polyline._flat(latlngs);
-      const lines = isMulti ? latlngs : [latlngs];
 
-      const newLines = lines.map(line => {
-        const unwrapped = [];
-        let lastLng = null;
-        line.forEach(latlng => {
-          let lng = latlng.lng;
-          if (lastLng !== null) {
-            // If the jump between longitude points is > 180 degrees, it's a dateline cross
-            if (Math.abs(lng - lastLng) > 180) {
-              lng += (lng > lastLng) ? -360 : 360; // Adjust longitude
+    /**
+     * Parses a KML coordinate string and "unwraps" the longitudes
+     * to allow them to cross the 180° meridian properly.
+     * @param {string} coordsStr - The string of coordinates from the KML file.
+     * @returns {Array<[number, number]>} An array of [lat, lon] pairs.
+     */
+    function parseAndUnwrapCoordinates(coordsStr) {
+        const points = coordsStr.split(/\s+/).filter(p => p);
+        let lastLon = null;
+        return points.map(p => {
+            const [lon, lat] = p.split(',').map(Number);
+            let currentLon = lon;
+            if (lastLon !== null) {
+                // If the longitude jump is > 180°, it crossed the date line
+                if (Math.abs(currentLon - lastLon) > 180) {
+                    currentLon += (currentLon > lastLon) ? -360 : 360;
+                }
             }
-          }
-          unwrapped.push(new L.LatLng(latlng.lat, lng));
-          lastLng = lng;
+            lastLon = currentLon;
+            return [lat, currentLon]; // Leaflet expects [lat, lon]
         });
-        return unwrapped;
-      });
-      
-      // Update the layer with the new, unwrapped coordinates
-      layer.setLatLngs(isMulti ? newLines : newLines[0]);
     }
-    /* ---------- Labels ---------- */
-    function addLabelsRecursive(layer){
-      if(layer.getLayers){layer.getLayers().forEach(addLabelsRecursive);}  
-      if(typeof layer.bindTooltip!=='function') return;
-      const label=getLabel(layer);
-      if(label && !layer.getTooltip()){
-        layer.bindTooltip(label,{permanent:true,direction:'right',className:'tc-label',offset:[6,0]});
+    
+    /* ---------- Load storm (NEW ASYNC VERSION) ---------- */
+    async function loadStorm(storm) {
+      if (currentLayer) map.removeLayer(currentLayer);
+    
+      try {
+        // 1. Fetch the KML file as text
+        const response = await fetch(storm.kml);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const kmlText = await response.text();
+    
+        // 2. Parse the text into an XML document
+        const parser = new DOMParser();
+        const kmlDoc = parser.parseFromString(kmlText, 'text/xml');
+    
+        // 3. Create a FeatureGroup to hold all layers for this storm
+        const stormLayerGroup = L.featureGroup();
+    
+        // 4. Find and draw the storm track (LineString)
+        const linePlacemarks = kmlDoc.querySelectorAll('Placemark > LineString');
+        linePlacemarks.forEach(lineString => {
+          const coordsStr = lineString.querySelector('coordinates').textContent.trim();
+          const latlngs = parseAndUnwrapCoordinates(coordsStr);
+          const track = L.polyline(latlngs, {
+            color: '#4A90E2',
+            weight: 3,
+            opacity: 0.9
+          });
+          stormLayerGroup.addLayer(track);
+        });
+
+        // 5. Find and draw the labels (Points)
+        const pointPlacemarks = kmlDoc.querySelectorAll('Placemark > Point');
+        pointPlacemarks.forEach(pointPlacemark => {
+            const parent = pointPlacemark.parentElement;
+            const name = parent.querySelector('name')?.textContent || '';
+            if (!name) return;
+
+            const coordsStr = pointPlacemark.querySelector('coordinates').textContent.trim();
+            const [lon, lat] = coordsStr.split(',').map(Number);
+            
+            // Create a small, invisible marker to anchor the label
+            const marker = L.circleMarker([lat, lon], { radius: 0, opacity: 0 });
+            marker.bindTooltip(name, {
+                permanent: true,
+                direction: 'right',
+                className: 'tc-label',
+                offset: [6, 0]
+            });
+            stormLayerGroup.addLayer(marker);
+        });
+    
+        // 6. Add the completed layer group to the map
+        currentLayer = stormLayerGroup;
+        map.addLayer(currentLayer);
+    
+        // 7. Zoom to fit the new storm track
+        if (currentLayer.getLayers().length > 0) {
+          map.fitBounds(currentLayer.getBounds());
+        }
+      } catch (error) {
+        console.error("Failed to load storm:", error);
+        alert(`Could not load storm data for ${storm.name}. See console for details.`);
       }
-    }
-    function getLabel(layer){
-      return layer?.feature?.properties?.name || layer.options?.title || layer.options?.name || ((layer.getPopup&&layer.getPopup())?(layer.getPopup().getContent().match(/<h2>(.*?)<\/h2>/i)||[])[1]:'');
     }
   </script>
 </body>
