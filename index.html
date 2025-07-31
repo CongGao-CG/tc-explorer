@@ -4,92 +4,125 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tropical Cyclone Explorer</title>
+  <!-- Tailwind for quick utility styling -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- OpenLayers CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.2.0/ol.css">
+  <script src="https://cdn.jsdelivr.net/npm/ol@v10.2.0/dist/ol.js"></script>
+
   <style>
     html,body{height:100%}
     #map{height:100%;width:100%}
-    .leaflet-tooltip.tc-label{font-size:10px;font-weight:600;background:rgba(255,255,255,.9);border:none;padding:1px 4px;border-radius:2px;pointer-events:none}
+    /* Tooltip-like label styling (we implement through ol.style.Text) */
+    .tc-label{font-size:10px;font-weight:600;background:rgba(255,255,255,.9);border:none;padding:1px 4px;border-radius:2px;pointer-events:none}
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-plugins@3.0.0/layer/vector/KML.min.js"></script>
 </head>
 <body class="h-full w-full flex">
+  <!-- Side catalogue panel -->
   <aside class="w-80 p-4 bg-gray-100 overflow-y-auto">
     <h1 class="text-2xl font-bold mb-4">Tropical Cyclones</h1>
     <input id="search" type="text" placeholder="Search storms…" class="mb-4 w-full p-2 border rounded" />
     <ul id="storm-list" class="space-y-2"></ul>
   </aside>
 
+  <!-- Map container -->
   <main class="flex-1"><div id="map"></div></main>
 
   <script>
-    /* ---------- Base map ---------- */
-    const map=L.map('map').setView([20,0],3);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:19}).addTo(map);
+    /* ---------- Base map (OpenLayers) ---------- */
+    const map = new ol.Map({
+      target: 'map',
+      layers: [
+        new ol.layer.Tile({ source: new ol.source.OSM() })
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([0, 20]),
+        zoom: 3
+      })
+    });
 
-    let currentLayer=null;
-    let catalogue=[];
+    let currentLayer = null;
+    let catalogue = [];
 
     /* ---------- Load catalogue ---------- */
     fetch('storms/storms.json')
-      .then(r=>r.ok?r.json():Promise.reject(r.status))
-      .then(data=>{catalogue=data;renderList(data,true);})
-      .catch(code=>alert(`storms.json error – HTTP ${code}`));
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(data => { catalogue = data; renderList(data, true); })
+      .catch(code => alert(`storms.json error – HTTP ${code}`));
 
-    const listEl=document.getElementById('storm-list');
-    const searchEl=document.getElementById('search');
+    const listEl = document.getElementById('storm-list');
+    const searchEl = document.getElementById('search');
 
     /* ---------- Render list ---------- */
-    function renderList(arr,sortByYearDesc=false){
-      const sorted=arr.slice().sort((a,b)=>{
+    function renderList(arr, sortByYearDesc = false){
+      const sorted = arr.slice().sort((a,b)=>{
         if(sortByYearDesc){
-          const yr=b.year-a.year; if(yr!==0) return yr;
+          const yr = b.year - a.year; if(yr !== 0) return yr;
         }
         return a.id.localeCompare(b.id);
       });
-      listEl.innerHTML='';
-      sorted.forEach(s=>{
-        const li=document.createElement('li');
-        li.className='cursor-pointer hover:bg-blue-100 p-2 rounded';
-        li.textContent=`${s.id} – ${s.name||'Unnamed'} (${s.year})`;
-        li.onclick=()=>loadStorm(s);
+      listEl.innerHTML = '';
+      sorted.forEach(s => {
+        const li = document.createElement('li');
+        li.className = 'cursor-pointer hover:bg-blue-100 p-2 rounded';
+        li.textContent = `${s.id} – ${s.name || 'Unnamed'} (${s.year})`;
+        li.onclick = () => loadStorm(s);
         listEl.appendChild(li);
       });
     }
 
     /* ---------- Search ---------- */
-    searchEl.oninput=e=>{
-      const q=e.target.value.trim().toLowerCase();
-      if(!q){ renderList(catalogue,true); return; }
-      const filtered=catalogue.filter(s=>
-        s.id.toLowerCase().includes(q)||
-        (s.name && s.name.toLowerCase().includes(q))||
+    searchEl.oninput = e => {
+      const q = e.target.value.trim().toLowerCase();
+      if(!q){ renderList(catalogue, true); return; }
+      const filtered = catalogue.filter(s =>
+        s.id.toLowerCase().includes(q) ||
+        (s.name && s.name.toLowerCase().includes(q)) ||
         String(s.year).includes(q)
       );
-      renderList(filtered,false);
+      renderList(filtered, false);
     };
 
-    /* ---------- Load storm ---------- */
+    /* ---------- Load selected storm KML ---------- */
     function loadStorm(storm){
       if(currentLayer) map.removeLayer(currentLayer);
-      currentLayer=new L.KML(storm.kml,{async:true});
-      currentLayer.on('loaded',()=>{addLabelsRecursive(currentLayer);map.fitBounds(currentLayer.getBounds());});
+
+      currentLayer = new ol.layer.Vector({
+        source: new ol.source.Vector({
+          url: storm.kml,
+          format: new ol.format.KML({ extractStyles: true })
+        })
+      });
       map.addLayer(currentLayer);
+
+      // When the KML finishes loading, zoom & label
+      currentLayer.getSource().on('change', () => {
+        if(currentLayer.getSource().getState() === 'ready'){
+          map.getView().fit(currentLayer.getSource().getExtent(), { padding: [50,50,50,50] });
+          addLabels(currentLayer);
+        }
+      });
     }
 
-    /* ---------- Labels ---------- */
-    function addLabelsRecursive(layer){
-      if(layer.getLayers){layer.getLayers().forEach(addLabelsRecursive);}  
-      if(typeof layer.bindTooltip!=='function') return;
-      const label=getLabel(layer);
-      if(label && !layer.getTooltip()){
-        layer.bindTooltip(label,{permanent:true,direction:'right',className:'tc-label',offset:[6,0]});
-      }
-    }
-
-    function getLabel(layer){
-      return layer?.feature?.properties?.name || layer.options?.title || layer.options?.name || ((layer.getPopup&&layer.getPopup())?(layer.getPopup().getContent().match(/<h2>(.*?)<\/h2>/i)||[])[1]:'');
+    /* ---------- Add text labels after load ---------- */
+    function addLabels(layer){
+      const features = layer.getSource().getFeatures();
+      features.forEach(f => {
+        const name = f.get('name');
+        if(!name) return;
+        f.setStyle(new ol.style.Style({
+          text: new ol.style.Text({
+            text: name,
+            font: '10px sans-serif',
+            overflow: true,
+            offsetX: 6,
+            backgroundFill: new ol.style.Fill({ color: 'rgba(255,255,255,0.9)' }),
+            padding: [1,4,1,4],
+            fill: new ol.style.Fill({ color: '#000' })
+          })
+        }));
+      });
     }
   </script>
 </body>
