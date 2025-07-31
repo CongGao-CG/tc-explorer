@@ -1,287 +1,222 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tropical Cyclone Explorer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.2.1/ol.css">
-  <script src="https://cdn.jsdelivr.net/npm/ol@v10.2.1/dist/ol.js"></script>
-  <style>
-    html,body{height:100%}
-    #map{height:100%;width:100%}
-    .ol-tooltip{position:absolute;background:rgba(255,255,255,.9);border:none;padding:1px 4px;border-radius:2px;font-size:10px;font-weight:600;pointer-events:none;white-space:nowrap}
-    .ol-popup{position:absolute;background-color:white;box-shadow:0 1px 4px rgba(0,0,0,0.2);padding:15px;border-radius:10px;border:1px solid #cccccc;bottom:12px;left:-50px;min-width:150px}
-    .ol-popup:after,.ol-popup:before{top:100%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
-    .ol-popup:after{border-top-color:white;border-width:10px;left:48px;margin-left:-10px}
-    .ol-popup:before{border-top-color:#cccccc;border-width:11px;left:48px;margin-left:-11px}
-    .ol-popup-closer{text-decoration:none;position:absolute;top:2px;right:8px}
-    .ol-popup-closer:after{content:"✖"}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tropical Cyclone Explorer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.2.1/ol.css">
+  <script src="https://cdn.jsdelivr.net/npm/ol@v10.2.1/dist/ol.js"></script>
+  <style>
+    html,body{height:100%}
+    #map{height:100%;width:100%}
+    .ol-tooltip{position:absolute;background:rgba(255,255,255,.9);border:none;padding:1px 4px;border-radius:2px;font-size:10px;font-weight:600;pointer-events:none;white-space:nowrap}
+    .ol-popup{position:absolute;background-color:white;box-shadow:0 1px 4px rgba(0,0,0,0.2);padding:15px;border-radius:10px;border:1px solid #cccccc;bottom:12px;left:-50px;min-width:150px}
+    .ol-popup:after,.ol-popup:before{top:100%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+    .ol-popup:after{border-top-color:white;border-width:10px;left:48px;margin-left:-10px}
+    .ol-popup:before{border-top-color:#cccccc;border-width:11px;left:48px;margin-left:-11px}
+    .ol-popup-closer{text-decoration:none;position:absolute;top:2px;right:8px}
+    .ol-popup-closer:after{content:"✖"}
+  </style>
 </head>
 <body class="h-full w-full flex">
-  <aside class="w-80 p-4 bg-gray-100 overflow-y-auto">
-    <h1 class="text-2xl font-bold mb-4">Tropical Cyclones</h1>
-    <input id="search" type="text" placeholder="Search storms…" class="mb-4 w-full p-2 border rounded" />
-    <ul id="storm-list" class="space-y-2"></ul>
-  </aside>
-  <main class="flex-1"><div id="map"></div></main>
-  <script>
-    /* ---------- Base map ---------- */
-    const map = new ol.Map({
-      target: 'map',
-      layers: [
-        new ol.layer.Tile({
-          source: new ol.source.OSM()
-        })
-      ],
-      view: new ol.View({
-        center: ol.proj.fromLonLat([0, 20]),
-        zoom: 3
-      })
-    });
+  <aside class="w-80 p-4 bg-gray-100 overflow-y-auto">
+    <h1 class="text-2xl font-bold mb-4">Tropical Cyclones</h1>
+    <input id="search" type="text" placeholder="Search storms…" class="mb-4 w-full p-2 border rounded" />
+    <ul id="storm-list" class="space-y-2"></ul>
+  </aside>
+  <main class="flex-1"><div id="map"></div></main>
+  <script>
+    /* ---------- Base map ---------- */
+    const map = new ol.Map({
+      target: 'map',
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        })
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([0, 20]),
+        zoom: 3
+      })
+    });
 
-    let currentLayer = null;
-    let currentOverlays = [];
-    let catalogue = [];
+    let currentLayer = null;
+    let currentOverlays = [];
+    let catalogue = [];
 
-    /* ---------- Load catalogue ---------- */
-    fetch('storms/storms.json')
-      .then(r => r.ok ? r.json() : Promise.reject(r.status))
-      .then(data => {
-        catalogue = data;
-        renderList(data, true);
-      })
-      .catch(code => alert(storms.json error – HTTP ${code}));
+    /* ---------- Load catalogue ---------- */
+    fetch('storms/storms.json')
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(data => {
+        catalogue = data;
+        renderList(data, true);
+      })
+      .catch(code => alert(storms.json error – HTTP ${code}));
 
-    const listEl = document.getElementById('storm-list');
-    const searchEl = document.getElementById('search');
+    const listEl = document.getElementById('storm-list');
+    const searchEl = document.getElementById('search');
 
-    /* ---------- Render list ---------- */
-    function renderList(arr, sortByYearDesc = false) {
-      const sorted = arr.slice().sort((a, b) => {
-        if (sortByYearDesc) {
-          const yr = b.year - a.year;
-          if (yr !== 0) return yr;
-        }
-        return a.id.localeCompare(b.id);
-      });
-      listEl.innerHTML = '';
-      sorted.forEach(s => {
-        const li = document.createElement('li');
-        li.className = 'cursor-pointer hover:bg-blue-100 p-2 rounded';
-        li.textContent = ${s.id} – ${s.name || 'Unnamed'} (${s.year});
-        li.onclick = () => loadStorm(s);
-        listEl.appendChild(li);
-      });
-    }
-
-    /* ---------- Search ---------- */
-    searchEl.oninput = e => {
-      const q = e.target.value.trim().toLowerCase();
-      if (!q) {
-        renderList(catalogue, true);
-        return;
-      }
-      const filtered = catalogue.filter(s =>
-        s.id.toLowerCase().includes(q) ||
-        (s.name && s.name.toLowerCase().includes(q)) ||
-        String(s.year).includes(q)
-      );
-      renderList(filtered, false);
-    };
-
-    /* ---------- Load storm ---------- */
-    function loadStorm(storm) {
-      // Remove existing layer and overlays
-      if (currentLayer) {
-        map.removeLayer(currentLayer);
-      }
-      currentOverlays.forEach(overlay => map.removeOverlay(overlay));
-      currentOverlays = [];
-
-      // Load KML
-      const kmlSource = new ol.source.Vector({
-        url: storm.kml,
-        format: new ol.format.KML()
-      });
-
-      currentLayer = new ol.layer.Vector({
-        source: kmlSource,
-        style: function(feature) {
-          // Basic style for lines and points
-          const styles = [];
-          
-          // Line style
-          if (feature.getGeometry().getType() === 'LineString') {
-            styles.push(new ol.style.Style({
-              stroke: new ol.style.Stroke({
-                color: '#ff0000',
-                width: 2
-              })
-            }));
-          }
-          
-          // Point style
-          if (feature.getGeometry().getType() === 'Point') {
-            styles.push(new ol.style.Style({
-              image: new ol.style.Circle({
-                radius: 4,
-                fill: new ol.style.Fill({
-                  color: '#ff0000'
-                }),
-                stroke: new ol.style.Stroke({
-                  color: '#ffffff',
-                  width: 1
-                })
-              })
-            }));
-          }
-          
-          return styles;
-        }
-      });
-
-      map.addLayer(currentLayer);
-
-  // When features are loaded, fit view
-  kmlSource.once('change', () => {
-    if (kmlSource.getState() === 'ready') {
-      const features = kmlSource.getFeatures();
-      if (features.length === 0) return;
-
-      // --- Custom Extent Calculation for Antimeridian Crossing ---
-
-      // 1. Extract all longitude values from the KML features.
-      // We transform coordinates from the map's projection (EPSG:3857)
-      // back to standard Lon/Lat (EPSG:4326) for analysis.
-      const lons = [];
-      features.forEach(feature => {
-        const geom = feature.getGeometry().clone().transform('EPSG:3857', 'EPSG:4326');
-        const flatCoords = geom.getCoordinates().flat(Infinity);
-        for (let i = 0; i < flatCoords.length; i += 2) {
-          lons.push(flatCoords[i]); // Push each longitude
+    /* ---------- Render list ---------- */
+    function renderList(arr, sortByYearDesc = false) {
+      const sorted = arr.slice().sort((a, b) => {
+        if (sortByYearDesc) {
+          const yr = b.year - a.year;
+          if (yr !== 0) return yr;
         }
+        return a.id.localeCompare(b.id);
       });
-      if (lons.length === 0) return;
+      listEl.innerHTML = '';
+      sorted.forEach(s => {
+        const li = document.createElement('li');
+        li.className = 'cursor-pointer hover:bg-blue-100 p-2 rounded';
+        li.textContent = ${s.id} – ${s.name || 'Unnamed'} (${s.year});
+        li.onclick = () => loadStorm(s);
+        listEl.appendChild(li);
+      });
+    }
 
-      // 2. Detect a dateline cross by finding the largest gap in sorted longitudes.
-      // A gap > 180 degrees indicates a feature that wraps around the globe.
-      lons.sort((a, b) => a - b);
-      let maxGap = 0;
-      let gapIndex = -1;
-      for (let i = 0; i < lons.length - 1; i++) {
-        const gap = lons[i + 1] - lons[i];
-        if (gap > maxGap) {
-          maxGap = gap;
-          gapIndex = i;
-        }
-      }
-
-      // 3. If no large gap is found, use the default extent fitting.
-      if (maxGap < 180) {
-        const extent = kmlSource.getExtent();
-        if (!ol.extent.isEmpty(extent)) {
-          map.getView().fit(extent, { padding: [50, 50, 50, 50], duration: 500 });
-        }
+    /* ---------- Search ---------- */
+    searchEl.oninput = e => {
+      const q = e.target.value.trim().toLowerCase();
+      if (!q) {
+        renderList(catalogue, true);
         return;
       }
+      const filtered = catalogue.filter(s =>
+        s.id.toLowerCase().includes(q) ||
+        (s.name && s.name.toLowerCase().includes(q)) ||
+        String(s.year).includes(q)
+      );
+      renderList(filtered, false);
+    };
 
-      // 4. If a dateline cross is detected, calculate a new "unwrapped" extent.
-      // We define a new center for our view and adjust all longitudes to be continuous.
-      const centerLon = lons[gapIndex] + 180;
-      const customExtent = ol.extent.createEmpty();
+    /* ---------- Load storm ---------- */
+    function loadStorm(storm) {
+      // Remove existing layer and overlays
+      if (currentLayer) {
+        map.removeLayer(currentLayer);
+      }
+      currentOverlays.forEach(overlay => map.removeOverlay(overlay));
+      currentOverlays = [];
 
-      features.forEach(feature => {
-        const geom = feature.getGeometry().clone().transform('EPSG:3857', 'EPSG:4326');
-        const flatCoords = geom.getCoordinates().flat(Infinity);
+      // Load KML
+      const kmlSource = new ol.source.Vector({
+        url: storm.kml,
+        format: new ol.format.KML()
+      });
 
-        for (let i = 0; i < flatCoords.length; i += 2) {
-          let lon = flatCoords[i];
-          const lat = flatCoords[i + 1];
-
-          // Unwrap longitude relative to the new center
-          while (lon < centerLon - 180) lon += 360;
-          while (lon > centerLon + 180) lon -= 360;
-
-          // Project the unwrapped coordinate back to the map's projection
-          const mapProjCoord = ol.proj.fromLonLat([lon, lat]);
-          // Extend our custom extent with the new coordinate
-          ol.extent.extendCoordinate(customExtent, mapProjCoord);
+      currentLayer = new ol.layer.Vector({
+        source: kmlSource,
+        style: function(feature) {
+          // Basic style for lines and points
+          const styles = [];
+          
+          // Line style
+          if (feature.getGeometry().getType() === 'LineString') {
+            styles.push(new ol.style.Style({
+              stroke: new ol.style.Stroke({
+                color: '#ff0000',
+                width: 2
+              })
+            }));
+          }
+          
+          // Point style
+          if (feature.getGeometry().getType() === 'Point') {
+            styles.push(new ol.style.Style({
+              image: new ol.style.Circle({
+                radius: 4,
+                fill: new ol.style.Fill({
+                  color: '#ff0000'
+                }),
+                stroke: new ol.style.Stroke({
+                  color: '#ffffff',
+                  width: 1
+                })
+              })
+            }));
+          }
+          
+          return styles;
         }
       });
 
-      // 5. Fit the view to our new, correctly calculated extent.
-      if (!ol.extent.isEmpty(customExtent)) {
-        map.getView().fit(customExtent, {
-          padding: [50, 50, 50, 50],
-          duration: 500
-        });
-      }
+      map.addLayer(currentLayer);
+
+      // When features are loaded, fit view
+      kmlSource.once('change', () => {
+        if (kmlSource.getState() === 'ready') {
+          const extent = kmlSource.getExtent();
+          if (!ol.extent.isEmpty(extent)) {
+            map.getView().fit(extent, {
+              padding: [50, 50, 50, 50],
+              duration: 500
+            });
+          }
+          
+        }
+      });
     }
-  });
-    }
 
-    /* ---------- Popup for feature info ---------- */
-    const popupElement = document.createElement('div');
-    popupElement.className = 'ol-popup';
-    const popupCloser = document.createElement('a');
-    popupCloser.className = 'ol-popup-closer';
-    popupCloser.href = '#';
-    const popupContent = document.createElement('div');
-    popupElement.appendChild(popupCloser);
-    popupElement.appendChild(popupContent);
+    /* ---------- Popup for feature info ---------- */
+    const popupElement = document.createElement('div');
+    popupElement.className = 'ol-popup';
+    const popupCloser = document.createElement('a');
+    popupCloser.className = 'ol-popup-closer';
+    popupCloser.href = '#';
+    const popupContent = document.createElement('div');
+    popupElement.appendChild(popupCloser);
+    popupElement.appendChild(popupContent);
 
-    const popup = new ol.Overlay({
-      element: popupElement,
-      autoPan: true,
-      autoPanAnimation: {
-        duration: 250
-      }
-    });
-    map.addOverlay(popup);
+    const popup = new ol.Overlay({
+      element: popupElement,
+      autoPan: true,
+      autoPanAnimation: {
+        duration: 250
+      }
+    });
+    map.addOverlay(popup);
 
-    popupCloser.onclick = function() {
-      popup.setPosition(undefined);
-      popupCloser.blur();
-      return false;
-    };
+    popupCloser.onclick = function() {
+      popup.setPosition(undefined);
+      popupCloser.blur();
+      return false;
+    };
 
-    // Click handler for features
-    map.on('click', function(evt) {
-      const feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
-        return feature;
-      });
-      
-      if (feature) {
-        const coordinates = evt.coordinate;
-        const properties = feature.getProperties();
-        let content = '';
-        
-        if (properties.name) {
-          content += <h2 style="margin:0 0 5px 0;font-size:14px">${properties.name}</h2>;
-        }
-        if (properties.description) {
-          content += <div style="font-size:12px">${properties.description}</div>;
-        }
-        
-        if (content) {
-          popupContent.innerHTML = content;
-          popup.setPosition(coordinates);
-        }
-      } else {
-        popup.setPosition(undefined);
-      }
-    });
+    // Click handler for features
+    map.on('click', function(evt) {
+      const feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
+        return feature;
+      });
+      
+      if (feature) {
+        const coordinates = evt.coordinate;
+        const properties = feature.getProperties();
+        let content = '';
+        
+        if (properties.name) {
+          content += <h2 style="margin:0 0 5px 0;font-size:14px">${properties.name}</h2>;
+        }
+        if (properties.description) {
+          content += <div style="font-size:12px">${properties.description}</div>;
+        }
+        
+        if (content) {
+          popupContent.innerHTML = content;
+          popup.setPosition(coordinates);
+        }
+      } else {
+        popup.setPosition(undefined);
+      }
+    });
 
-    // Change cursor on hover
-    map.on('pointermove', function(evt) {
-      const pixel = map.getEventPixel(evt.originalEvent);
-      const hit = map.hasFeatureAtPixel(pixel);
-      map.getTarget().style.cursor = hit ? 'pointer' : '';
-    });
-  </script>
-
+    // Change cursor on hover
+    map.on('pointermove', function(evt) {
+      const pixel = map.getEventPixel(evt.originalEvent);
+      const hit = map.hasFeatureAtPixel(pixel);
+      map.getTarget().style.cursor = hit ? 'pointer' : '';
+    });
+  </script>
 </body>
 </html>
