@@ -110,14 +110,27 @@
         currentKmlLayer.setMap(null);
       }
       
-      // Create new KML layer
-      // Note: KML files must be publicly accessible via HTTP/HTTPS
-      // If files are local, you'll need to serve them from a web server
+      // Construct full URL for KML file
+      let kmlUrl = storm.kml;
+      
+      // Check if it's already a full URL
+      if (!kmlUrl.startsWith('http://') && !kmlUrl.startsWith('https://')) {
+        // Construct GitHub Pages URL
+        const baseUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+          ? window.location.origin // For local testing
+          : 'https://conggao-cg.github.io/tc-explorer'; // GitHub Pages URL
+        
+        kmlUrl = `${baseUrl}/${kmlUrl}`;
+      }
+      
+      console.log('Loading KML from:', kmlUrl);
+      
+      // Create KML layer
       currentKmlLayer = new google.maps.KmlLayer({
-        url: getAbsoluteUrl(storm.kml),
+        url: kmlUrl,
         map: map,
-        preserveViewport: false, // Auto-zoom to show the entire track
-        suppressInfoWindows: false // Show info windows for placemarks
+        preserveViewport: false,
+        suppressInfoWindows: false
       });
       
       // Handle KML load events
@@ -125,11 +138,22 @@
         const status = currentKmlLayer.getStatus();
         if (status !== 'OK') {
           console.error('KML loading error:', status);
-          alert(`Error loading storm data: ${status}\n\nNote: KML files must be publicly accessible via HTTP/HTTPS.`);
+          let errorMsg = `Error loading storm data: ${status}`;
+          
+          if (status === 'DOCUMENT_NOT_FOUND') {
+            errorMsg += '\n\nPossible solutions:\n';
+            errorMsg += '1. Enable GitHub Pages for your repository\n';
+            errorMsg += '2. Make sure the KML file exists at: ' + kmlUrl + '\n';
+            errorMsg += '3. Check that the filename in storms.json matches the actual file';
+          }
+          
+          alert(errorMsg);
+        } else {
+          console.log('KML loaded successfully');
         }
       });
       
-      // Optional: Add click listener for custom info windows
+      // Add click listener for custom info windows
       google.maps.event.addListener(currentKmlLayer, 'click', function(kmlEvent) {
         const content = kmlEvent.featureData.infoWindowHtml;
         if (content) {
@@ -139,22 +163,12 @@
         }
       });
     }
-    
-    // Helper function to get absolute URL (needed for KML layer)
-    function getAbsoluteUrl(url) {
-      // If the URL is already absolute, return it
-      if (url.startsWith('http://') || url.startsWith('https://')) {
-        return url;
-      }
-      // Otherwise, construct absolute URL
-      return window.location.origin + '/' + url;
-    }
   </script>
   
   <!-- Load Google Maps API -->
   <!-- Replace YOUR_API_KEY_HERE with your actual Google Maps API key -->
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX_YvYFsw9M3Q7wMFoL2QDh7dI_ASyAps&callback=initMap&libraries=visualization">
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=initMap&libraries=visualization">
   </script>
 </body>
 </html>
