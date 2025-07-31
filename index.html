@@ -9,6 +9,8 @@
     html,body{height:100%}
     #map{height:100%;width:100%}
     .leaflet-tooltip.tc-label{font-size:10px;font-weight:600;background:rgba(255,255,255,.9);border:none;padding:1px 4px;border-radius:2px;pointer-events:none}
+    .grid-line{stroke:#ccc;stroke-width:0.5;stroke-dasharray:2,4;fill:none}
+    .grid-label{font-size:11px;fill:#666;font-family:Arial,sans-serif}
   </style>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -20,26 +22,76 @@
     <input id="search" type="text" placeholder="Search storms…" class="mb-4 w-full p-2 border rounded" />
     <ul id="storm-list" class="space-y-2"></ul>
   </aside>
-
   <main class="flex-1"><div id="map"></div></main>
-
   <script>
     /* ---------- Base map ---------- */
     const map=L.map('map').setView([20,0],3);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:19}).addTo(map);
-
+    
+    /* ---------- Lat/Lon Grid ---------- */
+    const gridLayer=L.layerGroup().addTo(map);
+    
+    function drawGrid(){
+      gridLayer.clearLayers();
+      const bounds=map.getBounds();
+      const zoom=map.getZoom();
+      
+      // Determine grid spacing based on zoom level
+      let step=30;
+      if(zoom>3) step=20;
+      if(zoom>5) step=10;
+      if(zoom>7) step=5;
+      if(zoom>9) step=2;
+      if(zoom>11) step=1;
+      
+      // Draw latitude lines
+      for(let lat=-90;lat<=90;lat+=step){
+        if(lat<bounds.getSouth()-step||lat>bounds.getNorth()+step) continue;
+        const line=L.polyline([[lat,-180],[lat,180]],{color:'#ccc',weight:0.5,dashArray:'2,4',interactive:false});
+        gridLayer.addLayer(line);
+        
+        // Add labels at visible longitude edges
+        const labelLng=Math.max(bounds.getWest(),Math.min(bounds.getEast(),0));
+        const label=L.divIcon({
+          html:`<div style="font-size:10px;color:#666;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:2px">${lat}°</div>`,
+          iconSize:[30,12],
+          iconAnchor:[15,6],
+          className:'grid-label-icon'
+        });
+        gridLayer.addLayer(L.marker([lat,labelLng],{icon:label,interactive:false}));
+      }
+      
+      // Draw longitude lines
+      for(let lng=-180;lng<=180;lng+=step){
+        if(lng<bounds.getWest()-step||lng>bounds.getEast()+step) continue;
+        const line=L.polyline([[-90,lng],[90,lng]],{color:'#ccc',weight:0.5,dashArray:'2,4',interactive:false});
+        gridLayer.addLayer(line);
+        
+        // Add labels at visible latitude edges
+        const labelLat=Math.max(bounds.getSouth(),Math.min(bounds.getNorth(),0));
+        const label=L.divIcon({
+          html:`<div style="font-size:10px;color:#666;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:2px">${lng}°</div>`,
+          iconSize:[30,12],
+          iconAnchor:[15,6],
+          className:'grid-label-icon'
+        });
+        gridLayer.addLayer(L.marker([labelLat,lng],{icon:label,interactive:false}));
+      }
+    }
+    
+    // Draw grid on map events
+    map.on('moveend zoomend',drawGrid);
+    drawGrid(); // Initial draw
+    
     let currentLayer=null;
     let catalogue=[];
-
     /* ---------- Load catalogue ---------- */
     fetch('storms/storms.json')
       .then(r=>r.ok?r.json():Promise.reject(r.status))
       .then(data=>{catalogue=data;renderList(data,true);})
       .catch(code=>alert(`storms.json error – HTTP ${code}`));
-
     const listEl=document.getElementById('storm-list');
     const searchEl=document.getElementById('search');
-
     /* ---------- Render list ---------- */
     function renderList(arr,sortByYearDesc=false){
       const sorted=arr.slice().sort((a,b)=>{
@@ -57,7 +109,6 @@
         listEl.appendChild(li);
       });
     }
-
     /* ---------- Search ---------- */
     searchEl.oninput=e=>{
       const q=e.target.value.trim().toLowerCase();
@@ -69,7 +120,6 @@
       );
       renderList(filtered,false);
     };
-
     /* ---------- Load storm ---------- */
     function loadStorm(storm){
       if(currentLayer) map.removeLayer(currentLayer);
@@ -77,7 +127,6 @@
       currentLayer.on('loaded',()=>{addLabelsRecursive(currentLayer);map.fitBounds(currentLayer.getBounds());});
       map.addLayer(currentLayer);
     }
-
     /* ---------- Labels ---------- */
     function addLabelsRecursive(layer){
       if(layer.getLayers){layer.getLayers().forEach(addLabelsRecursive);}  
@@ -87,7 +136,6 @@
         layer.bindTooltip(label,{permanent:true,direction:'right',className:'tc-label',offset:[6,0]});
       }
     }
-
     function getLabel(layer){
       return layer?.feature?.properties?.name || layer.options?.title || layer.options?.name || ((layer.getPopup&&layer.getPopup())?(layer.getPopup().getContent().match(/<h2>(.*?)<\/h2>/i)||[])[1]:'');
     }
