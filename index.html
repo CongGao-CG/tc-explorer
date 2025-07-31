@@ -147,77 +147,14 @@
       // When features are loaded, fit view
       kmlSource.once('change', () => {
         if (kmlSource.getState() === 'ready') {
-          const features = kmlSource.getFeatures();
-          if (features.length === 0) return;
-
-          // --- Custom Extent Calculation for Antimeridian Crossing ---
-
-          // 1. Extract all longitude values from the KML features.
-          // We transform coordinates from the map's projection (EPSG:3857)
-          // back to standard Lon/Lat (EPSG:4326) for analysis.
-          const lons = [];
-          features.forEach(feature => {
-            const geom = feature.getGeometry().clone().transform('EPSG:3857', 'EPSG:4326');
-            const flatCoords = geom.getCoordinates().flat(Infinity);
-            for (let i = 0; i < flatCoords.length; i += 2) {
-              lons.push(flatCoords[i]); // Push each longitude
-            }
-          });
-          if (lons.length === 0) return;
-
-          // 2. Detect a dateline cross by finding the largest gap in sorted longitudes.
-          // A gap > 180 degrees indicates a feature that wraps around the globe.
-          lons.sort((a, b) => a - b);
-          let maxGap = 0;
-          let gapIndex = -1;
-          for (let i = 0; i < lons.length - 1; i++) {
-            const gap = lons[i + 1] - lons[i];
-            if (gap > maxGap) {
-              maxGap = gap;
-              gapIndex = i;
-            }
-          }
-
-          // 3. If no large gap is found, use the default extent fitting.
-          if (maxGap < 180) {
-            const extent = kmlSource.getExtent();
-            if (!ol.extent.isEmpty(extent)) {
-              map.getView().fit(extent, { padding: [50, 50, 50, 50], duration: 500 });
-            }
-            return;
-          }
-
-          // 4. If a dateline cross is detected, calculate a new "unwrapped" extent.
-          // We define a new center for our view and adjust all longitudes to be continuous.
-          const centerLon = lons[gapIndex] + 180;
-          const customExtent = ol.extent.createEmpty();
-
-          features.forEach(feature => {
-            const geom = feature.getGeometry().clone().transform('EPSG:3857', 'EPSG:4326');
-            const flatCoords = geom.getCoordinates().flat(Infinity);
-
-            for (let i = 0; i < flatCoords.length; i += 2) {
-              let lon = flatCoords[i];
-              const lat = flatCoords[i + 1];
-
-              // Unwrap longitude relative to the new center
-              while (lon < centerLon - 180) lon += 360;
-              while (lon > centerLon + 180) lon -= 360;
-
-              // Project the unwrapped coordinate back to the map's projection
-              const mapProjCoord = ol.proj.fromLonLat([lon, lat]);
-              // Extend our custom extent with the new coordinate
-              ol.extent.extendCoordinate(customExtent, mapProjCoord);
-            }
-          });
-
-          // 5. Fit the view to our new, correctly calculated extent.
-          if (!ol.extent.isEmpty(customExtent)) {
-            map.getView().fit(customExtent, {
+          const extent = kmlSource.getExtent();
+          if (!ol.extent.isEmpty(extent)) {
+            map.getView().fit(extent, {
               padding: [50, 50, 50, 50],
               duration: 500
             });
           }
+          
         }
       });
     }
