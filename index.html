@@ -52,7 +52,7 @@
         catalogue = data;
         renderList(data, true);
       })
-      .catch(code => alert(storms.json error – HTTP ${code}));
+      .catch(code => alert(`storms.json error – HTTP ${code}`));
 
     const listEl = document.getElementById('storm-list');
     const searchEl = document.getElementById('search');
@@ -70,7 +70,7 @@
       sorted.forEach(s => {
         const li = document.createElement('li');
         li.className = 'cursor-pointer hover:bg-blue-100 p-2 rounded';
-        li.textContent = ${s.id} – ${s.name || 'Unnamed'} (${s.year});
+        li.textContent = `${s.id} – ${s.name || 'Unnamed'} (${s.year})`;
         li.onclick = () => loadStorm(s);
         listEl.appendChild(li);
       });
@@ -196,10 +196,10 @@
         let content = '';
         
         if (properties.name) {
-          content += <h2 style="margin:0 0 5px 0;font-size:14px">${properties.name}</h2>;
+          content += `<h2 style="margin:0 0 5px 0;font-size:14px">${properties.name}</h2>`;
         }
         if (properties.description) {
-          content += <div style="font-size:12px">${properties.description}</div>;
+          content += `<div style="font-size:12px">${properties.description}</div>`;
         }
         
         if (content) {
