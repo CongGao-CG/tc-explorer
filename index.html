@@ -155,27 +155,6 @@
             });
           }
           
-          // Add labels for points
-          kmlSource.getFeatures().forEach(feature => {
-            if (feature.getGeometry().getType() === 'Point') {
-              const name = feature.get('name');
-              if (name) {
-                const coordinates = feature.getGeometry().getCoordinates();
-                const labelElement = document.createElement('div');
-                labelElement.className = 'ol-tooltip';
-                labelElement.textContent = name;
-                
-                const overlay = new ol.Overlay({
-                  element: labelElement,
-                  offset: [10, 0],
-                  positioning: 'center-left'
-                });
-                overlay.setPosition(coordinates);
-                map.addOverlay(overlay);
-                currentOverlays.push(overlay);
-              }
-            }
-          });
         }
       });
     }
