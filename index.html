@@ -76,106 +76,78 @@
       renderList(filtered, false);
     };
 
-    /* ---------- Geometry normaliser (handles dateline crossing) ---------- */
-    function normalizeDatelineGeometry(feature){
-      const geom = feature.getGeometry();
-      const type = geom.getType();
-      if(type!== 'LineString' && type!== 'Point') return; // Only need to adjust these
+    /* ---------- Dateline-aware fitting ---------- */
+    function fitStormView(source){
+      const feats = source.getFeatures();
+      if(!feats.length) return;
+      const lons=[], lats=[];
+      feats.forEach(f=>{
+        const geom=f.getGeometry();
+        const coords = (geom.getType()==='LineString')? geom.getCoordinates(): [geom.getCoordinates()];
+        coords.forEach(c=>{
+          const ll = ol.proj.toLonLat(c);
+          lons.push(ll[0]); lats.push(ll[1]);
+        });
+      });
+      if(!lons.length) return;
+      const minLat=Math.min(...lats), maxLat=Math.max(...lats);
+      const minLon=Math.min(...lons), maxLon=Math.max(...lons);
+      const span = maxLon - minLon;
+      const size = map.getSize();
 
-      // Extract coordinates in lon/lat
-      const to4326 = geom.clone().transform('EPSG:3857','EPSG:4326');
+      if(span<=180){
+        const ext = ol.proj.transformExtent([minLon,minLat,maxLon,maxLat],'EPSG:4326','EPSG:3857');
+        map.getView().fit(ext,{padding:[50,50,50,50],duration:500});
+      }else{
+        // crosses dateline – work in 0–360 domain
+        const shifted = lons.map(l=> (l<0? l+360:l));
+        const minS=Math.min(...shifted), maxS=Math.max(...shifted);
+        const centerLonShift=(minS+maxS)/2;
+        const centerLon = centerLonShift>180? centerLonShift-360 : centerLonShift;
+        const centerLat=(minLat+maxLat)/2;
 
-      if(type==='LineString'){
-        let coords = to4326.getCoordinates();
-        if(coords.length<2) return;
-        let newCoords=[coords[0].slice()];
-        // unwrap so consecutive pts are <180° apart
-        for(let i=1;i<coords.length;i++){
-          let [lon,lat]=coords[i];
-          let prevLon=newCoords[i-1][0];
-          while(lon - prevLon > 180) lon -= 360;
-          while(lon - prevLon < -180) lon += 360;
-          newCoords.push([lon,lat]);
-        }
-        // Shift whole path so that mean lon sits inside [-180,180]
-        const meanLon = newCoords.reduce((a,c)=>a+c[0],0)/newCoords.length;
-        let shift=0;
-        if(meanLon>180) shift=-360;
-        if(meanLon<-180) shift= 360;
-        if(shift!==0) newCoords=newCoords.map(([lon,lat])=>[lon+shift,lat]);
-        geom.setCoordinates(newCoords.map(c=>ol.proj.fromLonLat(c)));
-      }else if(type==='Point'){
-        let [lon,lat]=to4326.getCoordinates();
-        if(lon>180) lon-=360;
-        if(lon<-180) lon+=360;
-        geom.setCoordinates(ol.proj.fromLonLat([lon,lat]));
+        const extShift4326=[minS,minLat,maxS,maxLat];
+        const extShift3857=ol.proj.transformExtent(extShift4326,'EPSG:4326','EPSG:3857');
+        const res = map.getView().getResolutionForExtent(extShift3857,size);
+
+        map.getView().animate({center: ol.proj.fromLonLat([centerLon,centerLat]), resolution: res, duration:500});
       }
     }
 
     /* ---------- Load storm ---------- */
     function loadStorm(storm) {
       if (currentLayer) map.removeLayer(currentLayer);
-
-      const kmlSource = new ol.source.Vector({
-        url: storm.kml,
-        format: new ol.format.KML(),
-        wrapX: false // avoid duplicate copies
-      });
-
+      const kmlSource = new ol.source.Vector({ url: storm.kml, format: new ol.format.KML(), wrapX:false });
       currentLayer = new ol.layer.Vector({
         source: kmlSource,
         style: feature => {
-          const styles = [];
-          const geomType = feature.getGeometry().getType();
-          if (geomType === 'LineString') {
-            styles.push(new ol.style.Style({ stroke: new ol.style.Stroke({color:'#ff0000',width:2}) }));
-          }
-          if (geomType === 'Point') {
-            styles.push(new ol.style.Style({ image: new ol.style.Circle({radius:4,fill:new ol.style.Fill({color:'#ff0000'}),stroke:new ol.style.Stroke({color:'#ffffff',width:1})}) }));
-          }
-          return styles;
+          const t = feature.getGeometry().getType();
+          if (t==='LineString') return new ol.style.Style({ stroke: new ol.style.Stroke({color:'#ff0000',width:2}) });
+          if (t==='Point')      return new ol.style.Style({ image: new ol.style.Circle({radius:4,fill:new ol.style.Fill({color:'#ff0000'}),stroke:new ol.style.Stroke({color:'#ffffff',width:1})}) });
         }
       });
       map.addLayer(currentLayer);
-
-      kmlSource.once('change', () => {
-        if (kmlSource.getState() !== 'ready') return;
-        // Fix geometries that cross the dateline
-        kmlSource.getFeatures().forEach(normalizeDatelineGeometry);
-
-        const extent = kmlSource.getExtent();
-        if (!ol.extent.isEmpty(extent)) {
-          map.getView().fit(extent, {padding:[50,50,50,50],duration:500});
-        }
-      });
+      kmlSource.once('change', ()=>{ if(kmlSource.getState()==='ready') fitStormView(kmlSource); });
     }
 
-    /* ---------- Popup for feature info ---------- */
-    const popupElement   = document.createElement('div'); popupElement.className = 'ol-popup';
-    const popupCloser    = document.createElement('a');  popupCloser.className = 'ol-popup-closer'; popupCloser.href = '#';
-    const popupContent   = document.createElement('div');
+    /* ---------- Popup ---------- */
+    const popupElement=document.createElement('div'); popupElement.className='ol-popup';
+    const popupCloser=document.createElement('a'); popupCloser.className='ol-popup-closer'; popupCloser.href='#';
+    const popupContent=document.createElement('div');
     popupElement.appendChild(popupCloser); popupElement.appendChild(popupContent);
-
-    const popup = new ol.Overlay({element: popupElement, autoPan:true, autoPanAnimation:{duration:250}});
+    const popup=new ol.Overlay({element:popupElement,autoPan:true,autoPanAnimation:{duration:250}});
     map.addOverlay(popup);
-    popupCloser.onclick = () => { popup.setPosition(undefined); popupCloser.blur(); return false; };
-
-    map.on('click', evt => {
-      const feature = map.forEachFeatureAtPixel(evt.pixel, f => f);
-      if (feature) {
-        const properties = feature.getProperties();
-        let content = '';
-        if (properties.name)        content += `<h2 style="margin:0 0 5px 0;font-size:14px">${properties.name}</h2>`;
-        if (properties.description) content += `<div style="font-size:12px">${properties.description}</div>`;
-        if (content) { popupContent.innerHTML = content; popup.setPosition(evt.coordinate); }
-      } else {
-        popup.setPosition(undefined);
-      }
+    popupCloser.onclick=()=>{popup.setPosition(undefined);popupCloser.blur();return false;};
+    map.on('click',evt=>{
+      const feature=map.forEachFeatureAtPixel(evt.pixel,f=>f);
+      if(feature){
+        const p=feature.getProperties();
+        let html=''; if(p.name)html+=`<h2 style="margin:0 0 5px 0;font-size:14px">${p.name}</h2>`;
+        if(p.description)html+=`<div style="font-size:12px">${p.description}</div>`;
+        if(html){ popupContent.innerHTML=html; popup.setPosition(evt.coordinate);} }
+      else popup.setPosition(undefined);
     });
-
-    map.on('pointermove', evt => {
-      map.getTargetElement().style.cursor = map.hasFeatureAtPixel(evt.pixel) ? 'pointer' : '';
-    });
+    map.on('pointermove',evt=>{map.getTargetElement().style.cursor=map.hasFeatureAtPixel(evt.pixel)?'pointer':'';});
   </script>
 </body>
 </html>
