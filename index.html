@@ -91,8 +91,14 @@
       renderList(filtered, false);
     };
 
+    function formatStormLabel(storm) {
+      return `${storm.id} – ${storm.name || 'Unnamed'} (${storm.year})`;
+    }
+
    /* ---------- Load storm ---------- */
    function loadStorm(storm) {
+     const stormLabel = formatStormLabel(storm);
+
      // Remove existing layer and overlays
      if (currentLayer) {
        map.removeLayer(currentLayer);
@@ -110,15 +116,33 @@
      currentLayer = new ol.layer.Vector({
        source: kmlSource,
        style: function(feature) {
-         // This styling function remains the same.
-         // It will style the original points and the new line we create.
+         const geometry = feature.getGeometry();
+         if (!geometry) return null;
+
          const styles = [];
-         if (feature.getGeometry().getType() === 'LineString') {
+
+         if (feature.get('isStormLabel')) {
+           styles.push(new ol.style.Style({
+             text: new ol.style.Text({
+               text: feature.get('label'),
+               font: '600 13px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+               textBaseline: 'bottom',
+               fill: new ol.style.Fill({ color: '#111827' }),
+               stroke: new ol.style.Stroke({ color: '#ffffff', width: 4 }),
+               backgroundFill: new ol.style.Fill({ color: 'rgba(255,255,255,0.88)' }),
+               backgroundStroke: new ol.style.Stroke({ color: 'rgba(17,24,39,0.25)', width: 1 }),
+               padding: [3, 6, 3, 6]
+             })
+           }));
+           return styles;
+         }
+
+         if (geometry.getType() === 'LineString') {
            styles.push(new ol.style.Style({
              stroke: new ol.style.Stroke({ color: '#ff0000', width: 2 })
            }));
          }
-         if (feature.getGeometry().getType() === 'Point') {
+         if (geometry.getType() === 'Point') {
            styles.push(new ol.style.Style({
              image: new ol.style.Circle({
                radius: 4,
@@ -219,8 +243,12 @@ function extractDate(feature) {
        if (kmlSource.getState() === 'ready') {
          const worldWidth = ol.extent.getWidth(map.getView().getProjection().getExtent());
          
-         // 1. Get all features (which are all points) and sort them by date
-         const pointFeatures = kmlSource.getFeatures();
+         // 1. Get point features and sort them by date
+         const pointFeatures = kmlSource.getFeatures()
+           .filter(feature => {
+             const geometry = feature.getGeometry();
+             return geometry && geometry.getType() === 'Point';
+           });
          pointFeatures.sort((a, b) => extractDate(a) - extractDate(b));
          
          if (pointFeatures.length > 1) {
@@ -254,9 +282,27 @@ function extractDate(feature) {
                 pointGeom.setCoordinates(pCoord);
              }
            });
+
+           const labelFeature = new ol.Feature({
+             geometry: new ol.geom.Point([
+               (lineExtent[0] + lineExtent[2]) / 2,
+               lineExtent[3] + Math.max((lineExtent[3] - lineExtent[1]) * 0.08, (lineExtent[2] - lineExtent[0]) * 0.02, 25000)
+             ]),
+             isStormLabel: true,
+             label: stormLabel
+           });
+           kmlSource.addFeature(labelFeature);
+         } else if (pointFeatures.length === 1) {
+           const pointCoord = pointFeatures[0].getGeometry().getCoordinates();
+           const labelFeature = new ol.Feature({
+             geometry: new ol.geom.Point([pointCoord[0], pointCoord[1] + 25000]),
+             isStormLabel: true,
+             label: stormLabel
+           });
+           kmlSource.addFeature(labelFeature);
          }
          
-         // 5. Fit the view to the extent of ALL features (new line + adjusted points)
+         // 5. Fit the view to the extent of ALL features (new line + adjusted points + label)
          const extent = kmlSource.getExtent();
          if (!ol.extent.isEmpty(extent)) {
            map.getView().fit(extent, {
@@ -314,6 +360,8 @@ function extractDate(feature) {
         if (content) {
           popupContent.innerHTML = content;
           popup.setPosition(coordinates);
+        } else {
+          popup.setPosition(undefined);
         }
       } else {
         popup.setPosition(undefined);
