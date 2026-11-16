@@ -1,3 +1,15 @@
+The **Basemap** selector switches between OpenStreetMap streets and
+OpenTopoMap-R terrain with shaded relief and elevation contours. Zoom in to
+see contour lines and height labels; switching basemaps keeps the current view
+and storm tracks.
+
+Terrain tiles are provided by [OpenMaps.fr](https://openmaps.fr/), with native
+zoom levels up to 18. Their [tile usage policy](https://openmaps.fr/tile-usage-policy.html)
+allows free, noncommercial use up to 500,000 tiles per month and requires visible
+attribution and a donation link, which the map displays. Serve the app over HTTP
+or HTTPS so tile requests include the required Referer header. Tiles load on
+demand; availability depends on the external provider.
+
 kms files are produced by https://github.com/CongGao-CG/HURDAT2kml and https://github.com/CongGao-CG/JTWCkml
 
 ```bash
