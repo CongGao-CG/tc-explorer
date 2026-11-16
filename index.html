@@ -357,7 +357,7 @@
 
       setMultiStatus(`Building ${selectedTracks.length.toLocaleString()} tracks...`);
 
-      const source = new ol.source.Vector({ wrapX: false });
+      const source = new ol.source.Vector({ wrapX: true });
       const features = [];
       for (let i = 0; i < selectedTracks.length; i++) {
         if (loadId !== activeLoadId) return;
@@ -399,11 +399,13 @@
      clearCurrentLayer();
      setMultiStatus('');
 
-     // Load KML with wrapX: false
      const kmlSource = new ol.source.Vector({
        url: storm.kml,
-       format: new ol.format.KML(),
-       wrapX: false
+       format: new ol.format.KML({
+         // KML marker icons live beside the storm file, not beside index.html.
+         iconUrlFunction: href => new URL(href.split('/').pop(), new URL(storm.kml, document.baseURI)).href
+       }),
+       wrapX: true
      });
 
      currentLayer = new ol.layer.Vector({
@@ -544,44 +546,24 @@ function extractDate(feature) {
              return geometry && geometry.getType() === 'Point';
            });
          pointFeatures.sort((a, b) => extractDate(a) - extractDate(b));
+         let fitExtent = kmlSource.getExtent();
          
          if (pointFeatures.length > 1) {
-           // 2. Create a continuous coordinate array from the sorted points
-           const coords = pointFeatures.map(p => p.getGeometry().getCoordinates());
-           for (let i = 1; i < coords.length; i++) {
-             const prevLon = coords[i-1][0];
-             if (Math.abs(coords[i][0] - prevLon) > worldWidth / 2) {
-               if (coords[i][0] < prevLon) {
-                 coords[i][0] += worldWidth;
-               } else {
-                 coords[i][0] -= worldWidth;
-               }
-             }
-           }
-           
-           // 3. Create a new LineString feature from the adjusted coordinates
+           const coords = adjustDateline(pointFeatures.map(p => p.getGeometry().getCoordinates()));
            const lineGeom = new ol.geom.LineString(coords);
            const lineFeature = new ol.Feature({ geometry: lineGeom });
-           kmlSource.addFeature(lineFeature); // Add the new line to the map
-           
-           // 4. Adjust original point features to match the new continuous line
+           kmlSource.addFeature(lineFeature);
+
            const lineExtent = lineGeom.getExtent();
-           const lineCenterLon = (lineExtent[0] + lineExtent[2]) / 2;
-
-           pointFeatures.forEach(point => {
-             const pointGeom = point.getGeometry();
-             const pCoord = pointGeom.getCoordinates();
-             if (Math.abs(pCoord[0] - lineCenterLon) > worldWidth / 2) {
-                pCoord[0] += (pCoord[0] < lineCenterLon) ? worldWidth : -worldWidth;
-                pointGeom.setCoordinates(pCoord);
-             }
-           });
-
+           const labelCoord = [
+             (lineExtent[0] + lineExtent[2]) / 2,
+             lineExtent[3] + Math.max((lineExtent[3] - lineExtent[1]) * 0.08, (lineExtent[2] - lineExtent[0]) * 0.02, 25000)
+           ];
+           // Fit the continuous track while keeping markers and labels in the base world for repetition.
+           fitExtent = ol.extent.extendCoordinate(lineExtent.slice(), labelCoord);
+           labelCoord[0] -= worldWidth * Math.floor((labelCoord[0] + worldWidth / 2) / worldWidth);
            const labelFeature = new ol.Feature({
-             geometry: new ol.geom.Point([
-               (lineExtent[0] + lineExtent[2]) / 2,
-               lineExtent[3] + Math.max((lineExtent[3] - lineExtent[1]) * 0.08, (lineExtent[2] - lineExtent[0]) * 0.02, 25000)
-             ]),
+             geometry: new ol.geom.Point(labelCoord),
              isStormLabel: true,
              label: stormLabel
            });
@@ -594,12 +576,11 @@ function extractDate(feature) {
              label: stormLabel
            });
            kmlSource.addFeature(labelFeature);
+           fitExtent = kmlSource.getExtent();
          }
          
-         // 5. Fit the view to the extent of ALL features (new line + adjusted points + label)
-         const extent = kmlSource.getExtent();
-         if (!ol.extent.isEmpty(extent)) {
-           map.getView().fit(extent, {
+         if (!ol.extent.isEmpty(fitExtent)) {
+           map.getView().fit(fitExtent, {
              padding: [50, 50, 50, 50],
              duration: 500
            });
@@ -705,7 +686,7 @@ function extractDate(feature) {
       }, {
         hitTolerance: 5
       });
-      map.getTarget().style.cursor = hit ? 'pointer' : '';
+      map.getTargetElement().style.cursor = hit ? 'pointer' : '';
     });
   </script>
 </body>

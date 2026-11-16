@@ -4,6 +4,8 @@ elevation contours with colored ocean depths and NOAA / GEBCO depth contours
 labeled in meters. Pale blues show shallow water; darker blues show deeper water.
 Expand **Depth color key (meters)** for the exact depth bands.
 Zoom in for detail; switching basemaps keeps the current view and storm tracks.
+Storm tracks repeat with the basemap when panning east or west, in both
+single-storm and multiple-storm modes. Dateline crossings remain continuous.
 
 Ocean colors come from [OpenDEM's GEBCO 2021 WMS](https://www.opendem.info/download_bathymetry.html),
 with land masked using Natural Earth so the terrain remains visible. Depths
