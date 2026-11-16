@@ -26,7 +26,7 @@
       <label for="basemap" class="mb-2 block text-sm font-semibold text-gray-600">Basemap</label>
       <select id="basemap" aria-describedby="basemap-description" class="w-full rounded border p-2 text-sm">
         <option value="streets">Streets — OpenStreetMap</option>
-        <option value="terrain">Terrain — shaded relief &amp; contours</option>
+        <option value="terrain">Terrain — land &amp; ocean depth</option>
       </select>
       <p id="basemap-description" class="mt-2 text-xs text-gray-600">Street map with roads and place names.</p>
       <p id="basemap-status" role="status" class="mt-2 text-xs text-amber-800" hidden></p>
@@ -73,7 +73,7 @@
     };
     const basemapDescriptions = {
       streets: 'Street map with roads and place names.',
-      terrain: 'Shaded relief and elevation contours from OpenTopoMap-R. Zoom in to see contour lines and height labels.'
+      terrain: 'Shaded land relief and elevation contours, plus ocean-depth contours from NOAA / GEBCO. Ocean depths are labeled in meters; zoom in for detail.'
     };
     const basemapEl = document.getElementById('basemap');
     const basemapDescriptionEl = document.getElementById('basemap-description');
@@ -81,11 +81,24 @@
     const basemapLayer = new ol.layer.Tile({
       source: basemapSources[basemapEl.value]
     });
+    const oceanDepthSource = new ol.source.XYZ({
+      url: 'https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/GEBCO_contours/MapServer/tile/{z}/{y}/{x}',
+      maxZoom: 10,
+      attributions: [
+        '<a href="https://www.gebco.net/">General Bathymetric Chart of the Oceans (GEBCO)</a>',
+        '<a href="https://www.ncei.noaa.gov/">NOAA National Centers for Environmental Information (NCEI)</a>'
+      ],
+      attributionsCollapsible: false
+    });
+    const oceanDepthLayer = new ol.layer.Tile({
+      source: oceanDepthSource,
+      visible: basemapEl.value === 'terrain'
+    });
     basemapDescriptionEl.textContent = basemapDescriptions[basemapEl.value];
 
     const map = new ol.Map({
       target: 'map',
-      layers: [basemapLayer],
+      layers: [basemapLayer, oceanDepthLayer],
       view: new ol.View({
         center: ol.proj.fromLonLat([0, 20]),
         zoom: 3
@@ -94,6 +107,7 @@
 
     basemapEl.addEventListener('change', () => {
       basemapLayer.setSource(basemapSources[basemapEl.value]);
+      oceanDepthLayer.setVisible(basemapEl.value === 'terrain');
       basemapDescriptionEl.textContent = basemapDescriptions[basemapEl.value];
       basemapStatusEl.hidden = true;
       basemapStatusEl.textContent = '';
@@ -102,6 +116,12 @@
     basemapSources.terrain.on('tileloaderror', () => {
       if (basemapLayer.getSource() !== basemapSources.terrain) return;
       basemapStatusEl.textContent = 'Some terrain tiles could not load. Switch to Streets or reload the page to retry.';
+      basemapStatusEl.hidden = false;
+    });
+
+    oceanDepthSource.on('tileloaderror', () => {
+      if (!oceanDepthLayer.getVisible()) return;
+      basemapStatusEl.textContent = 'Some ocean-depth contours could not load. Reload the page to retry.';
       basemapStatusEl.hidden = false;
     });
 

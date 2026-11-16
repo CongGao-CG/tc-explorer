@@ -1,7 +1,14 @@
-The **Basemap** selector switches between OpenStreetMap streets and
-OpenTopoMap-R terrain with shaded relief and elevation contours. Zoom in to
-see contour lines and height labels; switching basemaps keeps the current view
-and storm tracks.
+The **Basemap** selector switches between OpenStreetMap streets and **Terrain —
+land & ocean depth**. Terrain combines OpenTopoMap-R shaded land relief and
+elevation contours with NOAA / GEBCO ocean-depth contours labeled in meters.
+Zoom in for detail; switching basemaps keeps the current view and storm tracks.
+
+The transparent [ocean-depth layer](https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/GEBCO_contours/MapServer)
+is provided by NOAA NCEI from the GEBCO_2023 grid and appears only in Terrain
+mode, below storm tracks. It shows smoothed depth contours at intervals of
+2,000, 1,000, or 500 meters depending on zoom, plus additional shallow-water
+contours. Native tiles cover zoom levels 0–10; closer views enlarge those tiles
+without adding depth detail. Land contours retain their existing detail.
 
 Terrain tiles are provided by [OpenMaps.fr](https://openmaps.fr/), with native
 zoom levels up to 18. Their [tile usage policy](https://openmaps.fr/tile-usage-policy.html)
