@@ -23,7 +23,8 @@ without adding depth detail. Land contours retain their existing detail.
 Terrain tiles are provided by [OpenMaps.fr](https://openmaps.fr/), with native
 zoom levels up to 18. Their [tile usage policy](https://openmaps.fr/tile-usage-policy.html)
 allows free, noncommercial use up to 500,000 tiles per month and requires visible
-attribution and a donation link, which the map displays. Serve the app over HTTP
+attribution and a donation link, displayed in the fixed sidebar footer. The
+credits update with the active layers without covering the map. Serve the app over HTTP
 or HTTPS so tile requests include the required Referer header. Tiles load on
 demand; availability depends on the external provider.
 

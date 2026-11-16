@@ -10,6 +10,10 @@
   <style>
     html,body{height:100%}
     #map{height:100%;width:100%}
+    #map-credits .ol-attribution{position:static;max-width:none;height:auto;margin:0;padding:0;background:none;text-align:left}
+    #map-credits .ol-attribution ul{display:block;white-space:normal;font-size:11px;line-height:1.5;color:#4b5563;text-shadow:none}
+    #map-credits .ol-attribution li:not(:last-child)::after{content:' · '}
+    #map-credits .ol-attribution a{color:inherit;text-decoration:underline}
     .ol-tooltip{position:absolute;background:rgba(255,255,255,.9);border:none;padding:1px 4px;border-radius:2px;font-size:10px;font-weight:600;pointer-events:none;white-space:nowrap}
     .ol-popup{position:absolute;background-color:white;box-shadow:0 1px 4px rgba(0,0,0,0.2);padding:15px;border-radius:10px;border:1px solid #cccccc;bottom:12px;left:-50px;min-width:150px}
     .ol-popup:after,.ol-popup:before{top:100%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
@@ -20,7 +24,8 @@
   </style>
 </head>
 <body class="h-full w-full flex">
-  <aside class="w-80 p-4 bg-gray-100 overflow-y-auto">
+  <aside class="flex w-80 shrink-0 flex-col bg-gray-100">
+    <div class="min-h-0 flex-1 overflow-y-auto p-4">
     <h1 class="text-2xl font-bold mb-4">Tropical Cyclones</h1>
     <section class="mb-4 rounded border border-gray-200 bg-white p-3">
       <label for="basemap" class="mb-2 block text-sm font-semibold text-gray-600">Basemap</label>
@@ -61,6 +66,8 @@
     <h2 class="mb-2 text-sm font-semibold text-gray-600">Single Storm</h2>
     <input id="search" type="text" placeholder="Search storms…" class="mb-4 w-full p-2 border rounded" />
     <ul id="storm-list" class="space-y-2"></ul>
+    </div>
+    <footer id="map-credits" aria-label="Map data credits" class="shrink-0 border-t border-gray-200 px-4 py-3"></footer>
   </aside>
   <main class="flex-1"><div id="map"></div></main>
   <script>
@@ -124,6 +131,11 @@
 
     const map = new ol.Map({
       target: 'map',
+      controls: [
+        new ol.control.Zoom(),
+        new ol.control.Rotate(),
+        new ol.control.Attribution({ target: 'map-credits', collapsible: false })
+      ],
       layers: [basemapLayer, oceanColorLayer, oceanDepthLayer],
       view: new ol.View({
         center: ol.proj.fromLonLat([0, 20]),
