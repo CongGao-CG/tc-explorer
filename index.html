@@ -7,6 +7,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.2.1/ol.css">
   <script src="https://cdn.jsdelivr.net/npm/ol@v10.2.1/dist/ol.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.css">
+  <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/maplibre-contour@0.1.0/dist/index.min.js"></script>
+  <script src="assets/english-basemap.js"></script>
   <style>
     html,body{height:100%}
     #map{height:100%;width:100%}
@@ -30,10 +34,10 @@
     <section class="mb-4 rounded border border-gray-200 bg-white p-3">
       <label for="basemap" class="mb-2 block text-sm font-semibold text-gray-600">Basemap</label>
       <select id="basemap" aria-describedby="basemap-description" class="w-full rounded border p-2 text-sm">
-        <option value="streets">Streets — OpenStreetMap</option>
+        <option value="streets">Streets — English labels</option>
         <option value="terrain">Terrain — land &amp; ocean depth</option>
       </select>
-      <p id="basemap-description" class="mt-2 text-xs text-gray-600">Street map with roads and place names.</p>
+      <p id="basemap-description" class="mt-2 text-xs text-gray-600">Street map with roads and English place names where available.</p>
       <details id="ocean-depth-legend" class="mt-2 text-xs text-gray-600" hidden>
         <summary class="cursor-pointer font-semibold">Depth color key (meters)</summary>
         <div class="mt-2 max-h-64 overflow-y-auto rounded border bg-white p-2">
@@ -73,31 +77,40 @@
   <main class="flex-1"><div id="map"></div></main>
   <script>
     /* ---------- Base map ---------- */
-    const basemapSources = {
-      streets: new ol.source.OSM(),
-      terrain: new ol.source.XYZ({
-        url: 'https://tile.openmaps.fr/opentopomap/{z}/{x}/{y}.png',
-        maxZoom: 18,
-        attributions: [
-          '<a href="https://github.com/sletuffe/OpenTopoMap">&copy; OpenTopoMap-R</a>',
-          '<a href="https://openmaps.fr/donate">❤️ Donation</a>',
-          '<a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a>'
-        ],
-        attributionsCollapsible: false
-      })
-    };
     const basemapDescriptions = {
-      streets: 'Street map with roads and place names.',
-      terrain: 'Shaded land relief with ocean depths in pale blue (shallow) through dark blue (deep). Depth contours are labeled in meters; zoom in for detail.'
+      streets: 'Street map with roads and English place names where available.',
+      terrain: 'Shaded land relief with English place names where available. Ocean depths range from pale blue (shallow) to dark blue (deep), with contours labeled in meters.'
     };
     const basemapEl = document.getElementById('basemap');
     const basemapDescriptionEl = document.getElementById('basemap-description');
     const basemapStatusEl = document.getElementById('basemap-status');
     const retryTilesEl = document.getElementById('retry-tiles');
     const oceanDepthLegendEl = document.getElementById('ocean-depth-legend');
-    const basemapLayer = new ol.layer.Tile({
-      source: basemapSources[basemapEl.value]
+    let terrainDemSource;
+    const englishBasemap = new EnglishBasemap({
+      onRecoveryChange: () => updateTileRecovery(),
+      prepareStyle: (style, name) => {
+        if (name === 'terrain') {
+          if (!terrainDemSource) {
+            terrainDemSource = new mlcontour.DemSource({
+              url: 'https://tiles.mapterhorn.com/{z}/{x}/{y}.webp',
+              encoding: 'terrarium', maxzoom: 15, worker: true,
+              cacheSize: 100, timeoutMs: 10000
+            });
+            terrainDemSource.setupMaplibre(maplibregl);
+          }
+          style.sources.dem.tiles = [terrainDemSource.sharedDemProtocolUrl];
+          style.sources['contour-source'].tiles = [terrainDemSource.contourProtocolUrl({
+            multiplier: 1,
+            thresholds: { 10: [50, 1000], 11: [20, 500], 12: [10, 100], 13: [10, 100], 14: [10, 100], 15: [10, 50] },
+            contourLayer: 'contours', elevationKey: 'ele', levelKey: 'level',
+            extent: 4096, buffer: 1
+          })];
+        }
+        return style;
+      }
     });
+    const basemapLayer = englishBasemap.layer;
     const oceanColorSource = new ol.source.TileWMS({
       url: 'https://www.opendem.info/geoserver/opendem/wms',
       params: {
@@ -146,7 +159,7 @@
     });
 
     basemapEl.addEventListener('change', () => {
-      basemapLayer.setSource(basemapSources[basemapEl.value]);
+      englishBasemap.setBasemap(basemapEl.value);
       oceanColorLayer.setVisible(basemapEl.value === 'terrain');
       oceanDepthLayer.setVisible(basemapEl.value === 'terrain');
       oceanDepthLegendEl.hidden = basemapEl.value !== 'terrain';
@@ -195,18 +208,21 @@
           }, tileRetryDelays[failure.attempts]);
         }
       }
-      const retrying = visibleFailures.some(failure => failure.timer || failure.tile.getState() === tileStates.loading);
-      const stalled = visibleFailures.some(failure => !failure.timer && failure.tile.getState() === tileStates.error);
-      const layers = [...new Set(visibleFailures.map(failure => failure.label))].join(', ');
-      basemapStatusEl.hidden = visibleFailures.length === 0;
-      basemapStatusEl.textContent = visibleFailures.length
+      const basemapFailures = englishBasemap.getFailures();
+      const retrying = visibleFailures.some(failure => failure.timer || failure.tile.getState() === tileStates.loading)
+        || basemapFailures.some(failure => failure.retrying);
+      const stalled = visibleFailures.some(failure => !failure.timer && failure.tile.getState() === tileStates.error)
+        || basemapFailures.some(failure => failure.stalled);
+      const failures = [...visibleFailures, ...basemapFailures];
+      const layers = [...new Set(failures.map(failure => failure.label))].join(', ');
+      basemapStatusEl.hidden = failures.length === 0;
+      basemapStatusEl.textContent = failures.length
         ? `Some map tiles could not load (${layers}). ${retrying ? 'Retrying…' : 'Use Retry tiles to try again.'}`
         : '';
       retryTilesEl.hidden = !stalled;
     }
 
     for (const [source, label] of [
-      [basemapSources.terrain, 'terrain'],
       [oceanColorSource, 'ocean depth colors'],
       [oceanDepthSource, 'ocean depth contours']
     ]) {
@@ -220,6 +236,7 @@
     }
     map.on('moveend', updateTileRecovery);
     retryTilesEl.addEventListener('click', () => {
+      englishBasemap.retry();
       for (const [tile, failure] of tileFailures) {
         if (tileIsInView(tile, failure.source) && tile.getState() === tileStates.error && !failure.timer) {
           failure.attempts = 0;
@@ -227,6 +244,7 @@
       }
       updateTileRecovery();
     });
+    englishBasemap.setBasemap(basemapEl.value);
 
     let currentLayer = null;
     let currentOverlays = [];
