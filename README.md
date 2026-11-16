@@ -1,7 +1,17 @@
 The **Basemap** selector switches between OpenStreetMap streets and **Terrain —
 land & ocean depth**. Terrain combines OpenTopoMap-R shaded land relief and
-elevation contours with NOAA / GEBCO ocean-depth contours labeled in meters.
+elevation contours with colored ocean depths and NOAA / GEBCO depth contours
+labeled in meters. Pale blues show shallow water; darker blues show deeper water.
+Expand **Depth color key (meters)** for the exact depth bands.
 Zoom in for detail; switching basemaps keeps the current view and storm tracks.
+
+Ocean colors come from [OpenDEM's GEBCO 2021 WMS](https://www.opendem.info/download_bathymetry.html),
+with land masked using Natural Earth so the terrain remains visible. Depths
+shallower than 25 m are uncolored. The [provider's legend](https://opendem.info/ol6/bathymetry_raster/legend.71d11efa.png)
+is saved as `assets/ocean-depth-legend.png`. Colors and contours use different
+GEBCO releases (2021 and 2023), so their boundaries can differ locally. Color
+requests use 512-pixel tiles up to source zoom 9; closer views enlarge those
+tiles without adding depth detail.
 
 The transparent [ocean-depth layer](https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/GEBCO_contours/MapServer)
 is provided by NOAA NCEI from the GEBCO_2023 grid and appears only in Terrain

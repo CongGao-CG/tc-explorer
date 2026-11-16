@@ -29,6 +29,13 @@
         <option value="terrain">Terrain — land &amp; ocean depth</option>
       </select>
       <p id="basemap-description" class="mt-2 text-xs text-gray-600">Street map with roads and place names.</p>
+      <details id="ocean-depth-legend" class="mt-2 text-xs text-gray-600" hidden>
+        <summary class="cursor-pointer font-semibold">Depth color key (meters)</summary>
+        <div class="mt-2 max-h-64 overflow-y-auto rounded border bg-white p-2">
+          <img src="assets/ocean-depth-legend.png" width="161" height="545" loading="lazy" alt="Ocean depth colors: pale cyan for 25–50 meters, progressively darker blues through 9,500 meters, and nearly black for depths greater than 9,500 meters." />
+        </div>
+        <p class="mt-1">Water shallower than 25 m is uncolored.</p>
+      </details>
       <p id="basemap-status" role="status" class="mt-2 text-xs text-amber-800" hidden></p>
     </section>
     <section class="mb-4 rounded border border-gray-200 bg-white p-3">
@@ -73,13 +80,31 @@
     };
     const basemapDescriptions = {
       streets: 'Street map with roads and place names.',
-      terrain: 'Shaded land relief and elevation contours, plus ocean-depth contours from NOAA / GEBCO. Ocean depths are labeled in meters; zoom in for detail.'
+      terrain: 'Shaded land relief with ocean depths in pale blue (shallow) through dark blue (deep). Depth contours are labeled in meters; zoom in for detail.'
     };
     const basemapEl = document.getElementById('basemap');
     const basemapDescriptionEl = document.getElementById('basemap-description');
     const basemapStatusEl = document.getElementById('basemap-status');
+    const oceanDepthLegendEl = document.getElementById('ocean-depth-legend');
     const basemapLayer = new ol.layer.Tile({
       source: basemapSources[basemapEl.value]
+    });
+    const oceanColorSource = new ol.source.TileWMS({
+      url: 'https://www.opendem.info/geoserver/opendem/wms',
+      params: {
+        LAYERS: 'opendem:gebco_2021',
+        FORMAT: 'image/png',
+        TRANSPARENT: true
+      },
+      serverType: 'geoserver',
+      hidpi: false,
+      tileGrid: ol.tilegrid.createXYZ({ maxZoom: 9, tileSize: 512 }),
+      attributions: 'Depth colors: <a href="https://www.opendem.info/download_bathymetry.html">OpenDEM</a>, derived from GEBCO 2021 and <a href="https://www.naturalearthdata.com/">Natural Earth</a>',
+      attributionsCollapsible: false
+    });
+    const oceanColorLayer = new ol.layer.Tile({
+      source: oceanColorSource,
+      visible: basemapEl.value === 'terrain'
     });
     const oceanDepthSource = new ol.source.XYZ({
       url: 'https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/GEBCO_contours/MapServer/tile/{z}/{y}/{x}',
@@ -95,10 +120,11 @@
       visible: basemapEl.value === 'terrain'
     });
     basemapDescriptionEl.textContent = basemapDescriptions[basemapEl.value];
+    oceanDepthLegendEl.hidden = basemapEl.value !== 'terrain';
 
     const map = new ol.Map({
       target: 'map',
-      layers: [basemapLayer, oceanDepthLayer],
+      layers: [basemapLayer, oceanColorLayer, oceanDepthLayer],
       view: new ol.View({
         center: ol.proj.fromLonLat([0, 20]),
         zoom: 3
@@ -107,7 +133,9 @@
 
     basemapEl.addEventListener('change', () => {
       basemapLayer.setSource(basemapSources[basemapEl.value]);
+      oceanColorLayer.setVisible(basemapEl.value === 'terrain');
       oceanDepthLayer.setVisible(basemapEl.value === 'terrain');
+      oceanDepthLegendEl.hidden = basemapEl.value !== 'terrain';
       basemapDescriptionEl.textContent = basemapDescriptions[basemapEl.value];
       basemapStatusEl.hidden = true;
       basemapStatusEl.textContent = '';
@@ -116,6 +144,12 @@
     basemapSources.terrain.on('tileloaderror', () => {
       if (basemapLayer.getSource() !== basemapSources.terrain) return;
       basemapStatusEl.textContent = 'Some terrain tiles could not load. Switch to Streets or reload the page to retry.';
+      basemapStatusEl.hidden = false;
+    });
+
+    oceanColorSource.on('tileloaderror', () => {
+      if (!oceanColorLayer.getVisible()) return;
+      basemapStatusEl.textContent = 'Some ocean-depth colors could not load. Reload the page to retry.';
       basemapStatusEl.hidden = false;
     });
 
