@@ -42,6 +42,7 @@
         <p class="mt-1">Water shallower than 25 m is uncolored.</p>
       </details>
       <p id="basemap-status" role="status" class="mt-2 text-xs text-amber-800" hidden></p>
+      <button id="retry-tiles" type="button" class="mt-2 rounded border border-gray-300 px-3 py-1 text-xs font-semibold text-gray-700 hover:bg-gray-50" hidden>Retry tiles</button>
     </section>
     <section class="mb-4 rounded border border-gray-200 bg-white p-3">
       <h2 class="mb-3 text-sm font-semibold text-gray-600">Multiple Storms</h2>
@@ -92,6 +93,7 @@
     const basemapEl = document.getElementById('basemap');
     const basemapDescriptionEl = document.getElementById('basemap-description');
     const basemapStatusEl = document.getElementById('basemap-status');
+    const retryTilesEl = document.getElementById('retry-tiles');
     const oceanDepthLegendEl = document.getElementById('ocean-depth-legend');
     const basemapLayer = new ol.layer.Tile({
       source: basemapSources[basemapEl.value]
@@ -149,26 +151,81 @@
       oceanDepthLayer.setVisible(basemapEl.value === 'terrain');
       oceanDepthLegendEl.hidden = basemapEl.value !== 'terrain';
       basemapDescriptionEl.textContent = basemapDescriptions[basemapEl.value];
-      basemapStatusEl.hidden = true;
-      basemapStatusEl.textContent = '';
+      updateTileRecovery();
     });
 
-    basemapSources.terrain.on('tileloaderror', () => {
-      if (basemapLayer.getSource() !== basemapSources.terrain) return;
-      basemapStatusEl.textContent = 'Some terrain tiles could not load. Switch to Streets or reload the page to retry.';
-      basemapStatusEl.hidden = false;
-    });
+    const tileRetryDelays = [1000, 3000];
+    const tileFailures = new Map();
+    const tileStates = { loading: 1, loaded: 2, error: 3, empty: 4 };
 
-    oceanColorSource.on('tileloaderror', () => {
-      if (!oceanColorLayer.getVisible()) return;
-      basemapStatusEl.textContent = 'Some ocean-depth colors could not load. Reload the page to retry.';
-      basemapStatusEl.hidden = false;
-    });
+    function tileIsInView(tile, source) {
+      if (basemapEl.value !== 'terrain') return false;
+      const view = map.getView();
+      const grid = source.getTileGridForProjection(view.getProjection());
+      const coord = tile.getTileCoord();
+      if (coord[0] !== grid.getZForResolution(view.getResolution(), source.zDirection)) return false;
+      const extent = view.calculateExtent(map.getSize());
+      // OpenLayers keeps unwrapped coordinates for each tile's displayed world copy.
+      return ol.extent.intersects(extent, grid.getTileCoordExtent(coord));
+    }
 
-    oceanDepthSource.on('tileloaderror', () => {
-      if (!oceanDepthLayer.getVisible()) return;
-      basemapStatusEl.textContent = 'Some ocean-depth contours could not load. Reload the page to retry.';
-      basemapStatusEl.hidden = false;
+    function updateTileRecovery() {
+      const visibleFailures = [];
+      for (const [tile, failure] of tileFailures) {
+        const state = tile.getState();
+        if (tile.disposed || state === tileStates.loaded || state === tileStates.empty) {
+          clearTimeout(failure.timer);
+          tileFailures.delete(tile);
+          continue;
+        }
+        if (!tileIsInView(tile, failure.source)) {
+          clearTimeout(failure.timer);
+          failure.timer = null;
+          continue;
+        }
+        visibleFailures.push(failure);
+        if (state === tileStates.error && !failure.timer && failure.attempts < tileRetryDelays.length) {
+          failure.timer = setTimeout(() => {
+            failure.timer = null;
+            if (!tile.disposed && tileIsInView(tile, failure.source) && tile.getState() === tileStates.error) {
+              failure.attempts += 1;
+              tile.load();
+            }
+            updateTileRecovery();
+          }, tileRetryDelays[failure.attempts]);
+        }
+      }
+      const retrying = visibleFailures.some(failure => failure.timer || failure.tile.getState() === tileStates.loading);
+      const stalled = visibleFailures.some(failure => !failure.timer && failure.tile.getState() === tileStates.error);
+      const layers = [...new Set(visibleFailures.map(failure => failure.label))].join(', ');
+      basemapStatusEl.hidden = visibleFailures.length === 0;
+      basemapStatusEl.textContent = visibleFailures.length
+        ? `Some map tiles could not load (${layers}). ${retrying ? 'Retrying…' : 'Use Retry tiles to try again.'}`
+        : '';
+      retryTilesEl.hidden = !stalled;
+    }
+
+    for (const [source, label] of [
+      [basemapSources.terrain, 'terrain'],
+      [oceanColorSource, 'ocean depth colors'],
+      [oceanDepthSource, 'ocean depth contours']
+    ]) {
+      source.on('tileloaderror', ({ tile }) => {
+        if (!tileFailures.has(tile)) {
+          tileFailures.set(tile, { tile, source, label, attempts: 0, timer: null });
+        }
+        updateTileRecovery();
+      });
+      source.on('tileloadend', updateTileRecovery);
+    }
+    map.on('moveend', updateTileRecovery);
+    retryTilesEl.addEventListener('click', () => {
+      for (const [tile, failure] of tileFailures) {
+        if (tileIsInView(tile, failure.source) && tile.getState() === tileStates.error && !failure.timer) {
+          failure.attempts = 0;
+        }
+      }
+      updateTileRecovery();
     });
 
     let currentLayer = null;

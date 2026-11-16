@@ -29,6 +29,9 @@ attribution and a donation link, displayed in the fixed sidebar footer. The
 credits update with the active layers without covering the map. Serve the app over HTTP
 or HTTPS so tile requests include the required Referer header. Tiles load on
 demand; availability depends on the external provider.
+Failed terrain and ocean tiles retry twice automatically while in view. If they
+still fail, **Retry tiles** tries again without reloading the page or clearing
+storm tracks. Warnings clear when the affected tiles load or leave the view.
 
 kms files are produced by https://github.com/CongGao-CG/HURDAT2kml and https://github.com/CongGao-CG/JTWCkml
 
