@@ -609,7 +609,7 @@ function extractDate(feature) {
 }
 
      // When features are loaded, sort points, create a line, and fit the view
-     kmlSource.once('change', () => {
+     kmlSource.once('featuresloadend', () => {
        if (kmlSource.getState() === 'ready') {
          if (loadId !== activeLoadId) return;
          const worldWidth = ol.extent.getWidth(map.getView().getProjection().getExtent());
@@ -635,7 +635,10 @@ function extractDate(feature) {
              lineExtent[3] + Math.max((lineExtent[3] - lineExtent[1]) * 0.08, (lineExtent[2] - lineExtent[0]) * 0.02, 25000)
            ];
            // Fit the continuous track while keeping markers and labels in the base world for repetition.
-           fitExtent = ol.extent.extendCoordinate(lineExtent.slice(), labelCoord);
+           fitExtent = ol.extent.extend(
+             lineExtent.slice(),
+             ol.extent.boundingExtent([labelCoord])
+           );
            labelCoord[0] -= worldWidth * Math.floor((labelCoord[0] + worldWidth / 2) / worldWidth);
            const labelFeature = new ol.Feature({
              geometry: new ol.geom.Point(labelCoord),
